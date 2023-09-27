@@ -1,11 +1,11 @@
 {
-  "name": "vanilla-app-template",
+  "name": "DrinkFusionHub",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build --base=/high-degree/",
+    "build": "vite build --base=/DrinkFusionHub/",
     "preview": "vite preview"
   },
   "devDependencies": {
