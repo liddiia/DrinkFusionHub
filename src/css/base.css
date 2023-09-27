@@ -1,0 +1,51 @@
+:root {
+  --color-violet: #7e8fdd;
+  --color-violet-darck: #6e7fcf;
+  --color-blue: #9cdfdf;
+  --color-light-theme-black: #242424;
+  --color-dark-theme-black: #1a1a1a;
+  --color-white: #fdfdff;
+  --color-darck-white: #f8f9ff;
+  --font-family: 'Poppins';
+  --logo-font-wight: 600;
+  --logo-font-size: 22px;
+  --logo-Line-height: 1.1;
+  --logo-letter-spacing: -0.01em;
+  --mobile-logo-font-size: 16px;
+  --mobile-logo-Line-height: 1.13;
+  --button-font-size: 18px;
+  --button-font-weight: 600;
+  --button-line-height: 1.33;
+  --button-letter-spacing: 0.02em;
+  --mobile-button-font-size: 14px;
+  --mobile-button-font-weight: 600;
+  --mobile-button-line-height: 1.4;
+  --mobile-button-letter-spacing: 0.02em;
+  --drop-down-font-size: 14px;
+  --drop-down-font-weight: 400;
+  --drop-down-line-height: 1.3;
+  --drop-down-letter-spacing: 0.02em;
+}
+
+body {
+  font-family: var(--font-family);
+}
+@media screen and (min-width: 375px) {
+  .container {
+    width: 375px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .container {
+    width: 1200px;
+  }
+}
