@@ -25,6 +25,42 @@
   --drop-down-font-weight: 400;
   --drop-down-line-height: 1.3;
   --drop-down-letter-spacing: 0.02em;
+   --hero-titel-font-size: 64px;
+  --hero-font-weight: 400;
+  --hero-titel-line-height: 1.1;
+  --hero-letter-spacing: 0em;
+  --hero-titel-span-font-style: italic;
+ --tablet-hero-titel-font-size: 44px;
+--mobile-hero-titel-font-size: 32px;
+ --mobile-hero-titel-line-height:1.19;
+  --hero-text-font-size: 20px;
+ --hero-text-line-height: 1.3;
+ --tablet-hero-text-font-size: 16px;
+ --tablet-hero-text-line-height:1.5;
+ --mobile-hero-text-font-size: 14px;
+  --mobile-hero-text-line-height:1.43;
+  --hero-caption-font-size: 18px;
+  --hero-caption-line-height: 1.33;
+  --hero-caption-letter-spacing: 0.02em;
+  --tablet-hero-caption-font-size: 16px;
+--tablet-hero-caption-line-height: 1.5;
+  --mobile-hero-caption-font-size: 14px;
+    --mobile-hero-caption-line-height: 1.43;
+  --gallery-titel-font-size: 40px;
+--gallery-titel-font-weight: 500;
+--gallery-titel-line-height: 1.2;
+--gallery-letter-spacing: 0em;
+--mobil-gallery-titel-font-size: 24px;
+--mobil-gallery-titel-line-height: 1.17;
+--gallery-card-titel-font-size: 20px;
+--gallery-card-titel-font-weight: 600;
+--gallery-card-titel-line-height: 1.2;
+--mobile--gallery-card-titel-font-size: 18px;
+--mobile--gallery-card-titel-line-height: 1.33;
+--gallery-card-text-font-size: 14px;
+--gallery-card-text-font-weight: 400;
+--gallery-card-text-line-height: 1.29;
+
 }
 
 body {
