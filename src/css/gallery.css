@@ -114,6 +114,12 @@
   text-wrap: nowrap;
 }
 
+.cocktail-learn-more-btn:hover,
+.cocktail-learn-more-btn:focus {
+  background: var(--color-violet);
+  color: var(--color-white);
+}
+
 .cocktail-add-fav-btn {
   display: block;
   padding: 16px;

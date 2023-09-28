@@ -22,7 +22,7 @@ export function createCocktailCards(arr, container) {
             >
               <use
                 class="favorites-icon"
-                href="../img/icons.svg#icon-heart"
+                href="/src/img/icons.svg#icon-heart"
               ></use>
             </svg>
           </button>
