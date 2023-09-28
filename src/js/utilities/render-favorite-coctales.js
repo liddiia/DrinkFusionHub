@@ -10,7 +10,7 @@ export let getValueC = [];
 
 const {
   favoritesList,
-  favoritesTitle,
+  // favoritesTitle,
   favoriteSearchItem,
   prewButton,
   nextButton,
@@ -54,11 +54,11 @@ export function initializeFavourites() {
   }
 
   if (windowWidth < 768) {
-    favoritesMarkup(0, 3);
+    favouritesMarkup(0, 3);
   } else if (windowWidth < 1280) {
-    favoritesMarkup(0, 6);
+    favouritesMarkup(0, 6);
   } else {
-    favoritesMarkup(0, 9);
+    favouritesMarkup(0, 9);
   }
   if (totalPage > 1) {
     prewButton.classList.remove('is-hiden');
