@@ -18,6 +18,10 @@ export function createCocktailCards(arr, container) {
           <button class="cocktail-add-fav-btn" data-type="user-action" data-action="addtofav">
             <svg
               class="favorites-btn-icon"
+              aria-label="add to favorites button"
+            >
+              <use
+                class="favorites-icon"
                 href="../img/icons.svg#icon-heart"
               ></use>
             </svg>
