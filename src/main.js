@@ -3,4 +3,4 @@ import './js/favorite';
 import './js/surch';
 import './js/gallery';
 import './js/modal';
-
+import './js/random-coctails'
