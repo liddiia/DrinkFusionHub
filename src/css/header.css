@@ -1,0 +1,49 @@
+button {
+    cursor: pointer;
+    display: block;
+}
+
+.page-header-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.page-nav{
+    display: flex;
+}
+
+.link {
+    text-decoration: none;
+}
+
+.logotype {
+    display: flex;
+    font-weight: var(--logo-font-wight);
+    font-size: var(--mobile-logo-font-size);
+    text-transform: uppercase;
+    color: var(--color-light-theme-black);
+}
+
+.logo-icon-heder{
+    stroke: var(--color-violet);
+    fill: var(--color-violet);
+}
+
+.mobile-menu-open-btn{
+    background: transparent;
+    padding: 0;
+}
+
+.mob-menu-icon{
+    stroke: black;
+    fill: black;
+}
+
+.mobile-menu{
+    display: none;
+    background-color: var(--color-violet);
+}
+
+.active{
+    display: block;
+}
