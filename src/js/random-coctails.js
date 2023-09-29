@@ -11,3 +11,5 @@ const rondomGallery = async() => {
   }
 }
 rondomGallery()
+
+
