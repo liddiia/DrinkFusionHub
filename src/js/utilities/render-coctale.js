@@ -1,6 +1,10 @@
-export function createMarkupDescriptionCocktail(cocktailData, _id) {
-  const { drink, drinkThumb, ingredients, instructions } = cocktailData;
-
+export function createMarkupDescriptionCocktail(
+  drink,
+  drinkThumb,
+  ingredients,
+  instructions,
+  _id
+) {
   const markup = `
  
     <div class="cocktail-modal">
@@ -16,7 +20,7 @@ export function createMarkupDescriptionCocktail(cocktailData, _id) {
         .map(
           ingredient =>
             `<li class="cocktail-modal__ingredient-item">
-               <a href="#${ingredient.title}" class="ingredient-link">${ingredient.measure} - ${ingredient.title}</a>
+               <a href="#${ingredient.id}" class="ingredient-link">${ingredient.measure} - ${ingredient.title}</a>
              </li>`
         )
         .join('')}
@@ -35,21 +39,22 @@ export function createMarkupDescriptionCocktail(cocktailData, _id) {
     </div>
   
   `;
-
-  const modal = document.createElement('div');
-  modal.innerHTML = markup;
-
-  // Обробка клікабельних інгредієнтів
-  const ingredientLinks = modal.querySelectorAll('.ingredient-link');
-
-  ingredientLinks.forEach(link => {
-    link.addEventListener('click', event => {
-      event.preventDefault();
-      const ingredientTitle = link.getAttribute('href').substring(1);
-      const ingredient = ingredients.find(item => item.id === _id);
-      if (ingredient) {
-        // Показати нове модальне вікно з описом інгредієнта?
-      }
-    });
-  });
+  return markup;
 }
+
+// const modal = document.createElement('div');
+// modal.innerHTML = markup;
+
+// // Обробка клікабельних інгредієнтів
+// const ingredientLinks = modal.querySelectorAll('.ingredient-link');
+
+// ingredientLinks.forEach(link => {
+//   link.addEventListener('click', event => {
+//     event.preventDefault();
+//     const ingredientTitle = link.getAttribute('href').substring(1);
+//     const ingredient = ingredients.find(item => item.id === _id);
+//     if (ingredient) {
+//       // Показати нове модальне вікно з описом інгредієнта?
+//     }
+//   });
+// });
