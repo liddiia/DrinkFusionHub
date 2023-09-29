@@ -6,8 +6,13 @@
   --color-dark-theme-black: #1a1a1a;
   --color-white: #fdfdff;
   --color-darck-white: #f8f9ff;
-  --font-family: 'Poppins';
-  --logo-font-wight: 600;
+  --color-text-black:rgba(36, 36, 36, 1);
+ ----color-text-black-fair: rgba(36, 36, 36, 0.5);
+  --color-text-blue:rgba(156, 223, 223, 1);
+  --color-text-violet:rgba(126, 143, 221, 1);
+--color-text-white: rgba(253, 253, 255, 1);
+--color-text-white-:rgba(253, 253, 255, 0.5);
+    --logo-font-wight: 600;
   --logo-font-size: 22px;
   --logo-Line-height: 1.1;
   --logo-letter-spacing: -0.01em;
@@ -29,7 +34,7 @@
   --hero-font-weight: 400;
   --hero-titel-line-height: 1.1;
   --hero-letter-spacing: 0em;
-  --hero-titel-span-font-style: italic;
+  --span-font-style: italic;
  --tablet-hero-titel-font-size: 44px;
 --mobile-hero-titel-font-size: 32px;
  --mobile-hero-titel-line-height:1.19;
@@ -65,6 +70,7 @@
 
 body {
   font-family: var(--font-family);
+
 }
 @media screen and (min-width: 375px) {
   .container {

@@ -1,0 +1,22 @@
+.no-coktail{
+    margin: 138 px 65px;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+}
+
+.no-coktail-text{
+    font-family: var(--font-family),sans-serif;
+font-size: 18px;
+
+font-weight: 400;
+line-height: 1.33;
+letter-spacing: 0em;
+text-align: center;
+color: var(--color-text-bl);
+
+}
+.no-coktail-span{
+font-style: italic;
+color: var(--color-blue);
+}

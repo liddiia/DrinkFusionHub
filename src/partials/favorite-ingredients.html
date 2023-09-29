@@ -5,6 +5,7 @@
 
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>Favorite coctails</title>
 
     <link
@@ -15,7 +16,23 @@
   </head>
   
   <body>
+    <load src="partials/header.html" />
     <main>
+        <section class="favorite-coctails container">
+            <div class="">
+              <h2 class="favorite-titel">Favorite ingredients</h2>
+              <ul class="gallery-list"></ul>
+            </div>
+            <div class="no-coctails">
+                <picture>
+                    <source srcset="/img/no-coctails/no-coktails@1x.png 1x, /img/no-coctails/no-coktails@2x.png 1x 2x" type="image" />
+                    <img src="/img/no-coctails/no-coktails@1x.png" alt="no-coktail" />
+                  </picture>
+                  <p class="no-coktail-text">
+                    You haven't added any <span class=".no-coktail-span">favorite ingredients</span> yet
+                  </p>
+            </div>
+          </section>
      
     </main>
     <load src="partials/footer.html" />
