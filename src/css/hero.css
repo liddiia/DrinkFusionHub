@@ -1,0 +1,119 @@
+@media screen and (min-width: 1280px) {
+.hero-first {
+  /* padding-top: 134px;
+  margin-right: 115px; */
+  width: ((100% - 56px)/2);
+}
+.container.hero-container{
+  padding-right: 17px;
+  /* position: relative; */
+  background-color: antiquewhite;
+}
+.button-on-hero {
+  color: #FDFDFF;
+font-family: Poppins;
+font-size: 18px;
+font-style: normal;
+font-weight: 600;
+line-height: 24px; /* 133.333% */
+letter-spacing: 0.36px;
+text-transform: uppercase;
+border-radius: 12px;
+background: var(--violet, #7E8FDD);
+display: flex;
+padding: 22px 44px;
+border: transparent;
+}
+.hero-cocktails {
+    color: var(--violet, #7E8FDD);
+font-family: Poppins;
+font-size: 64px;
+font-style: italic;
+font-weight: 400;
+line-height: 70px;
+  }
+  .main-title {
+    color: #242424;
+font-family: Poppins;
+font-size: 64px;
+font-style: normal;
+font-weight: 400;
+line-height: 70px;
+width: 555px;
+margin-bottom: 28px;
+  }
+  .hero-p {
+    color: #242424;
+font-family: Poppins;
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: 26px;
+width: 480px;
+margin-bottom: 56px;
+  }
+  .hero-p-under-picture {
+    color: #242424;
+font-family: Poppins;
+font-size: 18px;
+font-style: normal;
+font-weight: 400;
+line-height: 24px; /* 133.333% */
+letter-spacing: 0.36px;
+text-transform: uppercase;
+width: 229px;
+margin-right: 80px;
+/* margin-top: 120px; */
+  }
+  .picture-hero {
+    position: relative;
+    /* display: block;  */
+    width: 552px;
+    height: 672px;
+    padding-right: 83px;
+    padding-top: 98px;
+    width: ((100% - 56px)/2);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+  }
+  .hero-container {
+    display: flex;
+    /* gap: 56px; */
+    justify-content: space-between;
+    align-items: center;
+
+  }
+  .rectangle {
+      /* position: absolute; */
+    /* top: 100px; */
+    width: 380px;
+height: 476px;
+/* flex-shrink: 0; */
+border-radius: 80px 0px;
+background: #7E8FDD;
+box-shadow: 0px 28px 75px 0px rgba(88, 109, 204, 0.50);
+margin-bottom: 51px;
+align-items: flex-end;
+  }
+  .hero-img-girl {
+    width: 410px;
+    height: 565px;
+    position: absolute;
+    right: 83px;
+    bottom: 99px;
+    z-index: 100;
+  }
+  .hero-p-under-picture {
+    /* padding-top: 500px;
+    padding-left: 85px; */
+  }
+  .hero-img-elements {
+    position: absolute;
+    width: 552px;
+    z-index: 1;
+    right: 0;
+    top: 0;
+  }
+}

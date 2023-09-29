@@ -1,0 +1,252 @@
+
+
+.gallery {
+  padding-bottom: 80px;
+}
+
+.gallery-header {
+  margin-bottom: 40px;
+  color: var(--color-light-theme-black);
+  font-size: 24px;
+  font-family: var(--font-family), sans-serif;
+  font-weight: 500;
+  line-height: 1.17;
+}
+
+.gallery-list {
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.cocktail-card {
+  padding: 14px;
+  width: 100%;
+  height: 471px;
+  border-radius: 20px;
+  background: var(--color-white);
+  box-shadow: 0px 4px 46px 0px rgba(0, 0, 0, 0.05);
+}
+
+.cocktail-img-wrap {
+  margin-bottom: 20px;
+  /* width: 307px; */
+  width: 100%;
+  height: 257px;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.cocktail-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cocktail-info {
+  padding: 0 6px 6px 6px;
+}
+
+.cocktail-name {
+  margin-bottom: 14px;
+
+  color: var(--color-light-theme-black);
+  font-size: 18px;
+  font-family: var(--font-family), sans-serif;
+  font-weight: 600;
+  line-height: 1.33;
+}
+
+.cocktail-description {
+  margin-bottom: 20px;
+  width: 100%;
+  height: 54px;
+
+  overflow: hidden;
+  -ms-text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  -ms-line-clamp: 3;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+
+  color: var(--color-light-theme-black);
+  font-family: var(--font-family), sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.29;
+}
+
+.cic-btn-wrapper {
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cocktail-learn-more-btn {
+  display: block;
+  padding: 14px 45px;
+  width: 180px;
+  height: 48px;
+  border-radius: 12px;
+  border: 1px solid var(--color-violet);
+  background: transparent;
+  color: var(--color-light-theme-black);
+  font-family: var(--font-family), sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.4;
+  letter-spacing: 0.28px;
+  text-transform: uppercase;
+  text-wrap: nowrap;
+}
+
+.cocktail-learn-more-btn:hover,
+.cocktail-learn-more-btn:focus {
+  background: var(--color-violet);
+  color: var(--color-white);
+}
+
+.cocktail-add-fav-btn {
+  display: block;
+  padding: 16px;
+  width: 48px;
+  height: 48px;
+  border: none;
+  border-radius: 12px;
+  background: var(--color-violet);
+}
+
+.favorites-btn-icon {
+  width: 18px;
+  height: 18px;
+  fill: none;
+  pointer-events: none;
+}
+
+.favorites-icon {
+  pointer-events: none;
+}
+
+.favorites-btn-icon.is-favorite {
+  fill: var(--color-white);
+}
+
+@media screen and (min-width: 375px) {
+  .cocktail-card {
+    width: 335px;
+  }
+
+  .cocktail-img-wrap {
+    width: 307px;
+  }
+
+  .cocktail-description {
+    width: 295px;
+  }
+
+  .cic-btn-wrapper {
+    gap: 15px;
+  }
+
+  .cocktail-learn-more-btn {
+    padding: 14px 71px;
+    width: 232px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .gallery {
+    padding-bottom: 100px;
+  }
+
+  .gallery-header {
+    font-size: 40px;
+    line-height: 1.2;
+  }
+
+  .gallery-list {
+    flex-direction: row;
+    gap: 32px 16px;
+  }
+
+  .cocktail-card {
+    width: 344px;
+    height: 523px;
+  }
+
+  .cocktail-img-wrap {
+    margin-bottom: 24px;
+    width: 316px;
+    height: 289px;
+  }
+
+  .cocktail-info {
+    padding: 0 10px 10px 10px;
+  }
+
+  .cocktail-name {
+    font-size: 20px;
+    line-height: 1.2;
+  }
+
+  .cocktail-description {
+    margin-bottom: 24px;
+    width: 296px;
+  }
+
+  .cic-btn-wrapper {
+    gap: 15px;
+  }
+
+  .cocktail-learn-more-btn {
+    padding: 16px 55px;
+    width: 225px;
+    height: 56px;
+    font-size: 18px;
+    line-height: 1.33;
+    letter-spacing: 0.36px;
+  }
+
+  .cocktail-add-fav-btn {
+    width: 56px;
+    height: 56px;
+  }
+
+  .favorites-btn-icon {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .gallery-header {
+    margin-bottom: 44px;
+  }
+
+  .gallery-list {
+    gap: 44px 24px;
+  }
+}
+
+/* Dark Theme */
+
+body.dark-theme .cocktail-card {
+  background: #232330;
+}
+
+body.dark-theme .gallery-header,
+body.dark-theme .cocktail-name,
+body.dark-theme .cocktail-description,
+body.dark-theme .cocktail-learn-more-btn {
+  color: var(--color-white);
+}
