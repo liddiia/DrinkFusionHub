@@ -1,16 +1,14 @@
 
-/* .page-footer{
-    max-width: 375px;
-    background-color: var(--color-violet);
-} */
+ .page-footer{
+background-color: var(--color-violet);
+} 
 
 .footer-container{
     display: flex;
     justify-content: space-between;
-    background-color: var(--color-violet);
     padding-top: 40px;
     padding-bottom: 80px;
-}
+   }
 
 .logo-container{
     display: flex;
@@ -50,3 +48,4 @@
     stroke: var(--color-white);
     fill: var(--color-white);
 }
+
