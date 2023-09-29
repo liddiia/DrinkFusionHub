@@ -14,7 +14,7 @@ export function createMarkupDescriptionCocktail(arr, container) {
       <h3 class="cocktail-modal__subtitle">Ingredients:</h3>
       <p class="cocktail-modal__per-cocktail">Per cocktail</p>
      <ul class="cocktail-modal__ingredients">
-      ${ingredients
+      ${item.ingredients
         .map(
           ingredient =>
             `<li class="cocktail-modal__ingredient-item">
