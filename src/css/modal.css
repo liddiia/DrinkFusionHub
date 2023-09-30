@@ -1,60 +1,231 @@
-.modal-backdrop{
-	position: fixed;
-	width: 100%;
-	height: 100%;
-	top: 0;
-	left: 0;
-	background-color:#15151560 ;
-	opacity: 0;
-	visibility: hidden;
-	pointer-events: none;
-	
+.modal-backdrop {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #15151560;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
 }
-.modal-backdrop.is-open{
-	opacity: 1;
-	visibility: visible;
-	pointer-events: all;
+.modal-backdrop.is-open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: all;
+}
+.modal-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--color-darck-white);
+  border-radius: 20px;
+  padding: 40px 20px;
+  width: 335px;
+  max-height: 95vh;
+  overflow-y: auto;
+}
 
+.close-modal {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+
+  background-color: inherit;
+  border: none;
+  width: 22px;
+  height: 22px;
+  margin-bottom: 4px;
 }
-.modal-container{
-	position: absolute;
-	top:50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	background-color: var(--color-darck-white);
-	border-radius: 20px;
-	padding: 40px 20px;
-	width: 335px;
+.modal-close-svg {
+  stroke: var(--color-light-theme-black);
+  pointer-events: none;
 }
-.close-modal{
-	position: absolute;
-	top: 14px;
-	right: 14px;
-	background-color: inherit;
-	border: none;
-	width: 22px;
-	height: 22px;
-	
+
+.cocktail-modal__image {
+  max-width: 295px;
+  border-radius: 16px;
+  margin-bottom: 40px;
+
+  margin-left: auto;
+  margin-right: auto;
+
+  object-fit: cover;
+  overflow: hidden;
 }
-.modal-close-svg{
-	stroke: var(--color-light-theme-black);
-	pointer-events: none;
+
+.cocktail-modal__title {
+  text-transform: uppercase;
+  font-size: 16px;
+  margin-bottom: 8px;
+  color: var(--color-light-theme-black);
 }
+
+.cocktail-modal__subtitle {
+  font-size: 18px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+  color: var(--color-light-theme-black);
+}
+
+.cocktail-modal__per-cocktail {
+  font-size: 14px;
+  margin-bottom: 20px;
+  color: rgba(36, 36, 36, 0.5);
+}
+
+.cocktail-modal__ingredients {
+  list-style: disc;
+  list-style-position: inside;
+  padding-left: 8px;
+  margin-bottom: 40px;
+  color: rgba(36, 36, 36, 0.8);
+}
+
+.cocktail-modal__ingredient-item {
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.cocktail-modal__ingredients-item:not(:last-child) {
+  margin-bottom: 8px;
+}
+
+.ingredient-link:hover,
+.ingredient-link:focus {
+  color: var(--color-violet);
+}
+
+.cocktail-modal__recipe {
+  font-size: 14px;
+  margin-top: 8px;
+  margin-bottom: 40px;
+  color: rgba(36, 36, 36, 0.5);
+  line-height: 1.29;
+  max-width: 295px;
+  max-height: 100px;
+  overflow-y: auto;
+}
+
+.cocktail-modal__favorite-button {
+  border: none;
+  border-radius: 12px;
+
+  margin-bottom: 14px;
+  margin-left: auto;
+  margin-right: auto;
+
+  padding: 14px 0;
+  width: 295px;
+
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 600;
+
+  background-color: var(--color-violet);
+  color: var(--color-white);
+}
+
+.cocktail-modal__favorite-button:hover,
+.cocktail-modal__favorite-button:focus {
+  background-color: var(--color-violet-darck);
+}
+
+.cocktail-modal__back-button {
+  padding: 14px 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: 295px;
+
+  border-radius: 12px;
+  border: none;
+
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 600;
+
+  background-color: rgba(36, 36, 36, 0.1);
+  color: var(--color-light-theme-black);
+}
+
+.cocktail-modal__back-button:hover,
+.cocktail-modal__back-button:focus {
+  background-color: rgba(36, 36, 36, 0.2);
+}
+
 @media screen and (min-width: 768px) {
-	.modal-container{
-	width:600px;
-	padding-left: 40px;
-	padding-right: 40px;
-	
-}
-.close-modal{
-	top: 18px;
-	right: 18px;
-	width: 24px;
-	height: 24px;
-}
-.modal-close-svg{
-	width: 24px;
-	height: 24px;
-}
+  .modal-container {
+    width: 600px;
+    padding-left: 40px;
+    padding-right: 40px;
   }
+  .close-modal {
+    top: 18px;
+    right: 18px;
+    width: 24px;
+    height: 24px;
+  }
+  .modal-close-svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  .cocktail-modal-wrapper {
+    display: flex;
+  }
+
+  .cocktail-modal-wrapper-descr {
+    margin-left: 20px;
+  }
+
+  .cocktail-modal__image {
+    margin: 0 0 20px 0;
+
+    width: 288px;
+    height: 277px;
+  }
+
+  .cocktail-modal__subtitle {
+    font-size: 14px;
+  }
+
+  .cocktail-modal__per-cocktail {
+    font-size: 14px;
+    margin-bottom: 20px;
+    color: rgba(36, 36, 36, 0.5);
+  }
+
+  .cocktail-modal__ingredients {
+    list-style: disc;
+
+    list-style-position: inside;
+    padding-left: 8px;
+
+    color: rgba(36, 36, 36, 0.8);
+  }
+
+  .cocktail-modal__recipe {
+    margin-top: 18px;
+    max-width: 520px;
+  }
+
+  .cocktail-modal__buttons {
+    display: flex;
+    gap: 18px;
+  }
+
+  .cocktail-modal__favorite-button {
+    margin-left: 0;
+
+    margin: 0;
+    width: 251px;
+    padding: 16px 0;
+  }
+
+  .cocktail-modal__back-button {
+    margin: 0;
+    width: 172px;
+    padding: 16px 0;
+  }
+}
