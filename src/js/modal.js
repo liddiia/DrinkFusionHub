@@ -1,7 +1,6 @@
 import { disableBodyScroll, enableBodyScroll} from 'body-scroll-lock';
 import { createMarkupDescriptionCocktail } from './utilities/render-coctale';
 import { getCocktail } from './utilities/fetch-data';
-import {createCocktailCards} from './utilities/render-gallery';
 const galleryEl= document.querySelector(".gallery-list");
 const modalEl={
 	modal:document.querySelector("[data-modal]"),
@@ -17,20 +16,20 @@ const {modal, modalCloseBtn, modalInfoEl}=modalEl;
 const openModal=  (e)=>{
 	const idDrink=e.target.dataset.idDrink
 	console.log(e.target.dataset.idDrink);
-	if(!e.target.classList.contains("cocktail-learn-more-btn")){
-	return
+	if(e.target.classList.contains("cocktail-learn-more-btn")){
+		const open = async()=>{
+			console.log(e.target.dataset.idDrink);
+			modal.classList.toggle("is-open");
+			try {
+				const drink = await getCocktail(idDrink);
+				createMarkupDescriptionCocktail(drink, modalInfoEl)
+			} catch (error) {
+				console.log(error);
+			}
+			
+			disableBodyScroll(e)}
 	}
-	const open = async()=>{
-		console.log(e.target.dataset.idDrink);
-		modal.classList.toggle("is-open");
-		try {
-			const drink = await getCocktail(idDrink);
-			createMarkupDescriptionCocktail(drink, modalInfoEl)
-		} catch (error) {
-			console.log(error);
-		}
-		
-		disableBodyScroll(e)}		
+			
 		
 	setTimeout(open, 500);
 	const closeEscape =(e=>{

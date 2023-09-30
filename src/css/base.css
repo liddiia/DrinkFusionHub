@@ -96,3 +96,63 @@ body {
     padding-right: 20px;
   }
 }
+
+@media screen and (max-width: 374px) {
+  .container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  body{
+    background-image:  url(../img/backgraund/mob-fav-bacground-light-empty.jpg);
+    background-size: cover;
+  }
+}
+
+@media screen and (min-device-pixel-ratio: 2) and (min-width: 375px),
+screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 375px),
+screen and (min-resolution: 192dpi) and (min-width: 375px),
+screen and (min-resolution: 2dppx) and (min-width: 375px) {
+  body{
+    background-image:  url(../img/backgraund/mob-fav-bacground-light-empty@2x.jpg);
+    background-size: cover;
+  }}
+  @media screen and (min-width: 375px)
+  {
+    body{
+      background-image: url(../img/backgraund/mob-fav-bacground-light-fav-bacground-light.jpg);
+      background-size: cover;
+  }}
+    
+@media screen and (min-device-pixel-ratio: 2) and (min-width: 768px),
+screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 768px),
+screen and (min-resolution: 192dpi) and (max-width: 767px),
+screen and (min-resolution: 2dppx) and (max-width: 767px) {
+  body{
+    background-image:  url(../img/backgraund/tab-background-fav-backgr-light@2x.jpg);
+    background-size: cover;
+  }
+}
+
+@media screen and (min-width: 1280px)
+{
+  body{
+    background-image: url(../img/backgraund/desctop-backgr-light.jpg);
+    background-size: cover;
+  }
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 1280px),
+screen and (min-resolution: 192dpi) and (min-width: 1280px),
+screen and (min-resolution: 2dppx) and (min-width: 1280px) {
+  body{
+    background-image:url(../img/backgraund/desctop-backgr-light@2x.jpg);
+    background-size: cover;
+  }
+}
+@media screen and (min-width: 1280px)
+{
+  body{
+    background-image: url(../img/backgraund/desctop-backgr-light.jpg);
+    background-size: cover;
+  }
+}
