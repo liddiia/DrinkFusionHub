@@ -6,7 +6,7 @@ export function createCocktailCards(arr, container) {
         <img
           class="cocktail-img"
           src="${item.drinkThumb}"
-          onerror = "this.onerror=null;this.src='../img/no-coctails/no-coktails@1x.png';"
+          onerror = "this.onerror=null;this.src='/img/no-coctails/no-coktails@1x.png';"
           alt="${item.drink}"
           loading="lazy"
         />
@@ -23,7 +23,7 @@ export function createCocktailCards(arr, container) {
             >
               <use
                 class="favorites-icon"
-                href="../img/icons.svg#icon-heart"
+                href="/img/icons.svg#icon-heart"
               ></use>
             </svg>
           </button>

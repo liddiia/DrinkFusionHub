@@ -43,9 +43,7 @@ const galleryList = document.querySelector('.gallery-list');
 galleryList.addEventListener('click', addToFavorites);
 
 const COCKTAIL_ID = 'favorites';
-// localStorage.removeItem(COCKTAIL_ID);
 
-// get favorites from local storage or empty array
 let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
 
 export function addToFavorites(evt) {
@@ -63,11 +61,8 @@ export function addToFavorites(evt) {
   let cocktailId = listItem.dataset.id;
   let idx = favorites.indexOf(cocktailId);
 
-  // !favorites.includes(cocktailId)
-
   if (actionType === 'addtofav' && idx === -1) {
     svg.classList.add('is-favorite');
-    //svg.classList.toggle('is-favorite');
     btn.dataset.action = 'removefromfav';
     addToLocalStorage(cocktailId, favorites, COCKTAIL_ID);
   } else {
