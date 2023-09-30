@@ -1,11 +1,37 @@
-<div class="container page-header-container">
-  <nav class="page-nav">
-    <a class="logotype link" href="/index.html">drinkify</a>
-      <svg class="logo-icon-heder" width="21" height="18">
-        <use href="/img/icons.svg#icon-cocktail"></use>
+<header class="main-heder">
+  <div class="container page-header-container">
+    <ul class="page-nav-list">
+      <li class="page-nav-item"><a href="" class="page-nav-link">Home</a></li>
+      <li class="page-nav-item">
+        <button type="button" class="btn-hed-sub-menu">
+          Favorite<svg class="heder-sub-icon">
+            <use href="/img/icons.svg#icon-chevron-down"></use>
+          </svg>
+        </button>
+        <ul class="desktop-menu-sub-list is-hidden">
+          <li class="desktop-menu-sub-item">
+            <a class="desktop-menu-sub-link" href="/partials/favorite-cocktails.html">Favorite coctails</a>
+          </li>
+          <li class="desktop-menu-sub-item">
+            <a class="desktop-menu-sub-link" href="/partials/favorite-ingredients.html"
+              >Favorite ingredients</a
+            >
+          </li>
+        </ul>
+      </li>
+    </ul>
+    <nav class="page-nav">
+      <a class="logotype" href="/index.html"
+        >drinkify
+        <svg class="logo-icon-heder" width="21" height="18">
+          <use href="/img/icons.svg#icon-cocktail"></use>
+        </svg>
+      </a>
+    </nav>
+    <button type="button" class="mobile-menu-open-btn js-open-menu">
+      <svg class="mob-menu-icon" width="32" height="32">
+        <use href="/img/icons.svg#icon-mob-menu"></use>
       </svg>
-  </nav>
-  <button type="button" class="mobile-menu-open-btn js-open-menu">
-    <svg class="mob-menu-icon" width="32" height="32"><use href="/img/icons.svg#icon-mob-menu"></use></svg>
-  </button>
-</div>
+    </button>
+  </div>
+</header>
