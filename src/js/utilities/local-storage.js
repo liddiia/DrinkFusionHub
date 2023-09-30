@@ -48,7 +48,7 @@ const COCKTAIL_ID = 'favorites';
 // get favorites from local storage or empty array
 let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
 
-function addToFavorites(evt) {
+export function addToFavorites(evt) {
   if (
     evt.currentTarget === evt.target ||
     evt.target.dataset.type !== 'user-action'
@@ -78,12 +78,12 @@ function addToFavorites(evt) {
   console.log(favorites);
 }
 
-function addToLocalStorage(id, arr, keyLS) {
+export function addToLocalStorage(id, arr, keyLS) {
   arr.push(id);
   localStorage.setItem(keyLS, JSON.stringify(arr));
 }
 
-function deleteFromLocalStorage(id, arr, keyLS) {
+export function deleteFromLocalStorage(id, arr, keyLS) {
   let index = arr.indexOf(id);
   console.log(index);
   if (index === -1) {
