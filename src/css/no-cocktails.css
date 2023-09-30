@@ -1,0 +1,41 @@
+    .no-cocktails-cont {
+        display: flex;
+        justify-content:center;
+        flex-wrap:wrap;
+      margin-left: auto;
+      margin-right: auto;
+     margin-top: 138px;
+     margin-bottom: 138px;
+     outline: 1px solid red;
+     width: 244px;
+     height: 190 px;
+    }
+    .no-cocktails-text{
+        font-family: var( --font-family);
+        font-size: 18px;
+font-weight: 400;
+line-height: 1.33;
+letter-spacing: 0em;
+text-align: center;
+color: var(--color-text-black);
+}
+
+.span-text{
+    font-style: var(--span-font-style);
+    color: var(--color-text-violet);
+}
+
+  @media screen and (min-width: 768px) {
+    .no-cocktails-cont {
+        margin-top: 100px;
+       margin-bottom: 140px;
+       outline: 1px solid black;
+       width: 360px;
+     height: 297px;
+    }
+    .no-cocktails-text{
+font-size: 24px;
+line-height: 1.17;
+    }
+   
+}

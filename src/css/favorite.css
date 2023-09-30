@@ -1,0 +1,18 @@
+.favorite-titel {
+font-family: var(--font-family);
+font-size: 24px;
+font-weight: 500;
+line-height: 1.17;
+letter-spacing: 0em;
+text-align: left;
+margin-top: 80px;
+}
+@media screen and (min-width: 768px){
+ .favorite-titel {
+font-size: 40px;
+line-height: 1.2;
+margin-top: 110px;}
+}
+
+
+

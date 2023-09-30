@@ -61,11 +61,41 @@
 --gallery-card-text-font-weight: 400;
 --gallery-card-text-line-height: 1.29;
 
+--color-text-black:rgba(36, 36, 36, 1);
+----color-text-black-fair: rgba(36, 36, 36, 0.5);
+--color-text-blue:rgba(156, 223, 223, 1);
+--color-text-violet:rgba(126, 143, 221, 1);
+--color-text-white: rgba(253, 253, 255, 1);
+--color-text-white-:rgba(253, 253, 255, 0.5);
+--logo-font-wight: 600;
+--logo-font-size: 22px;
+--logo-Line-height: 1.1;
+--logo-letter-spacing: -0.01em;
+--mobile-logo-font-size: 16px;
+--mobile-logo-line-height: 1.13;
+--button-font-size: 18px;
+--button-font-weight: 600;
+--button-line-height: 1.33;
+--button-letter-spacing: 0.02em;
+--mobile-button-font-size: 14px;
+--mobile-button-font-weight: 600;
+--mobile-button-line-height: 1.4;
+--mobile-button-letter-spacing: 0.02em;
+--drop-down-font-size: 14px;
+--drop-down-font-weight: 400;
+--drop-down-line-height: 1.3;
+--drop-down-letter-spacing: 0.02em;
+--hero-titel-font-size: 64px;
+--hero-font-weight: 400;
+--hero-titel-line-height: 1.1;
+--hero-letter-spacing: 0em;
+--span-font-style: italic;
 }
 
 body {
   font-family: var(--font-family);
 }
+
 @media screen and (min-width: 375px) {
   .container {
     width: 375px;
@@ -103,7 +133,7 @@ body {
     padding-right: 20px;
   }
   body{
-    background-image:  url(../img/backgraund/mob-fav-bacground-light-empty.jpg);
+    background-image:  url(/img/backgraund/mob-fav-bacground-light-empty.jpg);
     background-size: cover;
   }
 }
@@ -113,13 +143,13 @@ screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 375px),
 screen and (min-resolution: 192dpi) and (min-width: 375px),
 screen and (min-resolution: 2dppx) and (min-width: 375px) {
   body{
-    background-image:  url(../img/backgraund/mob-fav-bacground-light-empty@2x.jpg);
+    background-image:  url(/img/backgraund/mob-fav-bacground-light-empty@2x.jpg);
     background-size: cover;
   }}
   @media screen and (min-width: 375px)
   {
     body{
-      background-image: url(../img/backgraund/mob-fav-bacground-light-fav-bacground-light.jpg);
+      background-image: url(/img/backgraund/mob-fav-bacground-light-fav-bacground-light.jpg);
       background-size: cover;
   }}
     
@@ -128,7 +158,7 @@ screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 768px),
 screen and (min-resolution: 192dpi) and (max-width: 767px),
 screen and (min-resolution: 2dppx) and (max-width: 767px) {
   body{
-    background-image:  url(../img/backgraund/tab-background-fav-backgr-light@2x.jpg);
+    background-image:  url(/img/backgraund/tab-background-fav-backgr-light@2x.jpg);
     background-size: cover;
   }
 }
@@ -136,7 +166,7 @@ screen and (min-resolution: 2dppx) and (max-width: 767px) {
 @media screen and (min-width: 1280px)
 {
   body{
-    background-image: url(../img/backgraund/desctop-backgr-light.jpg);
+    background-image: url(/img/backgraund/desctop-backgr-light.jpg);
     background-size: cover;
   }
 }
@@ -145,14 +175,14 @@ screen and (min-resolution: 2dppx) and (max-width: 767px) {
 screen and (min-resolution: 192dpi) and (min-width: 1280px),
 screen and (min-resolution: 2dppx) and (min-width: 1280px) {
   body{
-    background-image:url(../img/backgraund/desctop-backgr-light@2x.jpg);
+    background-image:url(/img/backgraund/desctop-backgr-light@2x.jpg);
     background-size: cover;
   }
 }
 @media screen and (min-width: 1280px)
 {
   body{
-    background-image: url(../img/backgraund/desctop-backgr-light.jpg);
+    background-image: url(/img/backgraund/desctop-backgr-light.jpg);
     background-size: cover;
   }
 }
