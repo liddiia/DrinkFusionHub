@@ -6,3 +6,4 @@ import './js/favorite';
 import './js/gallery';
 import './js/modal';
 import './js/random-coctails';
+import './js/utilities/local-storage';

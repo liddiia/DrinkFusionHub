@@ -1,5 +1,3 @@
-
-
 .gallery {
   padding-bottom: 80px;
 }
@@ -61,6 +59,16 @@
   font-family: var(--font-family), sans-serif;
   font-weight: 600;
   line-height: 1.33;
+
+  overflow: hidden;
+  -ms-text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  -ms-line-clamp: 1;
+  -webkit-line-clamp: 1;
+  line-clamp: 1;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
 }
 
 .cocktail-description {
@@ -139,6 +147,14 @@
 
 .favorites-btn-icon.is-favorite {
   fill: var(--color-white);
+}
+
+.cocktail-add-fav-btn:hover .favorites-btn-icon,
+.cocktail-add-fav-btn:hover .favorites-btn-icon {
+  transform: scale(1.5);
+  /* animation: animate__heartBeat;
+  animation-duration: 2s;*/
+  /* https://animate.style/*/
 }
 
 @media screen and (min-width: 375px) {
