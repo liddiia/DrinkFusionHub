@@ -6,14 +6,65 @@ button {
 .page-header-container {
     display: flex;
     justify-content: space-between;
+    padding-top: 20px;
+    align-items: center;
 }
 
-.page-nav{
+.page-nav-list {
+    display: none;
+}
+
+.page-nav-item {
+    color: #242424;
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.13;
+    letter-spacing: 0.32px;
+    position: relative;
+}
+
+.btn-hed-sub-menu {
+    padding: 0;
+    background: transparent;
     display: flex;
+    gap: 4px;
+    align-items: center;
 }
 
-.link {
-    text-decoration: none;
+.heder-sub-icon {
+    width: 24px;
+    height: 24px;
+    stroke: var(--color-violet);
+    transform: rotate(0deg);
+    transition: transform 250ms ease;
+}
+
+.desktop-menu-sub-list {
+    position: absolute;
+    left: -50%;
+    top: 34px;
+    padding: 18px 24px;
+    width: 192px;
+    height: 80px;
+    border-radius: 16px;
+    background: #7E8FDD;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.desktop-menu-sub-item {
+    color: #FDFDFF;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.29;
+    letter-spacing: 0.28px;
+}
+
+.is-hidden {
+    display: none;
 }
 
 .logotype {
@@ -22,28 +73,64 @@ button {
     font-size: var(--mobile-logo-font-size);
     text-transform: uppercase;
     color: var(--color-light-theme-black);
+    align-items: center;
+    gap: 5px;
 }
 
-.logo-icon-heder{
+.logo-icon-heder {
     stroke: var(--color-violet);
     fill: var(--color-violet);
 }
 
-.mobile-menu-open-btn{
+.mobile-menu-open-btn {
     background: transparent;
     padding: 0;
 }
 
-.mob-menu-icon{
+.mob-menu-icon {
     stroke: black;
     fill: black;
 }
 
-.mobile-menu{
+.mobile-menu {
     display: none;
     background-color: var(--color-violet);
 }
 
-.active{
+.rotate {
+    transform: rotate(180deg);
+    transition: transform 250ms ease;
+}
+
+.active {
     display: block;
+}
+
+@media screen and (min-width: 768px) {
+    .page-header-container {
+        padding-top: 24px;
+    }
+
+    .logotype {
+        font-size: 22px;
+    }
+
+    .logo-icon-heder {
+        width: 29px;
+        height: 25px;
+    }
+
+    .mob-menu-icon {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .page-nav-list {
+        height: 24px;
+        display: flex;
+        gap: 28px;
+        align-items: center;
+    }
 }
