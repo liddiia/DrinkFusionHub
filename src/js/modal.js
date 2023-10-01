@@ -1,7 +1,7 @@
 import { disableBodyScroll, enableBodyScroll} from 'body-scroll-lock';
 import { createMarkupDescriptionCocktail } from './utilities/render-coctale';
 import { getCocktail } from './utilities/fetch-data';
-import { modal, modalCloseBtn, modalInfoEl } from './utilities/modal-btn';
+import { modal, modalCloseBtn, modalInfoEl } from './refs'
 const galleryEl= document.querySelector(".gallery-list");
 
 
