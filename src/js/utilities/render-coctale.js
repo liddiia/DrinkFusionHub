@@ -57,8 +57,5 @@ function isFavCoct(id) {
   </button>`;
 }
 function isDicriprion(discr){
-  console.log(discr.measure);
-  console.log(discr.hasOwnProperty("measure"));
-  
   return discr.hasOwnProperty("measure") ?  discr.measure : "🧐" ;
 }
