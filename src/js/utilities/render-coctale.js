@@ -1,3 +1,4 @@
+import { COCKTAIL_ID } from "./local-storage";
 export function createMarkupDescriptionCocktail(arr, container) {
   const markup = arr
     .map(
@@ -20,7 +21,7 @@ export function createMarkupDescriptionCocktail(arr, container) {
         .map(
           ingredient =>
             `<li class="cocktail-modal__ingredient-item">
-               <a href=${ingredient.id} class="ingredient-link">${ingredient.measure} - ${ingredient.title}</a>
+               <a href="#modalinfo" data-id-ingridient=${ingredient.ingredientId} class="ingredient-link"> ${isDicriprion(ingredient)} - ${ingredient.title}</a>
              </li>`
         )
         .join('')}
@@ -30,9 +31,7 @@ export function createMarkupDescriptionCocktail(arr, container) {
       <h3 class="cocktail-modal__subtitle">Instructions:</h3>
       <p class="cocktail-modal__recipe">${item.instructions}</p>
       <ul class="cocktail-modal__buttons">  
-    <li class="ingredient-button-item"> <button type="button" class="cocktail-modal__favorite-button" data-action="favorite">
-        Add to Favorites
-      </button></li>
+    <li class="ingredient-button-item"> ${isFavCoct(item._id)}</li>
       <li class="ingredient-button-item">
       <button type="button" class="cocktail-modal__back-button" data-action="back"" aria-label="back">
         BACK
@@ -45,4 +44,21 @@ export function createMarkupDescriptionCocktail(arr, container) {
     )
     .join('');
   container.innerHTML = markup;
+}
+
+function isFavCoct(id) {
+  let storageArr = JSON.parse(localStorage.getItem(COCKTAIL_ID));
+  return storageArr.includes(id)
+    ? `<button type="button" class="cocktail-modal__favorite-button" data-action="favorite" data-id-coctail=${id}>
+    Remove from Favorite
+  </button>`
+    : `<button type="button" class="cocktail-modal__favorite-button" data-action="favorite" data-id-coctail=${id}>
+    Add to Favorites
+  </button>`;
+}
+function isDicriprion(discr){
+  console.log(discr.measure);
+  console.log(discr.hasOwnProperty("measure"));
+  
+  return discr.hasOwnProperty("measure") ?  discr.measure : "🧐" ;
 }

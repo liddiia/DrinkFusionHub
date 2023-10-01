@@ -3,14 +3,13 @@ import { createMarkupDescriptionCocktail } from './utilities/render-coctale';
 import { getCocktail } from './utilities/fetch-data';
 import { modal, modalCloseBtn, modalInfoEl } from './refs'
 const galleryEl= document.querySelector(".gallery-list");
-
-
-
+import { showIngridient } from './modal-igridients';
+export const COCTAILMODAL_ID="modalcoctail";
  const closeModalHelper =(event)=>{
 	modal.classList.toggle("is-open");
 	enableBodyScroll(event);	
 }
-const renderDrink = async(id)=>{
+export const renderDrink = async(id)=>{
 	try {
 		const drink = await getCocktail(id);
 		createMarkupDescriptionCocktail(drink, modalInfoEl)
@@ -20,11 +19,15 @@ const renderDrink = async(id)=>{
 	
 }
 const openModal=  (e)=>{
-	const idDrinke=e.target.dataset.idDrink;
-		if(e.target.classList.contains("cocktail-learn-more-btn")){
+	const {target} =e;
+
+	const idDrink = target.dataset.idDrink;
+		if(target.classList.contains("cocktail-learn-more-btn")){
 		setTimeout(modal.classList.toggle("is-open"), 500)
-		 renderDrink(idDrinke);
+		 renderDrink(idDrink);
 		disableBodyScroll(e);
+		
+        localStorage.setItem(COCTAILMODAL_ID, idDrink)
 	}
 	const closeEscape =(e=>{
 		if(e.key ==='Escape'){
@@ -35,8 +38,17 @@ const openModal=  (e)=>{
 	document.addEventListener("keydown", closeEscape)	
 }
 const closeModal = (e)=>{
+		const {target} =e;
+	if(target===modalCloseBtn || target===modal||target.tagName==="A"){
+		if(target.tagName==="A"){
+			e.preventDefault();
+			console.log(target);
+			const ingrId = target.dataset.idIngridient;
+			console.log(ingrId);
+			showIngridient(ingrId)
+			return
+		} 
 		
-	if(e.target===modalCloseBtn || e.target===modal){
 		setTimeout(closeModalHelper(e), 500)
 	}
 }
