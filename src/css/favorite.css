@@ -1,18 +1,45 @@
 .favorite-titel {
-font-family: var(--font-family);
-font-size: 24px;
-font-weight: 500;
-line-height: 1.17;
-letter-spacing: 0em;
-text-align: left;
-margin-top: 80px;
-}
-@media screen and (min-width: 768px){
- .favorite-titel {
-font-size: 40px;
-line-height: 1.2;
-margin-top: 110px;}
+  font-family: var(--font-family);
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.17;
+  letter-spacing: 0em;
+  text-align: left;
+  margin-top: 80px;
 }
 
+.remove-favorites-btn-icon {
+  width: 24px;
+  height: 24px;
+}
 
+.remove-favorites-btn-icon {
+  width: 18px;
+  height: 18px;
+  fill: none;
+  pointer-events: none;
+}
 
+.remove-favorites-icon {
+  pointer-events: none;
+}
+
+.remove-favorites-btn-icon.is-favorite {
+  fill: var(--color-white);
+}
+
+.cocktail-rem-fav-btn:hover .remove-favorites-btn-icon,
+.cocktail-rem-fav-btn:hover .remove-favorites-btn-icon {
+  transform: scale(1.5);
+  /* animation: animate__heartBeat;
+  animation-duration: 2s;*/
+  /* https://animate.style/*/
+}
+
+@media screen and (min-width: 768px) {
+  .favorite-titel {
+    font-size: 40px;
+    line-height: 1.2;
+    margin-top: 110px;
+  }
+}
