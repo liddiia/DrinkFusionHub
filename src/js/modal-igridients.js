@@ -9,14 +9,14 @@ export const showIngridient = async(id)=>{
 		const ingridient = await fetchIngredient(id);
 		console.log(ingridient);
         renderIngidients(ingridient, modalInfoEl);
-	
+
 	 } catch (error) {
 		console.log(error);
 	 }
 }
 
  export const INGRIDIENT_ID ="ingridients";
- let ingredients = JSON.parse(localStorage.getItem('ingridients'))||[];
+ export let ingredients = JSON.parse(localStorage.getItem('ingridients'))||[];
 
  const addToFavIngr = (e)=>{
 	if(e.target.classList.contains("ingridient-modal-favorite-btn")){
@@ -37,7 +37,7 @@ export const showIngridient = async(id)=>{
 
 }
 	}
-	
+
 
  }
  modal.addEventListener("click", addToFavIngr)
