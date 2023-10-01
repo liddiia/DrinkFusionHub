@@ -44,8 +44,8 @@ galleryList.addEventListener('click', addToFavorites);
 
 export const COCKTAIL_ID = 'favorites';
 
-let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
-
+export let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
+console.log(favorites);
 export function addToFavorites(evt) {
   if (
     evt.currentTarget === evt.target ||
