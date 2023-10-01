@@ -75,24 +75,39 @@ export function initializeFavourites() {
 }
 
 function favouritesMarkup(start, end) {
-    const cocktailsArr = JSON.parse(localStorage.getItem('favorite-cocktail'));
+    const cocktailsArr = JSON.parse(localStorage.getItem('favorites'));
     let arr = cocktailsArr.slice(start, end);
     favoritesList.innerHTML = arr.map(
     e =>
-     `<li class="fav-cocktails__item">
-            <a class="cocktail-link" href="#" data-modal-open>
-              <img src="${e.img}" class="fav-cocktails__img" alt=${
-          e.name
-        } cocktail" data-id="${e.id}">
-            </a>
-            <h3 class="fav-cocktails__item-title">${e.name}</h3>
-            <div class="fav-cocktails__buttons">
-                <button type="button" class="learnMore" data-id="${
-                  e.id
-                }" data-modal-open>Learn more</button>
-                ${renderAddRemoveDrinkButton(e.id, e.name, e.img)}
-            </div>
-        </li>`
+     `<li class="cocktail-card" data-id="${item._id}">
+      <div class="cocktail-img-wrap">
+        <img
+          class="cocktail-img"
+          src="${item.drinkThumb}"
+          onerror = "this.onerror=null;this.src='/img/no-coctails/no-coktails@1x.png';"
+          alt="${item.drink}"
+          loading="lazy"
+        />
+      </div>
+      <div class="cocktail-info">
+        <h3 class="cocktail-name">${item.drink}</h3>
+        <p class="cocktail-description">${item.description}</p>
+        <div class="cic-btn-wrapper">
+          <button class="cocktail-learn-more-btn" data-id-drink="${item._id}">learn more</button>
+          <button class="cocktail-rem-fav-btn" data-type="user-action" data-action="remfav">
+            <svg
+              class="remove-favorites-btn-icon"
+              aria-label="remove from favorites button"
+            >
+              <use
+                class="remove-icon"
+                href="/img/icons.svg#icon-remove"
+              ></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </li>`
     )
         .join('');
 
