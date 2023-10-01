@@ -20,7 +20,7 @@ export function createMarkupDescriptionCocktail(arr, container) {
         .map(
           ingredient =>
             `<li class="cocktail-modal__ingredient-item">
-               <a href="#${ingredient.id}" class="ingredient-link">${ingredient.measure} - ${ingredient.title}</a>
+               <a href=${ingredient.id} class="ingredient-link">${ingredient.measure} - ${ingredient.title}</a>
              </li>`
         )
         .join('')}

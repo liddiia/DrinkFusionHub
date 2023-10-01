@@ -1,12 +1,16 @@
-const ingrCardModalEl ={
-	ingrAddBtn:document.querySelectorAll(".ingridient-add"),
-	ingrBackBtn:document.querySelectorAll
 
-}
-const renderIngidients = (array, container) => {
-	const markup = array.map(e => {
-		`<h2 class="ingridient-title" data-id-igridient ="${e._id}">${e.title}</h2><h3 class="ingridient-type" >${e.type}</h3><p class="ingridient-discription">${e.description}</p> <ul class="ingidient-dicr-list"><li class="ingridient-discription-item"> Type:${e.type}</li><li class="ingridient-discription-item">Country of origin: ${e.country}</li><li class="ingridient-discription-item">Alcohol by volume: ${e.abv}</li><li class="ingridient-discription-item">Flavour : ${e.flavour}</li></ul><ul class="ingridient-button-list"><li class="ingridient-button-item"><button class="ingridient-add">Add to favorite</button></li><li class="ingridient-button-item"><button class="ingridient-back">back</button></li></ul>`
-	}).join("");
+import { modalBtn } from "./modal-btn";
+ export const renderIngidients = (arr, container) => {
+	const markup = arr.map(item => 
+		`<h2 class="ingridient-title" data-id-igridient =${item._id}>${item.title}</h2>
+		<p class="ingridient-type" >${item.type}</p>
+		<p class="ingridient-discription" onerror = "this.onerror=null;this.textContent='Unfortunately we dont have this discription';">${item.description}</span>
+		 <ul class="ingidient-dicr-list">
+		 <li class="ingridient-discription-item"> Type: ${item.type}</li>
+		 <li class="ingridient-discription-item">Country of origin: ${item.country}</li>
+		 <li class="ingridient-discription-item">Alcohol by volume: ${item.abv}%</li>
+		 <li class="ingridient-discription-item">Flavour:  ${item.flavour}</li></ul>${modalBtn}`
+	).join("");
 
-	container.innerHTML=markup;
+	container.innerHTML = markup;
 }

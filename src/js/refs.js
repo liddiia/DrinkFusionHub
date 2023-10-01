@@ -8,3 +8,12 @@ export const refs = {
     pagContainer: document.querySelector('.pagination'),
     favNococktails: document.querySelector('.fav-nofav__cock'),
 };
+
+ const modalEl={
+	modal:document.querySelector("[data-modal]"),
+	modalCloseBtn:document.querySelector("[data-modal-close]"),
+	modalInfoEl:document.querySelector(".modal-info")
+};
+
+export const {modal, modalCloseBtn, modalInfoEl}=modalEl;
+
