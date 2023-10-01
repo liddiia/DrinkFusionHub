@@ -13,6 +13,7 @@ const selectElement = document.getElementById('mySelect');
 const btnHeroKeyboardEl = document.querySelector('.js-list-let-num');
 const galleryEl = document.querySelector('.gallery-list');
 const formEl = document.querySelector('.js-form');
+const contNoPhotoEl = document.querySelector('.container-non-photos');
 
 const slim = new SlimSelect({
   select: selectElement,
@@ -31,10 +32,10 @@ createKeyboardBtn(arrayLettersAndNumbers, btnHeroKeyboardEl);
 
 function onChangeSelect(evt) {
   const selecteByLetAndChar = evt.target.value;
+  changeGalleryTitle();
 
   fetchCocktailByFirstLetter(selecteByLetAndChar).then(resp => {
     createMarkupCard(resp, galleryEl);
-    changeGalleryTitle();
   });
 }
 
@@ -43,9 +44,10 @@ function onKeyboardClick(evt) {
     return;
   }
   const btn = evt.target.getAttribute('data-name');
+  changeGalleryTitle();
+
   fetchCocktailByFirstLetter(btn).then(resp => {
     createCocktailCards(resp, galleryEl);
-    changeGalleryTitle();
   });
 
   const currentActiveBtn = document.querySelector(
@@ -62,7 +64,8 @@ function onSearchFormSubmit(evt) {
   evt.preventDefault();
   const query = evt.currentTarget.elements['user-search-query'].value.trim();
   if (query === '') {
-    didntFindCoctails(galleryEl);
+    galleryEl.innerHTML = '';
+    didntFindCoctails(contNoPhotoEl);
     alert('non foto');
     return;
   }

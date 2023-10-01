@@ -1,6 +1,6 @@
-const titleGalleryEl = document.querySelector('.gallery-headling');
+const titleGalleryEl = document.querySelector('.gallery-header');
 
 export function changeGalleryTitle() {
-  console.log(rrr);
+  console.log('rrr');
   titleGalleryEl.textContent = 'Searching results';
 }
