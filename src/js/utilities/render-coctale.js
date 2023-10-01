@@ -8,7 +8,7 @@ export function createMarkupDescriptionCocktail(arr, container) {
      <div class="cocktail-modal-wrapper">
      <img class="cocktail-modal__image" src="${
        item.drinkThumb
-     }" onerror = "this.onerror=null;this.src='/img/no-coctails/no-coktails@1x.png';" alt="${
+     }" onerror = "this.onerror=null;this.src='/img/no-cocktails/no-cocktails@1x.png';" alt="${
         item.drink
       }" loading="lazy" width="295" >
       <div class="cocktail-modal-wrapper-descr">
@@ -34,7 +34,7 @@ export function createMarkupDescriptionCocktail(arr, container) {
         Add to Favorites
       </button></li>
       <li class="ingredient-button-item">
-      <button type="button" class="cocktail-modal__back-button" id="backButton" aria-label="back">
+      <button type="button" class="cocktail-modal__back-button" data-action="back"" aria-label="back">
         BACK
       </button>
       </li>
