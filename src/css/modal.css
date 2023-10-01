@@ -4,27 +4,31 @@
   height: 100%;
   top: 0;
   left: 0;
-  background-color: #15151560;
+  background-color: rgb(21, 21, 21, 0.6);
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
 }
+
 .modal-backdrop.is-open {
   opacity: 1;
   visibility: visible;
   pointer-events: all;
 }
+
 .modal-container {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+
   background-color: var(--color-darck-white);
   border-radius: 20px;
   padding: 40px 20px;
   width: 335px;
   max-height: 95vh;
   overflow-y: auto;
+
+  transform: translate(-50%, -50%);
 }
 
 .close-modal {
@@ -104,7 +108,7 @@
   color: rgba(36, 36, 36, 0.5);
   line-height: 1.29;
   max-width: 295px;
-  max-height: 100px;
+  max-height: 200px;
   overflow-y: auto;
 }
 
