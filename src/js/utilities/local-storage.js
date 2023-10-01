@@ -42,7 +42,7 @@
 const galleryList = document.querySelector('.gallery-list');
 galleryList.addEventListener('click', addToFavorites);
 
-const COCKTAIL_ID = 'favorites';
+export const COCKTAIL_ID = 'favorites';
 
 let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
 

@@ -1,28 +1,53 @@
 import { fetchIngredient } from "./utilities/fetch-data";
 import { renderIngidients } from "./utilities/render-ingridients";
-const ingidientLinkEl= document.querySelectorAll(".ingredient-link");
-import { modal, modalCloseBtn, modalInfoEl } from './refs'
-
-if(modal.classList.contains("is-open")){
-	if(ingidientLinkEl.length>0){
-		ingidientLinkEl.forEach(el=>{
-			el.addEventListener("click", function(e){
-				const ingrId = ingidientLinkEl.getAttribute('href');
-				console.log(ingrId);
-				e.preventDefault();
-				console.log(ingrId);
-			} )
-		})
-	}
-}
-
-
-const showIngridient = async(id)=>{
+import { addToLocalStorage, deleteFromLocalStorage } from "./utilities/local-storage";
+import { modal, modalInfoEl } from './refs'
+import { COCTAILMODAL_ID } from "./modal";
+import { renderDrink } from "./modal";
+export const showIngridient = async(id)=>{
 	 try {
 		const ingridient = await fetchIngredient(id);
-        renderIngidients(ingridient, modalInfoEl)
+		console.log(ingridient);
+        renderIngidients(ingridient, modalInfoEl);
+	
 	 } catch (error) {
 		console.log(error);
 	 }
 }
 
+ export const INGRIDIENT_ID ="ingridients";
+ let ingredients = JSON.parse(localStorage.getItem('ingridients'))||[];
+
+ const addToFavIngr = (e)=>{
+	if(e.target.classList.contains("ingridient-modal-favorite-btn")){
+	const btn = e.target;
+	let actionType =btn.dataset.action;
+	let ingridientId=btn.dataset.idIngridientBtn;
+	console.log(ingridientId);
+	let idx = ingredients.indexOf(ingridientId);
+	console.log(idx);
+	if(actionType ==="addtofav" && idx ===-1){
+		btn.textContent = "Remove from favorites";
+		btn.dataset.action ="removefromfav"
+	addToLocalStorage(ingridientId, ingredients, INGRIDIENT_ID)
+}else{
+	btn.textContent="Add to favorites";
+	btn.dataset.action="addtofav";
+	deleteFromLocalStorage(ingridientId, ingredients, INGRIDIENT_ID)
+
+}
+	}
+	
+
+ }
+ modal.addEventListener("click", addToFavIngr)
+
+ const backIngridients =(e)=>{
+if(e.target.classList.contains("ingridient-modal-back-btn")){
+	const id =localStorage.getItem(COCTAILMODAL_ID);
+	localStorage.removeItem(COCTAILMODAL_ID)
+    renderDrink(id);
+	return
+}
+ }
+ modal.addEventListener("click", backIngridients);
