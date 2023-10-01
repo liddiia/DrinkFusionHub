@@ -1,7 +1,7 @@
 import SlimSelect from 'slim-select';
-
+import { didntFindCoctails } from './utilities/no-cocktails';
 import { arrayLettersAndNumbers } from './utilities/data-letters-numbers';
-
+import { changeGalleryTitle } from './utilities/chane-title';
 import { createKeyboardBtn } from './utilities/render-keyboard-btn';
 import {
   fetchCocktailByFirstLetter,
@@ -13,6 +13,7 @@ const selectElement = document.getElementById('mySelect');
 const btnHeroKeyboardEl = document.querySelector('.js-list-let-num');
 const galleryEl = document.querySelector('.gallery-list');
 const formEl = document.querySelector('.js-form');
+const contNoPhotoEl = document.querySelector('.container-non-photos');
 
 const slim = new SlimSelect({
   select: selectElement,
@@ -31,6 +32,7 @@ createKeyboardBtn(arrayLettersAndNumbers, btnHeroKeyboardEl);
 
 function onChangeSelect(evt) {
   const selecteByLetAndChar = evt.target.value;
+  changeGalleryTitle();
 
   fetchCocktailByFirstLetter(selecteByLetAndChar).then(resp => {
     createMarkupCard(resp, galleryEl);
@@ -42,6 +44,8 @@ function onKeyboardClick(evt) {
     return;
   }
   const btn = evt.target.getAttribute('data-name');
+  changeGalleryTitle();
+
   fetchCocktailByFirstLetter(btn).then(resp => {
     createCocktailCards(resp, galleryEl);
   });
@@ -59,9 +63,15 @@ function onKeyboardClick(evt) {
 function onSearchFormSubmit(evt) {
   evt.preventDefault();
   const query = evt.currentTarget.elements['user-search-query'].value.trim();
-
+  if (query === '') {
+    galleryEl.innerHTML = '';
+    didntFindCoctails(contNoPhotoEl);
+    alert('non foto');
+    return;
+  }
   fetchCocktailByName(query).then(resp => {
     console.log(resp);
     createCocktailCards(resp, galleryEl);
+    changeGalleryTitle();
   });
 }
