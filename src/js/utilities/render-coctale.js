@@ -6,7 +6,9 @@ export function createMarkupDescriptionCocktail(arr, container) {
     <div class="cocktail-modal">
    
      <div class="cocktail-modal-wrapper">
-     <img class="cocktail-modal__image" src="${item.drinkThumb}" alt="${
+     <img class="cocktail-modal__image" src="${
+       item.drinkThumb
+     }" onerror = "this.onerror=null;this.src='/img/no-coctails/no-coktails@1x.png';" alt="${
         item.drink
       }" loading="lazy" width="295" >
       <div class="cocktail-modal-wrapper-descr">
@@ -27,13 +29,16 @@ export function createMarkupDescriptionCocktail(arr, container) {
     </div>
       <h3 class="cocktail-modal__subtitle">Instructions:</h3>
       <p class="cocktail-modal__recipe">${item.instructions}</p>
-    <div class="cocktail-modal__buttons">  <button type="button" class="cocktail-modal__favorite-button" data-action="favorite">
+      <ul class="cocktail-modal__buttons">  
+    <li class="ingredient-button-item"> <button type="button" class="cocktail-modal__favorite-button" data-action="favorite">
         Add to Favorites
-      </button>
-      <button type="button" class="cocktail-modal__back-button" aria-label="back">
+      </button></li>
+      <li class="ingredient-button-item">
+      <button type="button" class="cocktail-modal__back-button" id="backButton" aria-label="back">
         BACK
       </button>
-      </div>
+      </li>
+      </ul>
     </div>
   
   `
@@ -41,20 +46,3 @@ export function createMarkupDescriptionCocktail(arr, container) {
     .join('');
   container.innerHTML = markup;
 }
-
-// const modal = document.createElement('div');
-// modal.innerHTML = markup;
-
-// // Обробка клікабельних інгредієнтів
-// const ingredientLinks = modal.querySelectorAll('.ingredient-link');
-
-// ingredientLinks.forEach(link => {
-//   link.addEventListener('click', event => {
-//     event.preventDefault();
-//     const ingredientTitle = link.getAttribute('href').substring(1);
-//     const ingredient = ingredients.find(item => item.id === _id);
-//     if (ingredient) {
-//       // Показати нове модальне вікно з описом інгредієнта?
-//     }
-//   });
-// });
