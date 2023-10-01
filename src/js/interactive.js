@@ -1,7 +1,7 @@
 import SlimSelect from 'slim-select';
-
+import { didntFindCoctails } from './utilities/no-cocktails';
 import { arrayLettersAndNumbers } from './utilities/data-letters-numbers';
-
+import { changeGalleryTitle } from './utilities/chane-title';
 import { createKeyboardBtn } from './utilities/render-keyboard-btn';
 import {
   fetchCocktailByFirstLetter,
@@ -34,6 +34,7 @@ function onChangeSelect(evt) {
 
   fetchCocktailByFirstLetter(selecteByLetAndChar).then(resp => {
     createMarkupCard(resp, galleryEl);
+    changeGalleryTitle();
   });
 }
 
@@ -44,6 +45,7 @@ function onKeyboardClick(evt) {
   const btn = evt.target.getAttribute('data-name');
   fetchCocktailByFirstLetter(btn).then(resp => {
     createCocktailCards(resp, galleryEl);
+    changeGalleryTitle();
   });
 
   const currentActiveBtn = document.querySelector(
@@ -59,9 +61,14 @@ function onKeyboardClick(evt) {
 function onSearchFormSubmit(evt) {
   evt.preventDefault();
   const query = evt.currentTarget.elements['user-search-query'].value.trim();
-
+  if (query === '') {
+    didntFindCoctails(galleryEl);
+    alert('non foto');
+    return;
+  }
   fetchCocktailByName(query).then(resp => {
     console.log(resp);
     createCocktailCards(resp, galleryEl);
+    changeGalleryTitle();
   });
 }
