@@ -9,12 +9,65 @@
       <button class="button-on-hero" type="button">View cocktails</button>
      </div>
       <div class="picture-hero">
-		<img class="hero-img-elements" src="/img/hero/elements.svg">
-        <div class="rectangle">
-			<img class="hero-img-girl" src="/img/hero/girl1x-min.png">
-       
-		</div>
-      <p class="hero-p-under-picture">Search your favorite cocktail by ABC </p>
+         <picture class="hero-img-girl-light-theme">
+          <source
+            srcset="
+              /img/hero/hero-desktop-black-star@1x.png  1x,
+              /img/hero/hero-desktop-black-star@2x.png 2x
+            "
+            media="(min-width: 1280px)"
+          /> 
+           <source
+            srcset="
+            /img/hero/hero-tablet-black-star@1x.png  1x,
+              /img/hero/hero-tablet-black-star@2x.png  2x
+            "
+            media="(min-width: 768px)"
+          />
+          <source
+            srcset="
+            /img/hero/hero-mobile-black-star@1x.png   1x,
+            /img/hero/hero-mobile-black-star@2x.png 2x
+            "
+            media="(max-width: 767px)"
+          />
+          <img
+            class="portfolio-image"
+            src="/img/hero/hero-mobile-black-star@1x.png"
+            alt="girl" 
+          /> 
+        </picture>
+
+        <picture class="hero-img-girl-dark-theme">
+          <source
+            srcset="
+              /img/hero/hero-desktop-white-star@1x.png  1x,
+              /img/hero/hero-desktop-white-star@2x.png 2x
+            "
+            media="(min-width: 1280px)"
+          /> 
+           <source
+            srcset="
+            /img/hero/hero-tablet-white-star@1x.png  1x,
+              /img/hero/hero-tablet-white-star@2x.png  2x
+            "
+            media="(min-width: 768px)"
+          />
+          <source
+            srcset="
+            /img/hero/hero-mobile-white-star@1x.png  1x,
+            /img/hero/hero-mobile-white-star@2x.png 2x
+            "
+            media="(max-width: 767px)"
+          />
+          <img
+            class="portfolio-image"
+            src="/img/hero/hero-mobile-white-star@1x.png"
+            alt="girl" 
+          /> 
+        </picture>
+      <p class="hero-p-under-picture">Search your favorite cocktail by ABC </p> 
+      
        </div> 
        
   </div> 
