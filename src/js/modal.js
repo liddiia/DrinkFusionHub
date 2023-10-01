@@ -1,111 +1,45 @@
-// import { disableBodyScroll, enableBodyScroll} from 'body-scroll-lock';
-// import { createMarkupDescriptionCocktail } from './utilities/render-coctale';
-// import { getCocktail } from './utilities/fetch-data';
-// const galleryEl= document.querySelector(".gallery-list");
-// const modalEl={
-// 	modal:document.querySelector("[data-modal]"),
-// 	modalCloseBtn:document.querySelector("[data-modal-close]"),
-// 	modalInfoEl:document.querySelector(".modal-info")
-// };
-
-// const {modal, modalCloseBtn, modalInfoEl}=modalEl;
-//  const closeModalHelper =(event)=>{
-// 	modal.classList.toggle("is-open");
-// 	enableBodyScroll(event);
-// }
-// const openModal=  (e)=>{
-// 	const idDrink=e.target.dataset.idDrink
-// 	console.log(e.target.dataset.idDrink);
-// 	if(e.target.classList.contains("cocktail-learn-more-btn")){
-// 		const open = async()=>{
-// 			console.log(e.target.dataset.idDrink);
-// 			modal.classList.toggle("is-open");
-// 			try {
-// 				const drink = await getCocktail(idDrink);
-// 				createMarkupDescriptionCocktail(drink, modalInfoEl)
-// 			} catch (error) {
-// 				console.log(error);
-// 			}
-
-// 			disableBodyScroll(e)}
-// 	}
-
-// 	setTimeout(open, 500);
-// 	const closeEscape =(e=>{
-// 		if(e.key ==='Escape'){
-// 			setTimeout(closeModalHelper(e), 500);
-// 			document.removeEventListener("keydown", closeEscape);
-// 		}
-
-// 	})
-// 	document.addEventListener("keydown", closeEscape)
-// }
-// const closeModal = (e)=>{
-
-// 	if(e.target===modalCloseBtn || e.target===modal){
-// 		setTimeout(closeModalHelper(e), 500)
-// 	}else{return}
-
-// }
-
-// galleryEl.addEventListener("click", openModal)
-// modal.addEventListener("click", closeModal)
-
-import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock';
+import { disableBodyScroll, enableBodyScroll} from 'body-scroll-lock';
 import { createMarkupDescriptionCocktail } from './utilities/render-coctale';
 import { getCocktail } from './utilities/fetch-data';
+import { modal, modalCloseBtn, modalInfoEl } from './refs'
+const galleryEl= document.querySelector(".gallery-list");
 
-const galleryEl = document.querySelector('.gallery-list');
-const modalEl = {
-  modal: document.querySelector('[data-modal]'),
-  modalCloseBtn: document.querySelector('[data-modal-close]'),
-  modalInfoEl: document.querySelector('.modal-info'),
-};
 
-const { modal, modalCloseBtn, modalInfoEl } = modalEl;
-const closeModalHelper = event => {
-  modal.classList.toggle('is-open');
-  enableBodyScroll(event);
-};
 
-const openModal = async e => {
-  const idDrink = e.target.dataset.idDrink;
+ const closeModalHelper =(event)=>{
+	modal.classList.toggle("is-open");
+	enableBodyScroll(event);	
+}
+const renderDrink = async(id)=>{
+	try {
+		const drink = await getCocktail(id);
+		createMarkupDescriptionCocktail(drink, modalInfoEl)
+	} catch (error) {
+		console.log(error);
+	}
+	
+}
+const openModal=  (e)=>{
+	const idDrinke=e.target.dataset.idDrink;
+		if(e.target.classList.contains("cocktail-learn-more-btn")){
+		setTimeout(modal.classList.toggle("is-open"), 500)
+		 renderDrink(idDrinke);
+		disableBodyScroll(e);
+	}
+	const closeEscape =(e=>{
+		if(e.key ==='Escape'){
+			setTimeout(closeModalHelper(e), 500);
+			document.removeEventListener("keydown", closeEscape);
+		}
+	})
+	document.addEventListener("keydown", closeEscape)	
+}
+const closeModal = (e)=>{
+		
+	if(e.target===modalCloseBtn || e.target===modal){
+		setTimeout(closeModalHelper(e), 500)
+	}
+}
 
-  if (!e.target.classList.contains('cocktail-learn-more-btn')) {
-    return;
-  }
-
-  try {
-    const drink = await getCocktail(idDrink);
-
-    modal.classList.add('is-open');
-    createMarkupDescriptionCocktail(drink, modalInfoEl);
-    disableBodyScroll(e);
-
-    const closeEscape = e => {
-      if (e.key === 'Escape') {
-        closeModalHelper(e);
-        document.removeEventListener('keydown', closeEscape);
-      }
-    };
-
-    document.addEventListener('keydown', closeEscape);
-  } catch (error) {
-    console.log(error);
-  }
-};
-
-const closeModal = e => {
-  if (
-    e.target === modalCloseBtn ||
-    e.target === modal ||
-    e.target.id === 'backButton'
-  ) {
-    closeModalHelper(e);
-  } else {
-    return;
-  }
-};
-
-galleryEl.addEventListener('click', openModal);
-modal.addEventListener('click', closeModal);
+galleryEl.addEventListener("click", openModal)
+modal.addEventListener("click", closeModal)
