@@ -7,6 +7,13 @@ export const refs = {
     nextButton: document.querySelector('.next-button'),
     pagContainer: document.querySelector('.pagination'),
     favNococktails: document.querySelector('.fav-nofav__cock'),
+    mainCocktailsGallery: document.querySelector('.gallery .gallery-list'),
+  paginationContainer: document.querySelector('.pagination-buttons-container'),
+  leftPagBtn: document.querySelectorAll("[data-action='leftPag']"),
+  rightPagBtn: document.querySelectorAll("[data-action='rightPag']"),
+  paginationNumberBtnsContainer: document.querySelector(
+    '.number-buttons-container'
+  ),
 };
 
  const modalEl={

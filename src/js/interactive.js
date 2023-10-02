@@ -8,6 +8,8 @@ import {
   fetchCocktailByName,
 } from './utilities/fetch-data';
 import { createCocktailCards } from './utilities/render-gallery';
+import { renderPagination } from './utilities/pagination';
+import { refs } from './refs';
 
 const selectElement = document.getElementById('mySelect');
 const btnHeroKeyboardEl = document.querySelector('.js-list-let-num');
@@ -49,6 +51,14 @@ function onKeyboardClick(evt) {
 
   fetchCocktailByFirstLetter(btn).then(resp => {
     createCocktailCards(resp, galleryEl);
+    renderPagination(resp);
+    if (window.innerWidth >= 1280 && resp.length >= 9) {
+      refs.paginationContainer.classList.remove('is-hidden');
+    }
+    if (window.innerWidth >= 768 && resp.length >= 8) {
+      refs.paginationContainer.classList.remove('is-hidden');
+    }
+
   });
 
   const currentActiveBtn = document.querySelector(
