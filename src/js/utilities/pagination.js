@@ -1,4 +1,4 @@
-import { refs } from '../refs';
+import { refs } from './refs';
 import { createCocktailCards } from './render-gallery';
 
 const galleryEl = document.querySelector('.gallery-list');

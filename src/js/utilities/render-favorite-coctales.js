@@ -1,19 +1,19 @@
-// import {
-//   renderAddRemoveDrinkButton,
-//   attachFavouritesRemoveClickEvents,
-// } from './favorite';
-// import { refs } from './refs';
-// import { pagination } from './pagination';
+// // import {
+// //   renderAddRemoveDrinkButton,
+// //   attachFavouritesRemoveClickEvents,
+// // } from './favorite';
+// // import { refs } from './refs';
+// // import { pagination } from './pagination';
 
 
-// const {
-//   favoritesList,
-//   favoriteSearchItem,
-//   prewButton,
-//   nextButton,
-//   pagContainer,
-//   favNococktails,
-// } = refs
+// // const {
+// //   favoritesList,
+// //   favoriteSearchItem,
+// //   prewButton,
+// //   nextButton,
+// //   pagContainer,
+// //   favNococktails,
+// // } = refs
 
 
 export function favouritesMarkup(arr, container) {

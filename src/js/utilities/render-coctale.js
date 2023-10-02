@@ -53,7 +53,7 @@ function isFavCoct(id) {
    </button>`
   }
  else {
-    return `<button type="button" class="cocktail-modal__favorite-button" data-action="favorite" data-id-coctail=${id}>
+    return `<button type="button" class="cocktail-modal__favorite-button" data-action="remfromfavorite" data-id-coctail=${id}>
     Remove from Favorite
   </button>`
   }

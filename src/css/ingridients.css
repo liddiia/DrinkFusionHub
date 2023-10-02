@@ -32,6 +32,8 @@
 	margin-bottom: 8px;
 	color:   #24242450;
 	margin-bottom: 40px;
+	height: 160px;
+	overflow: auto;
 
 }
 .ingr-title{
@@ -62,6 +64,7 @@ margin-bottom: 40px;
 	}
 	.ingridient-discription{
 		margin-top: 22px;
+		height: 100px;
 	}
 
 }

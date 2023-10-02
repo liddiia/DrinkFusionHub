@@ -9,7 +9,7 @@ import {
 } from './utilities/fetch-data';
 import { createCocktailCards } from './utilities/render-gallery';
 import { renderPagination } from './utilities/pagination';
-import { refs } from './refs';
+import { refs } from './utilities/refs';
 
 const selectElement = document.getElementById('mySelect');
 const btnHeroKeyboardEl = document.querySelector('.js-list-let-num');
