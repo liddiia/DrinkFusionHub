@@ -1,0 +1,166 @@
+@media only screen and (min-width: 320px) {
+  .pagination-buttons-container {
+    padding: 0px 122px;
+    height: fit-content;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+    max-width: 334px;
+  }
+
+  .number-buttons-container {
+    display: flex;
+    flex-wrap: nowrap;
+    column-gap: 8px;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .pagination-button-item {
+    display: flex;
+    width: 32px;
+    height: 32px;
+    padding: 8px 0px 7px 0px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    border: 1px solid var(--color-violet);
+    color: var(--color-violet);
+    background-color: inherit;
+    font-family: Montserrat;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  .pagination-button-item:hover,
+  .pagination-button-item:focus {
+    border: none;
+    background-color: var(--color-blue);
+    color: var(--color-white);
+  }
+
+  .pagination-button-item:hover .pagination-svg,
+  .pagination-button-item:focus .pagination-svg {
+    fill: white;
+  }
+
+  .left-pag-btn {
+    width: 32px;
+    height: 32px;
+  }
+
+  .right-pag-btn {
+    width: 32px;
+    height: 32px;
+  }
+  .page-left-icon {
+    width: 16px;
+    height: 16px;
+    fill: var(--color-violet);
+  }
+
+  .page-right-icon {
+    width: 28px;
+    height: 28px;
+    fill: var(--color-violet);
+  }
+  .page-right-icon-container {
+    padding-bottom: 2px;
+    width: 16px;
+    height: 16px;
+  }
+
+  .page-left-icon-container {
+    padding-bottom: 2px;
+    width: 16px;
+    height: 16px;
+  }
+}
+
+@media only screen and (min-width: 375px) {
+
+  .number-buttons-container {
+    margin-right: 20px;
+    margin-left: 20px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .pagination-buttons-container {
+    max-width: 700px;
+  }
+
+  .number-buttons-container {
+    column-gap: 14px;
+    margin-right: 39px;
+    margin-right: 94px;
+    margin-left: 94px;
+  }
+
+  .pagination-button-item {
+    width: 40px;
+    height: 40px;
+    padding: 18px 8px 18px 8px;
+  }
+
+  .left-pag-btn {
+    width: 60px;
+    height: 40px;
+  }
+
+  .right-pag-btn {
+    width: 60px;
+    height: 40px;
+  }
+  .page-left-icon {
+    width: 60px;
+    height: 40px;
+  }
+
+  .page-right-icon-container {
+    width: 18px;
+    height: 18px;
+  }
+
+  .page-left-icon-container {
+    width: 18px;
+    height: 18px;
+  }
+
+  .page-right-icon {
+    width: 60px;
+    height: 40px;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .pagination-buttons-container {
+    max-width: 880px;
+  }
+
+  .number-buttons-container {
+    margin-left: 184px;
+    margin-right: 184px;
+  }
+
+  .page-left-icon {
+    width: 18px;
+    height: 18px;
+  }
+
+  .page-right-icon {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.pagination-button-item-active {
+  border: none;
+  background-color: var(--color-blue);
+  color: var(--color-white);
+}
