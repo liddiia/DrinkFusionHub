@@ -19,8 +19,9 @@ export const refs = {
  const modalEl={
 	modal:document.querySelector("[data-modal]"),
 	modalCloseBtn:document.querySelector("[data-modal-close]"),
-	modalInfoEl:document.querySelector(".modal-info")
+	modalInfoEl:document.querySelector(".modal-info"),
+    coctailModalBackBtn:document.querySelector(".cocktail-modal__back-button")
 };
 
-export const {modal, modalCloseBtn, modalInfoEl}=modalEl;
+export const {modal, modalCloseBtn, modalInfoEl, coctailModalBackBtn }=modalEl;
 

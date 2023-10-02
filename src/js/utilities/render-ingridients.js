@@ -4,7 +4,7 @@ export const renderIngidients = (arr, container) => {
 	const markup = arr.map(item =>
 		`<h2 class="ingridient-title" data-id-igridient =${item._id}>${item.title}</h2>
 		<p class="ingridient-type" >${item.type}</p>
-		<p class="ingridient-discription" onerror = "this.onerror=null;this.textContent='Unfortunately we dont have this discription';">${isDicriprionIng(item.description)}</span>
+		<p class="ingridient-discription"><span class="ingr-title">${item.title}: </span>${isDicriprionIng(item.description)}</p>
 		 <ul class="ingidient-dicr-list">
 		 <li class="ingridient-discription-item"> Type: ${item.type}</li>
 		 <li class="ingridient-discription-item">Country of origin: ${item.country}</li>
@@ -33,5 +33,8 @@ function isFavIngr (id){
 
 }
 function isDicriprionIng (disc){
-	disc? disc:"Unfortunatly we dont have it yet"
+	return disc? disc:"Unfortunately we dont have it yet"
 }
+
+
+

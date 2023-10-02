@@ -11,7 +11,7 @@ export function addBackButtonHandler() {
   }
 }
 
-//!!!
+
 //  при імпорті:
 // Додати обробник кнопки "Back"
 // addBackButtonHandler();
