@@ -2,27 +2,23 @@ const mobileMenu = document.querySelector('.js-menu-container')
 const openBtnMenu = document.querySelector('.js-open-menu')
 const closeBtnMenu = document.querySelector('.js-close-menu')
 
-const svg = document.querySelector('.opn-sub-icon')
-
-console.log(svg);
-
 openBtnMenu.addEventListener('click', onMobileMenu)
 closeBtnMenu.addEventListener('click', onMobileMenu)
 
 function onMobileMenu(){
-  mobileMenu.classList.toggle("active")
+  mobileMenu.classList.toggle("is-hidden")
 }
 
 const btnSubMenu = document.querySelector('.js-btn-sub-menu')
 const subMenu = document.querySelector('.sub-menu')
-console.log(subMenu);
-subMenu.classList.add('is-hidden')
+const svg = document.querySelector('.opn-sub-icon')
+
+// subMenu.classList.add('is-hidden')
 
 btnSubMenu.addEventListener('click', onSubMenu)
 
-function onSubMenu(e){
-  console.log(e);
-    subMenu.classList.toggle('is-hidden')
+function onSubMenu(){
+    subMenu.classList.toggle('is-open')
     svg.classList.toggle('rotate')
 }
 
@@ -33,6 +29,6 @@ const hederSvg = document.querySelector('.heder-sub-icon')
 opnBtnHedSubMenu.addEventListener('click', onDeskSubMenu)
 
 function onDeskSubMenu(){
-  deskSubMenu.classList.toggle('is-hidden')
+  deskSubMenu.classList.toggle('is-open')
   hederSvg.classList.toggle('rotate')
 }
