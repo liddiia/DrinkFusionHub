@@ -1,21 +1,19 @@
-import './mob-menu'
-import './favorite'
-import './modal'
-import './modal-coctail'
-import './modal-igridients'
+import './mob-menu';
+import { favorites } from './utilities/local-storage';
+import { haventAddedFavoriteCoctails } from './utilities/no-cocktails';
+import { renderADrink } from './favorite';
 
-console.log("hello");
+const contNoCoctails = document.querySelector('.container-non-photos');
+const titleGalleryEl = document.querySelector('.gallery-header');
+const gelleryListEl = document.querySelector('.gallery-list');
 
-//import {fetchRandomCocktails} from '../js/utilities/fetch-data'
-//import { createCocktailCards } from "./utilities/render-gallery";
-//const randomGallery = document.querySelector('.gallery-list')
-//const rondomGallery = async() => {
-//   if(window.innerWidth>=1280){ 
-//     let render = await fetchRandomCocktails(9);
-//     createCocktailCards(render, randomGallery )
-//   }else {
-//     let render = await fetchRandomCocktails(8);
-//     createCocktailCards(render, randomGallery )
-//   }
-// }
-// rondomGallery()
+console.log('fav: ', favorites);
+
+if (favorites.length === 0 || !favorites) {
+  haventAddedFavoriteCoctails(contNoCoctails, titleGalleryEl);
+} else {
+  favorites.forEach(item => {
+    renderADrink(item);
+    console.log(item);
+  });
+}
