@@ -40,7 +40,31 @@ line-height: 1.17;
    
 } */
 
+.container-non-photos {
+  display: none;
+}
+
+.container-non-photos.active {
+  display: flex;
+  flex-direction: column;
+  row-gap: 40px;
+  align-items: center;
+  width: 244px;
+  height: 190px;
+  margin-right: auto;
+  margin-left: auto;
+  outline: 1px solid green;
+}
+
+@media screen and (min-width: 768px) {
+  .container-non-photos.active {
+    width: 370px;
+    height: 297px;
+  }
+}
+
 .description-no-coctails {
+  text-align: center;
   color: #242424;
   font-size: 24px;
   font-family: Poppins;

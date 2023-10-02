@@ -14,6 +14,7 @@ const btnHeroKeyboardEl = document.querySelector('.js-list-let-num');
 const galleryEl = document.querySelector('.gallery-list');
 const formEl = document.querySelector('.js-form');
 const contNoPhotoEl = document.querySelector('.container-non-photos');
+const titleGalleryEl = document.querySelector('.gallery-header');
 
 const slim = new SlimSelect({
   select: selectElement,
@@ -65,7 +66,7 @@ function onSearchFormSubmit(evt) {
   const query = evt.currentTarget.elements['user-search-query'].value.trim();
   if (query === '') {
     galleryEl.innerHTML = '';
-    didntFindCoctails(contNoPhotoEl);
+    didntFindCoctails(contNoPhotoEl, titleGalleryEl);
     alert('non foto');
     return;
   }
