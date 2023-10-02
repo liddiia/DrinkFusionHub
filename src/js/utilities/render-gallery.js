@@ -8,7 +8,7 @@ export function createCocktailCards(arr, container) {
         <img
           class="cocktail-img"
           src="${item.drinkThumb}"
-          onerror = "this.onerror=null;this.src='./img/no-coctails/no-coktails@1x.png';"
+          onerror = "this.onerror=null;this.src='/img/no-coctails/no-coktails@1x.png';"
           alt="${item.drink}"
           loading="lazy"
         />
@@ -40,7 +40,7 @@ function isFav(id) {
             >
               <use
                 class="favorites-icon"
-                href="./img/icons.svg#icon-heart"
+                href="/img/icons.svg#icon-heart"
               ></use>
             </svg>`;
   } else {
@@ -50,7 +50,7 @@ function isFav(id) {
             >
               <use
                 class="favorites-icon"
-                href="./img/icons.svg#icon-heart"
+                href="/img/icons.svg#icon-heart"
               ></use>
             </svg>`;
   }
