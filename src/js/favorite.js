@@ -2,7 +2,6 @@ import { favouritesMarkup } from "./utilities/render-favorite-coctales";
 import { favorites, COCKTAIL_ID, deleteFromLocalStorage } from "./utilities/local-storage";
 // import { refs } from './refs';
 import { getCocktail } from "./utilities/fetch-data";
-import { log } from "console";
 
 const favoriteCocktailsList = document.querySelector('.interactive-section')
 
