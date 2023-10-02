@@ -2,7 +2,7 @@ import { fetchIngredient } from "./utilities/fetch-data";
 import { renderIngidients } from "./utilities/render-ingridients";
 import { addToLocalStorage, deleteFromLocalStorage } from "./utilities/local-storage";
 import { modal, modalInfoEl } from './utilities/refs'
-import { COCTAILMODAL_ID } from "./modal";
+import { COCTAILMODAL_ID } from "./modalCallDrink";
 import { renderDrink } from "./modal";
 export const showIngridient = async (id) => {
 	try {

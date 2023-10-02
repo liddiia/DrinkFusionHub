@@ -33,7 +33,7 @@ export function createMarkupDescriptionCocktail(arr, container) {
       <ul class="cocktail-modal__buttons">
     <li class="ingredient-button-item"> ${isFavCoct(item._id)}</li>
       <li class="ingredient-button-item">
-      <button type="button" class="cocktail-modal__back-button" data-action="back"" aria-label="back">
+      <button type="button" class="cocktail-modal__back-button cocktail-modal-back" data-action="back"" aria-label="back">
         BACK
       </button>
       </li>
