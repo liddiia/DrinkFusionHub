@@ -1,7 +1,6 @@
 
 import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock';
-import { createMarkupDescriptionCocktail } from './utilities/render-coctale';
-import { getCocktail } from './utilities/fetch-data';
+
 import { modal, modalCloseBtn, modalInfoEl} from './utilities/refs'
 import { showIngridient } from './modal-igridients';
 
