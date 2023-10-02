@@ -1,6 +1,7 @@
-import './mob-menu'
+import './mob-menu';
 
-import './modal'
-import './modal-coctail'
-import './modal-igridients'
-console.log("hello world");
+import './modal';
+import './modal-coctail';
+import './modal-igridients';
+
+console.log('hello world');
