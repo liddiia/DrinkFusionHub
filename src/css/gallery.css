@@ -22,6 +22,7 @@
   gap: 20px;
   justify-content: center;
   align-items: center;
+  margin-bottom: 80px;
 }
 
 .cocktail-card {
@@ -191,6 +192,7 @@
   .gallery-list {
     flex-direction: row;
     gap: 32px 16px;
+    margin-bottom: 100px;
   }
 
   .cocktail-card {
