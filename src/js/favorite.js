@@ -1,40 +1,37 @@
-export function renderAddRemoveDrinkButton(id, name, image) {
-  if (getDrink(id)) {
-    return `<button class="favourite removeFrom" data-id="${id}" data-name="${name}" data-image="${image}">Remove
-        <svg class="icon-remove-selected">
-            <use href="${icons}#icon-remove"></use>
-        </svg>
-      </button>`;
-  }
+import { favouritesMarkup } from "./utilities/render-favorite-coctales";
+import { favorites, COCKTAIL_ID, deleteFromLocalStorage } from "./utilities/local-storage";
+// import { refs } from './refs';
+import { getCocktail } from "./utilities/fetch-data";
+import { log } from "console";
 
-  return `<button class="favourite removeFrom" data-id="${id}" data-name="${name}" data-image="${image}">Add to
-      <svg class="icon-heart">
-        <use href="${icons}#icon-remove"></use>
-      </svg>
-      </button>`;
-}
-
-export function attachFavouritesRemoveClickEvents() {
-  let buttons = document.querySelectorAll('.favourite');
-
-  for (let button of buttons) {
-    button.onclick = favouritesRemoveClickEvent;
-  }
-}
-
-// const noCocktailsCont = document.querySelector('.no-cocktails-cont')
-
-// if (localStorage.getItem.favorites.length > 0) {
-//   noCocktailsCont.classList.add('is-hiden');
-// }
-
-const modalInfoEl = document.querySelectorAll('.favourite')
+const favoriteCocktailsList = document.querySelector('.interactive-section')
 
 export const renderADrink = async(id)=>{
 	try {
 		const drink = await getCocktail(id);
-		favouritesMarkup(drink, modalInfoEl)
+		favouritesMarkup(drink, favoriteCocktailsList)
 	} catch (error) {
 		console.log(error);
 	}
 }
+
+//взяти масив з локального сховища
+let idsArray = JSON.parse(localStorage.getItem('favorites'));
+if (favorites.length !== 0) {
+ 
+  idsArray.forEach((item) => {
+  renderADrink(item);
+  console.log(item);
+});
+}
+
+function removeIdFromLocalStorage(event) {
+  if (event.target.classList.contains('.cocktail-rem-fav-btn')) {  
+    const btn = event.target;
+    const listItem = btn.closest('li');
+    let cocktailId = listItem.dataset.id;
+    deleteFromLocalStorage(cocktailId, favorites, COCKTAIL_ID);
+  }
+}
+
+favoriteCocktailsList.addEventListener('click', removeIdFromLocalStorage);

@@ -37,7 +37,7 @@ export function favouritesMarkup(arr, container) {
         <p class="cocktail-description">${e.description}</p>
         <div class="cic-btn-wrapper">
           <button class="cocktail-learn-more-btn" data-id-drink="${e._id}">learn more</button>
-          <button class="cocktail-rem-fav-btn" data-type="user-action" data-action="remfav">
+          <button class="cocktail-rem-fav-btn" data-type="user-action" data-action="remfromfav">
             <svg
               class="remove-favorites-btn-icon"
               aria-label="remove from favorites button"
@@ -47,11 +47,12 @@ export function favouritesMarkup(arr, container) {
                 href="/img/icons.svg#icon-remove"
               ></use>
             </svg>
-          </button>
+          </-button>
         </div>
       </div>
     </li>`
     )
     .join('');
-  container.innerHTML = markup;
+  
+  container.insertAdjacentHTML("beforeend", markup);
 }

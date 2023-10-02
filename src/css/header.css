@@ -49,10 +49,25 @@ button {
     width: 192px;
     height: 80px;
     border-radius: 16px;
-    background: #7E8FDD;
+    background: transparent;
     display: flex;
     flex-direction: column;
     gap: 8px;
+    transform: translateY(-100%);
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 250ms, visibility 250ms, transform 250ms ease-in-out;
+    /* top: 75px; */
+}
+
+.is-open{
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateY(0);
+    background: #7E8FDD;
+    transition: opacity 250ms, visibility 250ms, transform 250ms ease;
 }
 
 .desktop-menu-sub-item {
@@ -70,7 +85,9 @@ button {
 }
 
 .is-hidden {
-    display: none;
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
 }
 
 .logotype {
@@ -103,7 +120,7 @@ button {
 }
 
 .mobile-menu {
-    display: none;
+    /* display: none; */
     background-color: var(--color-violet);
 }
 
