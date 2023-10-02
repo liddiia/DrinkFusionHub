@@ -1,6 +1,5 @@
 const galleryList = document.querySelector('.gallery-list');
 galleryList.addEventListener('click', addToFavorites);
-document.addEventListener('DOMContentLoaded', restoreFavsFromLS);
 
 export const COCKTAIL_ID = 'favorites';
 

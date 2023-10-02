@@ -150,8 +150,7 @@
   fill: var(--color-white);
 }
 
-.cocktail-add-fav-btn:hover .favorites-btn-icon,
-.cocktail-add-fav-btn:focus .favorites-btn-icon {
+.cocktail-add-fav-btn:hover .favorites-btn-icon {
   transform: scale(1.3);
   /* animation: animate__heartBeat;
   animation-duration: 2s;*/
