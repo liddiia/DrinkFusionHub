@@ -1,4 +1,5 @@
 import { favorites } from './local-storage';
+import svgUrl from '/img/icons.svg';
 
 export function createCocktailCards(arr, container) {
   const markup = arr
@@ -8,7 +9,7 @@ export function createCocktailCards(arr, container) {
         <img
           class="cocktail-img"
           src="${item.drinkThumb}"
-          onerror = "this.onerror=null;this.src='/img/no-coctails/no-coktails@1x.png';"
+         onerror = "this.onerror=null;this.src='/img/no-cocktails/no-cocktails@1x.png';"
           alt="${item.drink}"
           loading="lazy"
         />
@@ -40,7 +41,7 @@ function isFav(id) {
             >
               <use
                 class="favorites-icon"
-                href="/img/icons.svg#icon-heart"
+                href="${svgUrl}#icon-heart"
               ></use>
             </svg>`;
   } else {
@@ -50,7 +51,7 @@ function isFav(id) {
             >
               <use
                 class="favorites-icon"
-                href="/img/icons.svg#icon-heart"
+                href="${svgUrl}#icon-heart"
               ></use>
             </svg>`;
   }
