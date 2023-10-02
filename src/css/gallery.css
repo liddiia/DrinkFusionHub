@@ -1,5 +1,6 @@
 .gallery {
   padding-bottom: 80px;
+  padding-top: 40px;
 }
 
 .gallery-header {
@@ -150,8 +151,8 @@
 }
 
 .cocktail-add-fav-btn:hover .favorites-btn-icon,
-.cocktail-add-fav-btn:hover .favorites-btn-icon {
-  transform: scale(1.5);
+.cocktail-add-fav-btn:focus .favorites-btn-icon {
+  transform: scale(1.3);
   /* animation: animate__heartBeat;
   animation-duration: 2s;*/
   /* https://animate.style/*/
@@ -183,6 +184,7 @@
 @media screen and (min-width: 768px) {
   .gallery {
     padding-bottom: 100px;
+    padding-top: 50px;
   }
 
   .gallery-header {

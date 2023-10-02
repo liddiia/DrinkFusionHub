@@ -1,51 +1,11 @@
-// const galleryList = document.querySelector('.gallery-list');
-// galleryList.addEventListener('click', addToFavorites);
-
-// const COCKTAIL_ID = 'favorites';
-// // localStorage.removeItem(COCKTAIL_ID);
-
-// // get favorites from local storage or empty array
-// let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
-
-// function addToFavorites(evt) {
-//   if (
-//     evt.currentTarget === evt.target ||
-//     evt.target.dataset.type !== 'user-action'
-//   ) {
-//     return;
-//   }
-
-//   const btn = evt.target;
-//   const svg = btn.firstElementChild;
-//   let actionType = btn.dataset.action;
-//   const listItem = btn.closest('li');
-//   let cocktailId = listItem.dataset.id;
-//   let idx = favorites.indexOf(cocktailId);
-
-//   // !favorites.includes(cocktailId)
-
-//   if (actionType === 'addtofav' && idx === -1) {
-//     svg.classList.add('is-favorite');
-//     //svg.classList.toggle('is-favorite');
-//     btn.dataset.action = 'removefromfav';
-//     favorites.push(cocktailId);
-//     localStorage.setItem(COCKTAIL_ID, JSON.stringify(favorites));
-//   } else {
-//     svg.classList.remove('is-favorite');
-//     btn.dataset.action = 'addtofav';
-//     favorites.splice(idx, 1);
-//     localStorage.setItem(COCKTAIL_ID, JSON.stringify(favorites));
-//   }
-//   console.log(favorites);
-// }
-
 const galleryList = document.querySelector('.gallery-list');
 galleryList.addEventListener('click', addToFavorites);
+document.addEventListener('DOMContentLoaded', restoreFavsFromLS);
 
 export const COCKTAIL_ID = 'favorites';
 
 export let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
-console.log(favorites);
+
 export function addToFavorites(evt) {
   if (
     evt.currentTarget === evt.target ||
