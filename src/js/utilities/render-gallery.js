@@ -1,3 +1,5 @@
+import { favorites } from './local-storage';
+
 export function createCocktailCards(arr, container) {
   const markup = arr
     .map(
@@ -15,17 +17,11 @@ export function createCocktailCards(arr, container) {
         <h3 class="cocktail-name">${item.drink}</h3>
         <p class="cocktail-description">${item.description}</p>
         <div class="cic-btn-wrapper">
-          <button class="cocktail-learn-more-btn" data-id-drink="${item._id}">learn more</button>
+          <button class="cocktail-learn-more-btn" data-id-drink="${
+            item._id
+          }">learn more</button>
           <button class="cocktail-add-fav-btn" data-type="user-action" data-action="addtofav">
-            <svg
-              class="favorites-btn-icon"
-              aria-label="add to favorites button"
-            >
-              <use
-                class="favorites-icon"
-                href="/img/icons.svg#icon-heart"
-              ></use>
-            </svg>
+            ${isFav(item._id)}
           </button>
         </div>
       </div>
@@ -34,4 +30,28 @@ export function createCocktailCards(arr, container) {
     .join('');
 
   container.innerHTML = markup;
+}
+
+function isFav(id) {
+  if (favorites && !favorites.includes(id)) {
+    return `<svg
+              class="favorites-btn-icon"
+              aria-label="add to favorites button"
+            >
+              <use
+                class="favorites-icon"
+                href="/img/icons.svg#icon-heart"
+              ></use>
+            </svg>`;
+  } else {
+    return `<svg
+              class="favorites-btn-icon is-favorite"
+              aria-label="add to favorites button"
+            >
+              <use
+                class="favorites-icon"
+                href="/img/icons.svg#icon-heart"
+              ></use>
+            </svg>`;
+  }
 }

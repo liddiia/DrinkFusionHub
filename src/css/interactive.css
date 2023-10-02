@@ -9,6 +9,18 @@
   margin-bottom: 40px;
 }
 
+@media screen and (min-width: 768px) {
+  .container-slimselect {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .container-letters-numbers {
+    display: none;
+  }
+}
+
 .search-form {
   background-color: transparent;
   height: 44px;
@@ -16,7 +28,6 @@
   margin: auto;
   position: relative;
   border: none;
-  margin-bottom: 20px;
 }
 
 .input-hero-search {
@@ -35,7 +46,6 @@
 }
 
 .btn-hero-serch {
-  /* background-color: black; */
   width: 16px;
   height: 16px;
   position: absolute;
@@ -92,4 +102,8 @@
     max-width: 904px;
     margin: auto;
   }
+}
+
+.container-letters-numbers {
+  margin-bottom: 50px;
 }
