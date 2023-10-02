@@ -55,13 +55,11 @@
   .hero-img-girl-light-theme {
     width: 100%;
     position: absolute;
-    z-index: 100;
   }
   .hero-img-girl-dark-theme {
     display: none;
     width: 100%;
     position: absolute;
-    z-index: 100;
   }
   .hero-p-under-picture {
     color: var(--color-light-theme-black);
