@@ -9,6 +9,7 @@
     width: 100%;
     height: 100%;
     padding-top: 20px;
+    z-index: 100;
 }
 
 .mobile-menu-container{
@@ -38,84 +39,6 @@
     align-items: center;
     gap: 18px;
 }
-
-.switch {
-    position: relative;
-    display: inline-block;
-    width: 50px;
-    height: 25px;
-    border: 2px white;
-  }
-  
-  /* Hide default html checkbox */
-  .switch input {
-    opacity: 0;
-  }
-  
-  /* The slider */
-  .slider {
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: var(--color-blue);
-    transition: 0.4s;
-  }
-  
-  .slider:before {
-    position: absolute;
-    content: "";
-    height: 23px;
-    width: 23px;
-    left: 23px;
-    bottom: 0;
-    background-color: #fff;
-    transition: 0.4s;
-  }
-  
-  input:checked + .slider {
-    background: var(--color-violet);
-    border: 2px solid #fff;
-  }
-  
-  input:checked + .slider:before {
-    transform: translateX(-23px);
-  }
-  .slider,
-  .round {
-    border-radius: 25px;
-  }
-  
-  .round::before {
-    border-radius: 50%;
-  }
-  
-  input:checked + .round::before {
-    background-color: var(--color-blue);
-  }
-  /* /THEME/ */
-  .dark {
-    --main-background: hsl(230, 17%, 14%);
-    --main-font: white;
-  }
-  
-  .light {
-    --main-background: white;
-    --main-font: hsl(230, 17%, 14%);
-  }
-  
-  .toggle-switch {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-  }
-  .toggle-switch p {
-    padding: 1em;
-  }
-
 
 .mobile-menu-close-btn{
     background: transparent;
@@ -200,6 +123,10 @@
     display: none;
 }
 
+.star-icon-container{
+    display: none;
+}
+
 @media screen and (min-width: 768px) {
     .mobile-menu{
         padding-top: 24px;
@@ -208,21 +135,6 @@
     .logotype-menu {
         font-size: 22px;
     }
-
-    .switch {
-        width: 64px;
-        height: 32px;
-    }
-
-    .slider:before {
-        width: 30px;
-        height: 30px;
-        left: 30px;
-    }
-
-    input:checked + .slider:before {
-        transform: translateX(-30px);
-      }
 
     .close-mob-menu-icon {
         width: 40px;
@@ -235,5 +147,20 @@
 
     .btn-opn-sub-menu {
         font-size: 24px;
+    }
+    
+    .star-icon-container{
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        display: block;
+        margin-left: auto;
+        margin-bottom: auto;
+    }
+
+    .star-icon-planshet{
+        display: block;
+        margin-left: auto;
+        margin-top: auto;
     }
 }
