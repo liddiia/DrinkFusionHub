@@ -152,9 +152,6 @@
 
 .cocktail-add-fav-btn:hover .favorites-btn-icon {
   transform: scale(1.3);
-  /* animation: animate__heartBeat;
-  animation-duration: 2s;*/
-  /* https://animate.style/*/
 }
 
 @media screen and (min-width: 375px) {
