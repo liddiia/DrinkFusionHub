@@ -6,6 +6,7 @@ const contNoCoctails = document.querySelector('.container-non-photos');
 const titleGalleryEl = document.querySelector('.gallery-header');
 
 
+
 export function renderFavPagination(cocktailArr) {
   refs.paginationNumberBtnsContainer.innerHTML = '';
   let cardsPerPage;
