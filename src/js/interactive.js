@@ -38,7 +38,7 @@ function onChangeSelect(evt) {
   changeGalleryTitle();
 
   fetchCocktailByFirstLetter(selecteByLetAndChar).then(resp => {
-    createMarkupCard(resp, galleryEl);
+    createCocktailCards(resp, galleryEl);
     renderPagination(resp);
     if (
       refs.paginationNumberBtnsContainer.classList.contains(
@@ -88,7 +88,6 @@ function onKeyboardClick(evt) {
     if (window.innerWidth >= 768 && resp.length >= 8) {
       refs.paginationContainer.classList.remove('is-hidden');
     }
-
   });
 
   const currentActiveBtn = document.querySelector(
