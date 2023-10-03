@@ -11,6 +11,7 @@ const INGRED_SEARCH_NAME = `ingredients/search/?`;
 
 const contNoPhotoEl = document.querySelector('.container-non-photos');
 const titleGalleryEl = document.querySelector('.gallery-header');
+const galleryEl = document.querySelector('.gallery-list');
 
 export async function fetchRandomCocktails(num) {
   const response = await fetch(`${BASE_URL}${RANDOM_ENDPOINT}${num}`);
@@ -42,6 +43,7 @@ export async function fetchCocktailByName(query) {
     return response.data;
   } catch (error) {
     console.log(error);
+    galleryEl.innerHTML = '';
     didntFindCoctails(contNoPhotoEl, titleGalleryEl);
     Notify.failure('Oops, cocktail not found, try another one!');
   }
@@ -57,6 +59,7 @@ export async function fetchCocktailByFirstLetter(query) {
     return response.data;
   } catch (error) {
     console.log(error);
+    galleryEl.innerHTML = '';
     didntFindCoctails(contNoPhotoEl, titleGalleryEl);
     Notify.failure('Oops, cocktail not found, try another one!');
   }
