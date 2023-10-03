@@ -1,4 +1,4 @@
-import{d as r,C as s,f as a,h as l}from"./no-cocktails-938ce485.js";import{g as n}from"./modalCallDrink-dc5522d1.js";function d(t,e){const c=t.map(o=>`<li class="cocktail-card" data-id="${o._id}">
+import{d as r,C as s,f as a,h as l}from"./no-cocktails-fa3b2e79.js";import{g as n}from"./modalCallDrink-5d476b63.js";function d(t,e){const c=t.map(o=>`<li class="cocktail-card" data-id="${o._id}">
       <div class="cocktail-img-wrap">
         <img
           class="cocktail-img"
