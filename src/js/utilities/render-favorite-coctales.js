@@ -14,15 +14,15 @@
 // //   pagContainer,
 // //   favNococktails,
 // // } = refs
-
+import svgUrl from '/img/icons.svg'
 
 export function favouritesMarkup(arr, container) {
   // getCocktail(id)
   // let arr = JSON.parse(localStorage.getItem('favorites'));
- const markup = arr
+  const markup = arr
     .map(
-      e => 
-     `<li class="cocktail-card" data-id="${e._id}">
+      e =>
+        `<li class="cocktail-card" data-id="${e._id}">
       <div class="cocktail-img-wrap">
         <img
           class="cocktail-img"
@@ -37,14 +37,14 @@ export function favouritesMarkup(arr, container) {
         <p class="cocktail-description">${e.description}</p>
         <div class="cic-btn-wrapper">
           <button class="cocktail-learn-more-btn" data-id-drink="${e._id}">learn more</button>
-          <button class="cocktail-rem-fav-btn" data-type="user-action" data-action="remfromfav">
+          <button class="cocktail-rem-fav-btn" data-type="user-action" id ="${e._id}" data-action="remfromfav">
             <svg
               class="remove-favorites-btn-icon"
               aria-label="remove from favorites button"
             >
               <use
                 class="remove-icon"
-                href="/img/icons.svg#icon-remove"
+                href="${svgUrl}#icon-remove"
               ></use>
             </svg>
           </button>
@@ -53,6 +53,6 @@ export function favouritesMarkup(arr, container) {
     </li>`
     )
     .join('');
-  
+
   container.insertAdjacentHTML("beforeend", markup);
 }

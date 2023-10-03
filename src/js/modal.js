@@ -3,6 +3,7 @@ import { modalCall } from "./modalCallDrink";
 import {createMarkupDescriptionCocktail} from './utilities/render-coctale'
 import {modalInfoEl} from './utilities/refs'
 import { getCocktail } from './utilities/fetch-data';
+const galleryEl = document.querySelector(".gallery-list");
 export const renderDrink = async (id) => {
 	try {
 		const drink = await getCocktail(id);
@@ -10,6 +11,8 @@ export const renderDrink = async (id) => {
 	} catch (error) {
 		console.log(error);
 	}}
-const galleryEl = document.querySelector(".gallery-list");
-modalCall(galleryEl, renderDrink)
+if(galleryEl){
+	modalCall(galleryEl, renderDrink)
+}
+
 

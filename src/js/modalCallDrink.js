@@ -12,6 +12,7 @@ export const closeModalHelper = (event) => {
 
 export function modalCall ( el, renderFunc){
   const openModal = (e) => {
+        
     const { target } = e;
   
     const idDrink = target.dataset.idDrink;
@@ -25,7 +26,7 @@ export function modalCall ( el, renderFunc){
     }
     const closeEscape = (e => {
       if (e.key === 'Escape') {
-        setTimeout(closeModalHelper(e), 500);
+        closeModalHelper(e);
         document.removeEventListener("keydown", closeEscape);
       }
     })
@@ -33,7 +34,7 @@ export function modalCall ( el, renderFunc){
   }
   const closeModal = (e) => {
     const { target } = e;
-    
+   
     if (target === modalCloseBtn || target === modal|| target.tagName === "A") {
       if (target.tagName === "A"&& target.classList.contains("ingredient-link")) {
         e.preventDefault();
@@ -43,7 +44,7 @@ export function modalCall ( el, renderFunc){
        return
       }else{
         console.log(target.parentNode);
-        setTimeout(closeModalHelper(target), 500)
+      closeModalHelper(target)
        
       }
       
@@ -54,4 +55,4 @@ export function modalCall ( el, renderFunc){
   el.addEventListener("click", openModal);
   
   modal.addEventListener("click", closeModal);
-  }
+}
