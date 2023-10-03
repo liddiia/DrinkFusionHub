@@ -1,4 +1,4 @@
-import{d as r,C as s,f as a,h as l}from"./no-cocktails-1a5e3885.js";import{g as n}from"./fetch-data-a373012e.js";function d(t,e){const c=t.map(o=>`<li class="cocktail-card" data-id="${o._id}">
+import{d as r,C as s,f as a,h as l}from"./no-cocktails-2967085f.js";import{g as n}from"./fetch-data-a373012e.js";function d(t,e){const c=t.map(o=>`<li class="cocktail-card" data-id="${o._id}">
       <div class="cocktail-img-wrap">
         <img
           class="cocktail-img"
