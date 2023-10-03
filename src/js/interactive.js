@@ -137,3 +137,5 @@ function onSearchFormSubmit(evt) {
     changeGalleryTitle();
   });
 }
+
+console.log('error');
