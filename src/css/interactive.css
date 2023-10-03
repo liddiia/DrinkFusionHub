@@ -34,13 +34,13 @@
   width: 100%;
   height: 100%;
   font-size: 14px;
-  color: #242424;
+  color: var(--color-light-theme-black);
   padding-left: 42px;
   padding-top: 12px;
   padding-bottom: 12px;
   box-sizing: border-box;
-  font-size: 16px;
-  border: solid 1px #7e8fdd;
+  font-size: var(--tablet-hero-text-font-size);
+  border: solid 1px var(--color-violet);
   border-radius: 80px;
   background-color: transparent;
 }
@@ -67,16 +67,15 @@
   border-radius: 8px;
   padding: 5px 0;
   border: none;
-  background-color: #7e8fdd66;
-  cursor: pointer;
-  color: #fdfdff;
-  font-size: 20px;
-  font-family: Poppins;
-  font-weight: 600;
+  background-color: var(--color-violet);
+  color: var(--color-white);
+  font-size: var(--hero-text-font-size);
+  font-family: var(--font-family);
+  font-weight: var(--button-font-weight);
 }
 
 .hero-keyboard-btn.hero-keyboard-btn-active {
-  background-color: #9cdfdf;
+  background-color: var(--color-blue);
 }
 .list-letters-numders {
   display: flex;
