@@ -13,10 +13,10 @@ import { refs } from './utilities/refs';
 
 const selectElement = document.getElementById('mySelect');
 const btnHeroKeyboardEl = document.querySelector('.js-list-let-num');
-const galleryEl = document.querySelector('.gallery-list');
+export const galleryEl = document.querySelector('.gallery-list');
 const formEl = document.querySelector('.js-form');
 const contNoPhotoEl = document.querySelector('.container-non-photos');
-const titleGalleryEl = document.querySelector('.gallery-header');
+export const titleGalleryEl = document.querySelector('.gallery-header');
 
 const slim = new SlimSelect({
   select: selectElement,
