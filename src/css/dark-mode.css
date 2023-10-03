@@ -123,8 +123,14 @@ body.dark-theme .cocktail-name,
 body.dark-theme .cocktail-description,
 body.dark-theme .cocktail-learn-more-btn,
 body.dark-theme .page-nav-item,
-body.dark-theme .mob-menu-icon {
+body.dark-theme .btn-hed-sub-menu,
+body.dark-theme .logotype {
   color: var(--color-white);
+}
+
+body.dark-theme .mob-menu-icon {
+  stroke: var(--color-white);
+  fill: var(--color-white);
 }
 
 body.dark-theme .cocktail-card:hover {

@@ -31,6 +31,7 @@ button {
     display: flex;
     gap: 4px;
     align-items: center;
+    color: var(--color-light-theme-black);
 }
 
 .heder-sub-icon {
@@ -115,8 +116,8 @@ button {
 }
 
 .mob-menu-icon {
-    stroke: black;
-    fill: black;
+    stroke: var(--color-light-theme-black);
+    fill: var(--color-light-theme-black);
 }
 
 .mobile-menu {
