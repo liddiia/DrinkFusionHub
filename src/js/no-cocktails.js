@@ -1,5 +1,4 @@
 const noPhoto = `<img
-            
             src="../img/no-cocktails/no-cocktails@2x.png"
             alt="no-coctails"
             class="no-coctails-img"
