@@ -4,7 +4,9 @@ import {
   addToLocalStorage,
   deleteFromLocalStorage,
 } from './utilities/local-storage';
+
 const galleryList = document.querySelector('.gallery-list');
+
 galleryList.addEventListener('click', addToFavorites);
 
 function addToFavorites(evt) {
@@ -16,18 +18,21 @@ function addToFavorites(evt) {
   }
 
   const btn = evt.target;
+  console.log(btn);
   let actionType = btn.dataset.action;
   const listItem = btn.closest('li');
   let cocktailId = listItem.dataset.id;
+  console.log(cocktailId);
   let idx = favorites.indexOf(cocktailId);
 
   if (actionType === 'addtofav' && idx === -1) {
     btn.classList.add('is-favorite');
-    btn.dataset.action = 'removefromfav';
+    actionType = 'removefromfav';
     addToLocalStorage(cocktailId, favorites, COCKTAIL_ID);
+    
   } else {
     btn.classList.remove('is-favorite');
-    btn.dataset.action = 'addtofav';
+    actionType = 'addtofav';
     deleteFromLocalStorage(cocktailId, favorites, COCKTAIL_ID);
   }
   console.log(favorites);

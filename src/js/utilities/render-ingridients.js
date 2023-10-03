@@ -23,10 +23,10 @@ export const renderIngidients = (arr, container) => {
 }
 function isFavIngr (id){
   if (ingredients && !ingredients.includes(id)) {
-    return `<button type="button" class="cocktail-modal-favorite-button"  data-type ="ingr-btn" data-add="ingraddfav" data-id-ingridient-btn=${id}>
+    return `<button type="button" class="cocktail-modal-favorite-button"  data-typeingr ="ingr-btn" data-localingr="ingraddfav" data-id-ingridient-btn=${id}>
     Add to Favorites
     </button>` } else {
-         return `<button type="button" class="cocktail-modal-favorite-button" data-type ="ingr-btn" data-add="igrremovefav" data-id-ingridient-btn=${id}>
+         return `<button type="button" class="cocktail-modal-favorite-button" data-typeingr ="ingr-btn" data-localingr="igrremovefav" data-id-ingridient-btn=${id}>
          Remove from favorites
           </button>`
        }

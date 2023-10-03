@@ -13,13 +13,13 @@ export const refs = {
     rightPagBtn: document.querySelectorAll("[data-action='rightPag']"),
     paginationNumberBtnsContainer: document.querySelector(
     '.number-buttons-container'),
-    mainEl:document.querySelector("main")
-  ,
+    
+  
 };
 
  const modalEl={
-	modal:document.querySelector("[data-modal]"),
-	modalCloseBtn:document.querySelector("[data-modal-close]"),
+	modal:document.querySelector("[data-modal='modal']"),
+	modalCloseBtn:document.querySelector("[data-close='close']"),
 	modalInfoEl:document.querySelector(".modal-info"),
     coctailModalBackBtn:document.querySelector(".cocktail-modal__back-button")
 };
