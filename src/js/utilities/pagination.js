@@ -140,16 +140,7 @@ export function renderPagination(cocktailArr) {
               moreBtn,
               dots,
               ...[pageBtns[currentPageIndex]],
-              moreBtn, // Add another moreBtn here
-              ...finish2
-            );
-          } else {
-            refs.paginationNumberBtnsContainer.append(
-              ...start2,
               moreBtn,
-              dots,
-              ...[pageBtns[currentPageIndex]],
-              moreBtn, // Add another moreBtn here
               ...finish2
             );
           }
@@ -201,17 +192,7 @@ export function renderPagination(cocktailArr) {
               moreBtn, // Add another moreBtn here
               ...finish2
             );
-          } else {
-            refs.paginationNumberBtnsContainer.append(
-              ...start2,
-              moreBtn,
-              dots,
-              ...pageBtns.slice(currentPageIndex - 1, currentPageIndex + 2),
-              moreBtn, // Add another moreBtn here
-              ...finish2
-            );
           }
-
         }
         break;
       }
