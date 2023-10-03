@@ -9,4 +9,4 @@
           />`;function q(n,e){e.textContent="",n.classList.add("active"),n.innerHTML=`${a}
           <p class="description-no-coctails">Sorry, we <span class="span-no-coctails">didn’t find</span> any cocktail for you</p>`}function C(n,e){e.textContent="Favorite cocktails",n.classList.add("active"),n.innerHTML=`${a}
  <p class="description-no-coctails">You haven't added any <span class="span-no-coctails">favorite cocktails</span> yet</p>`}function F(n,e){e.textContent="Favorite ingredients",n.classList.add("active"),n.innerHTML=`${a}
- <p class="description-no-coctails">You haven't added any <span class="span-no-coctails">favorite ingredients</span> yet</p>`}export{b as C,k as I,O as a,I as b,F as c,x as d,q as e,h as f,C as h,M as i};
+ <p class="description-no-coctails">You haven't added any <span class="span-no-coctails">favorite ingredients</span> yet</p>`}export{b as C,k as I,q as a,O as b,I as c,x as d,F as e,h as f,C as h,M as i};
