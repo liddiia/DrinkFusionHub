@@ -1,9 +1,8 @@
 import axios from 'axios';
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
 import { didntFindCoctails } from './no-cocktails';
-import { galleryEl } from '../interactive';
+import { contNoPhotoEl } from '../interactive';
 import { titleGalleryEl } from '../interactive';
-
 
 const BASE_URL = 'https://drinkify.b.goit.study/api/v1/';
 const RANDOM_ENDPOINT = `cocktails/?r=`;
@@ -41,11 +40,10 @@ export async function fetchCocktailByName(query) {
     const response = await axios.get(`${BASE_URL}${COCKT_SEARCH}${params}`);
     return response.data;
   } catch (error) {
-    console.log(error)
-    didntFindCoctails(galleryEl, titleGalleryEl)
-    Notify.failure(
-      'Oops, cocktail not found, try another one!'
-    );  }
+    console.log(error);
+    didntFindCoctails(contNoPhotoEl, titleGalleryEl);
+    Notify.failure('Oops, cocktail not found, try another one!');
+  }
 }
 
 export async function fetchCocktailByFirstLetter(query) {
@@ -57,11 +55,10 @@ export async function fetchCocktailByFirstLetter(query) {
     const response = await axios.get(`${BASE_URL}${COCKT_SEARCH}${params}`);
     return response.data;
   } catch (error) {
-    console.log(error)
-    didntFindCoctails(galleryEl, titleGalleryEl)
-    Notify.failure(
-      'Oops, cocktail not found, try another one!'
-    );  }
+    console.log(error);
+    didntFindCoctails(contNoPhotoEl, titleGalleryEl);
+    Notify.failure('Oops, cocktail not found, try another one!');
+  }
 }
 
 //* Modals *//
