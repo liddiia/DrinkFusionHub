@@ -99,7 +99,6 @@ function onSearchFormSubmit(evt) {
   if (query === '') {
     galleryEl.innerHTML = '';
     didntFindCoctails(contNoPhotoEl, titleGalleryEl);
-    alert('non foto');
     return;
   }
   fetchCocktailByName(query).then(resp => {
