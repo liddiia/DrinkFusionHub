@@ -104,7 +104,9 @@ body.dark-theme .cocktail-card {
 body.dark-theme .gallery-header,
 body.dark-theme .cocktail-name,
 body.dark-theme .cocktail-description,
-body.dark-theme .cocktail-learn-more-btn {
+body.dark-theme .cocktail-learn-more-btn,
+body.dark-theme .page-nav-item,
+body.dark-theme .mob-menu-icon {
   color: var(--color-white);
 }
 
