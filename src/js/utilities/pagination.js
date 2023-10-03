@@ -3,15 +3,21 @@ import { createCocktailCards } from './render-gallery';
 
 const galleryEl = document.querySelector('.gallery-list');
 
-
 export function renderPagination(cocktailArr) {
   refs.paginationNumberBtnsContainer.innerHTML = '';
   let cardsPerPage;
 
   let currentPageIndex = 0;
+  let currentButton = null;
   let pageBtns = [];
   let start = [];
+  let start2 = [];
+  let start3 = [];
   let finish = [];
+  let finish2 = [];
+  let finish3 = [];
+  let moreBtn;
+  let dots;
 
   function isMobile() {
     if (window.innerWidth >= 768) {
@@ -51,7 +57,6 @@ export function renderPagination(cocktailArr) {
 
   createCocktailCards(sortedCardsArr[0], galleryEl);
 
-
   refs.leftPagBtn[0].addEventListener('click', onPaginationBtnClick);
   refs.rightPagBtn[0].addEventListener('click', onPaginationBtnClick);
   refs.paginationNumberBtnsContainer.addEventListener(
@@ -59,77 +64,192 @@ export function renderPagination(cocktailArr) {
     onPaginationBtnClick
   );
 
-  for (let i = 1; i <= totalPagesNum; i++) {
-    const pageBtn = document.createElement('button');
-    pageBtn.textContent = i;
-    pageBtn.setAttribute('data-action', i);
-    pageBtn.classList.add('pagination-button-item');
-    pageBtn.addEventListener('click', onPaginationBtnClick);
-    pageBtns.push(pageBtn);
+  function updatePaginationButtons() {
+    // Remove the 'pagination-button-item-active' class from the previous currentButton
+    if (currentButton) {
+      currentButton.classList.remove('pagination-button-item-active');
+    }
+
+    // Update currentButton to the newly clicked button
+    currentButton = pageBtns[currentPageIndex];
+    currentButton.classList.add('pagination-button-item-active');
   }
 
-  switch (isMobile()) {
-    case true:
-      {
-        if (pageBtns.length <= 4) {
+  function updateButtonLayout() {
+    refs.paginationNumberBtnsContainer.innerHTML = '';
+
+    switch (isMobile()) {
+      case true: {
+        if (pageBtns.length <= 5) {
           refs.paginationNumberBtnsContainer.append(...pageBtns);
         } else {
           start = pageBtns.slice(0, 3);
-          finish = pageBtns.slice(pageBtns.length - 1, pageBtns.length);
+          start2 = pageBtns.slice(0, 1);
+          start3 = pageBtns.slice(0, 4);
+          finish = pageBtns.slice(pageBtns.length - 3, pageBtns.length);
+          finish2 = pageBtns.slice(pageBtns.length - 1, pageBtns.length);
+          finish3 = pageBtns.slice(pageBtns.length - 4, pageBtns.length);
 
-          const moreBtn = document.createElement('button');
+          const currentButton = document.querySelector(
+            `button[data-action="${currentPageIndex + 1}"]`
+          );
+
+          refs.paginationNumberBtnsContainer.innerHTML = '';
+          moreBtn = document.createElement('button');
           moreBtn.textContent = '...';
           moreBtn.setAttribute('disabled', '');
-          moreBtn.setAttribute('data-disable', 'true');
           moreBtn.classList.add('pagination-button-item');
 
-          refs.paginationNumberBtnsContainer.append(
-            ...start,
-            moreBtn,
-            ...finish
-          );
+          dots = document.createElement('button');
+          dots.textContent = '...';
+          dots.setAttribute('disabled', '');
+          dots.setAttribute('data-disable', 'true');
+          dots.classList.add('pagination-button-item');
+
+          if (currentPageIndex === 0 || currentPageIndex === 1) {
+            refs.paginationNumberBtnsContainer.append(
+              ...start,
+              moreBtn,
+              ...finish2
+            );
+          } else if (currentPageIndex === 2) {
+            refs.paginationNumberBtnsContainer.append(
+              ...start3,
+              moreBtn,
+              ...finish2
+            );
+          } else if (currentPageIndex === totalPagesNum - 3) {
+            refs.paginationNumberBtnsContainer.append(
+              ...start2,
+              moreBtn,
+              ...finish3
+            );
+          } else if (
+            currentPageIndex === totalPagesNum - 2 ||
+            currentPageIndex === totalPagesNum - 1
+          ) {
+            refs.paginationNumberBtnsContainer.append(
+              ...start,
+              moreBtn,
+              ...finish
+            );
+          } else if (
+            currentPageIndex >= 3 &&
+            currentPageIndex <= totalPagesNum - 4
+          ) {
+            refs.paginationNumberBtnsContainer.append(
+              ...start2,
+              moreBtn,
+              dots,
+              ...[pageBtns[currentPageIndex]],
+              moreBtn, // Add another moreBtn here
+              ...finish2
+            );
+          } else {
+            refs.paginationNumberBtnsContainer.append(
+              ...start2,
+              moreBtn,
+              dots,
+              ...[pageBtns[currentPageIndex]],
+              moreBtn, // Add another moreBtn here
+              ...finish2
+            );
+          }
         }
+        break;
       }
-      break;
 
-    case false: {
-      if (pageBtns.length <= 7) {
-        refs.paginationNumberBtnsContainer.append(...pageBtns);
-      } else {
-        start = pageBtns.slice(0, 3);
-        finish = pageBtns.slice(pageBtns.length - 3, pageBtns.length);
+      case false: {
+        if (pageBtns.length <= 7) {
+          refs.paginationNumberBtnsContainer.append(...pageBtns);
+        } else {
+          start = pageBtns.slice(0, 3);
+          start2 = pageBtns.slice(0, 1);
+          start3 = pageBtns.slice(0, 4);
+          finish = pageBtns.slice(pageBtns.length - 3, pageBtns.length);
+          finish2 = pageBtns.slice(pageBtns.length - 1, pageBtns.length);
+          finish3 = pageBtns.slice(pageBtns.length - 4, pageBtns.length);
 
-        const moreBtn = document.createElement('button');
-        moreBtn.textContent = '...';
-        moreBtn.setAttribute('disabled', '');
-        moreBtn.classList.add('pagination-button-item');
+          const currentButton = document.querySelector(
+            `button[data-action="${currentPageIndex + 1}"]`
+          );
 
-        refs.paginationNumberBtnsContainer.append(...start, moreBtn, ...finish);
+          refs.paginationNumberBtnsContainer.innerHTML = '';
+          moreBtn = document.createElement('button');
+          moreBtn.textContent = '...';
+          moreBtn.setAttribute('disabled', '');
+          moreBtn.classList.add('pagination-button-item');
+
+          dots = document.createElement('button');
+          dots.textContent = '...';
+          dots.setAttribute('disabled', '');
+          dots.setAttribute('data-disable', 'true');
+          dots.classList.add('pagination-button-item');
+
+          if (currentPageIndex === 0 || currentPageIndex === 1) {
+            refs.paginationNumberBtnsContainer.append(
+              ...start,
+              moreBtn,
+              ...finish
+            );
+          } else if (currentPageIndex === 2) {
+            refs.paginationNumberBtnsContainer.append(
+              ...start3,
+              moreBtn,
+              ...finish2
+            );
+          } else if (currentPageIndex === totalPagesNum - 3) {
+            refs.paginationNumberBtnsContainer.append(
+              ...start2,
+              moreBtn,
+              ...finish3
+            );
+          } else if (
+            currentPageIndex === totalPagesNum - 2 ||
+            currentPageIndex === totalPagesNum - 1
+          ) {
+            refs.paginationNumberBtnsContainer.append(
+              ...start,
+              moreBtn,
+              ...finish
+            );
+          } else if (
+            currentPageIndex >= 3 &&
+            currentPageIndex <= totalPagesNum - 4
+          ) {
+            refs.paginationNumberBtnsContainer.append(
+              ...start2,
+              moreBtn,
+              dots,
+              ...pageBtns.slice(currentPageIndex - 1, currentPageIndex + 2),
+              moreBtn, // Add another moreBtn here
+              ...finish2
+            );
+          } else {
+            refs.paginationNumberBtnsContainer.append(
+              ...start2,
+              moreBtn,
+              dots,
+              ...pageBtns.slice(currentPageIndex - 1, currentPageIndex + 2),
+              moreBtn, // Add another moreBtn here
+              ...finish2
+            );
+          }
+
+        }
         break;
       }
     }
   }
 
-  let activeBtn = document.querySelector(
-    `button[data-action="${currentPageIndex + 1}"]`
-  );
-
-  activeBtn.classList.add('pagination-button-item-active');
-
 
   function onPaginationBtnClick(evt) {
     const toSearch = document.getElementById('search');
-
-    // if (evt.target.nodeName !== 'BUTTON') {
-    //   return;
-    // }
-
+    console.log("btns", refs.paginationNumberBtnsContainer);
+    console.log("pagebtns", pageBtns);
     toSearch.scrollIntoView({ behavior: 'smooth' }, true);
-
-
+    defaultActiveBtn.classList.remove('pagination-button-item-active');
     let btnValue = evt.target.dataset.action;
-
-    console.log(btnValue);
 
     switch (btnValue) {
       case 'leftPag':
@@ -138,39 +258,30 @@ export function renderPagination(cocktailArr) {
           if (currentPageIndex < 0) {
             currentPageIndex = 0;
           }
-          activeBtn.classList.remove('pagination-button-item-active');
-          createCocktailCards(sortedCardsArr[currentPageIndex], galleryEl);
-          activeBtn = document.querySelector(
-            `button[data-action="${currentPageIndex + 1}"]`
-          );
-          activeBtn.classList.add('pagination-button-item-active');
         }
         break;
 
       case 'rightPag':
         {
-          activeBtn.classList.remove('pagination-button-item-active');
           currentPageIndex += 1;
-          createCocktailCards(sortedCardsArr[currentPageIndex], galleryEl);
+          if (currentPageIndex >= totalPagesNum) {
+            currentPageIndex = totalPagesNum - 1;
+          }
+        }
+        break;
 
-          activeBtn = document.querySelector(
-            `button[data-action="${currentPageIndex + 1}"]`
-          );
-          activeBtn.classList.add('pagination-button-item-active');
+      default:
+        {
+          if (!isNaN(Number(btnValue))) {
+            currentPageIndex = Number(btnValue - 1);
+          }
         }
         break;
     }
 
-    if (!isNaN(Number(btnValue))) {
-      activeBtn.classList.remove('pagination-button-item-active');
-      currentPageIndex = Number(btnValue - 1);
-      createCocktailCards(sortedCardsArr[currentPageIndex], galleryEl);
-
-      activeBtn = document.querySelector(
-        `button[data-action="${currentPageIndex + 1}"]`
-      );
-      activeBtn.classList.add('pagination-button-item-active');
-    }
+    createCocktailCards(sortedCardsArr[currentPageIndex], galleryEl);
+    updateButtonLayout();
+    updatePaginationButtons();
     arrowCheck();
   }
 
@@ -186,4 +297,179 @@ export function renderPagination(cocktailArr) {
       refs.rightPagBtn[0].classList.remove('is-hidden');
     }
   }
+
+  // Initialize pagination
+  for (let i = 1; i <= totalPagesNum; i++) {
+    const pageBtn = document.createElement('button');
+    pageBtn.textContent = i;
+    pageBtn.setAttribute('data-action', i);
+    pageBtn.classList.add('pagination-button-item');
+    pageBtns.push(pageBtn);
+  }
+
+  switch (isMobile()) {
+    case true: {
+      if (pageBtns.length <= 5) {
+        refs.paginationNumberBtnsContainer.append(...pageBtns);
+      } else {
+        start = pageBtns.slice(0, 3);
+        start2 = pageBtns.slice(0, 1);
+        start3 = pageBtns.slice(0, 4);
+        finish = pageBtns.slice(pageBtns.length - 3, pageBtns.length);
+        finish2 = pageBtns.slice(pageBtns.length - 1, pageBtns.length);
+        finish3 = pageBtns.slice(pageBtns.length - 4, pageBtns.length);
+
+        const currentButton = document.querySelector(
+          `button[data-action="${currentPageIndex + 1}"]`
+        );
+
+        refs.paginationNumberBtnsContainer.innerHTML = '';
+        moreBtn = document.createElement('button');
+        moreBtn.textContent = '...';
+        moreBtn.setAttribute('disabled', '');
+        moreBtn.classList.add('pagination-button-item');
+
+        dots = document.createElement('button');
+        dots.textContent = '...';
+        dots.setAttribute('disabled', '');
+        dots.setAttribute('data-disable', 'true');
+        dots.classList.add('pagination-button-item');
+
+        if (currentPageIndex === 0 || currentPageIndex === 1) {
+          refs.paginationNumberBtnsContainer.append(
+            ...start,
+            moreBtn,
+            ...finish2
+          );
+        } else if (currentPageIndex === 2) {
+          refs.paginationNumberBtnsContainer.append(
+            ...start3,
+            moreBtn,
+            ...finish2
+          );
+        } else if (currentPageIndex === totalPagesNum - 3) {
+          refs.paginationNumberBtnsContainer.append(
+            ...start2,
+            moreBtn,
+            ...finish3
+          );
+        } else if (
+          currentPageIndex === totalPagesNum - 2 ||
+          currentPageIndex === totalPagesNum - 1
+        ) {
+          refs.paginationNumberBtnsContainer.append(
+            ...start,
+            moreBtn,
+            ...finish
+          );
+        } else if (
+          currentPageIndex >= 3 &&
+          currentPageIndex <= totalPagesNum - 4
+        ) {
+          refs.paginationNumberBtnsContainer.append(
+            ...start2,
+            moreBtn,
+            dots,
+            ...[pageBtns[currentPageIndex]],
+            moreBtn, // Add another moreBtn here
+            ...finish2
+          );
+        } else {
+          refs.paginationNumberBtnsContainer.append(
+            ...start2,
+            moreBtn,
+            dots,
+            ...[pageBtns[currentPageIndex]],
+            moreBtn, // Add another moreBtn here
+            ...finish2
+          );
+        }
+      }
+      break;
+    }
+
+    case false: {
+      if (pageBtns.length <= 7) {
+        refs.paginationNumberBtnsContainer.append(...pageBtns);
+      } else {
+        start = pageBtns.slice(0, 3);
+        start2 = pageBtns.slice(0, 1);
+        start3 = pageBtns.slice(0, 4);
+        finish = pageBtns.slice(pageBtns.length - 3, pageBtns.length);
+        finish2 = pageBtns.slice(pageBtns.length - 1, pageBtns.length);
+        finish3 = pageBtns.slice(pageBtns.length - 4, pageBtns.length);
+
+        const currentButton = document.querySelector(
+          `button[data-action="${currentPageIndex + 1}"]`
+        );
+
+        refs.paginationNumberBtnsContainer.innerHTML = '';
+        moreBtn = document.createElement('button');
+        moreBtn.textContent = '...';
+        moreBtn.setAttribute('disabled', '');
+        moreBtn.classList.add('pagination-button-item');
+
+        dots = document.createElement('button');
+        dots.textContent = '...';
+        dots.setAttribute('disabled', '');
+        dots.setAttribute('data-disable', 'true');
+        dots.classList.add('pagination-button-item');
+
+        if (currentPageIndex === 0 || currentPageIndex === 1) {
+          refs.paginationNumberBtnsContainer.append(
+            ...start,
+            moreBtn,
+            ...finish
+          );
+        } else if (currentPageIndex === 2) {
+          refs.paginationNumberBtnsContainer.append(
+            ...start3,
+            moreBtn,
+            ...finish2
+          );
+        } else if (currentPageIndex === totalPagesNum - 3) {
+          refs.paginationNumberBtnsContainer.append(
+            ...start2,
+            moreBtn,
+            ...finish3
+          );
+        } else if (
+          currentPageIndex === totalPagesNum - 2 ||
+          currentPageIndex === totalPagesNum - 1
+        ) {
+          refs.paginationNumberBtnsContainer.append(
+            ...start,
+            moreBtn,
+            ...finish
+          );
+        } else if (
+          currentPageIndex >= 3 &&
+          currentPageIndex <= totalPagesNum - 4
+        ) {
+          refs.paginationNumberBtnsContainer.append(
+            ...start2,
+            moreBtn,
+            dots,
+            ...pageBtns.slice(currentPageIndex - 1, currentPageIndex + 2),
+            moreBtn, // Add another moreBtn here
+            ...finish2
+          );
+        } else {
+          refs.paginationNumberBtnsContainer.append(
+            ...start2,
+            moreBtn,
+            dots,
+            ...pageBtns.slice(currentPageIndex - 1, currentPageIndex + 2),
+            moreBtn, // Add another moreBtn here
+            ...finish2
+          );
+        }
+
+      }
+      break;
+    }
+  }
+
+  const defaultActiveBtn = document.querySelector('button[data-action="1"]');
+  defaultActiveBtn.classList.add('pagination-button-item-active');
 }

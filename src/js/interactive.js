@@ -39,6 +39,26 @@ function onChangeSelect(evt) {
 
   fetchCocktailByFirstLetter(selecteByLetAndChar).then(resp => {
     createMarkupCard(resp, galleryEl);
+    renderPagination(resp);
+    if (
+      refs.paginationNumberBtnsContainer.classList.contains(
+        'number-buttons-container-search'
+      )
+    ) {
+      refs.paginationNumberBtnsContainer.classList.remove(
+        'number-buttons-container-search'
+      );
+    }
+
+    refs.paginationNumberBtnsContainer.classList.contains(
+      'number-buttons-container-search'
+    );
+    if (window.innerWidth >= 1280 && resp.length >= 9) {
+      refs.paginationContainer.classList.remove('is-hidden');
+    }
+    if (window.innerWidth >= 768 && resp.length >= 8) {
+      refs.paginationContainer.classList.remove('is-hidden');
+    }
   });
 }
 
@@ -52,6 +72,16 @@ function onKeyboardClick(evt) {
   fetchCocktailByFirstLetter(btn).then(resp => {
     createCocktailCards(resp, galleryEl);
     renderPagination(resp);
+    if (
+      refs.paginationNumberBtnsContainer.classList.contains(
+        'number-buttons-container-search'
+      )
+    ) {
+      refs.paginationNumberBtnsContainer.classList.remove(
+        'number-buttons-container-search'
+      );
+    }
+
     if (window.innerWidth >= 1280 && resp.length >= 9) {
       refs.paginationContainer.classList.remove('is-hidden');
     }
@@ -83,6 +113,21 @@ function onSearchFormSubmit(evt) {
   fetchCocktailByName(query).then(resp => {
     console.log(resp);
     createCocktailCards(resp, galleryEl);
+    if (
+      !refs.paginationNumberBtnsContainer.classList.contains(
+        'number-buttons-container-search'
+      )
+    ) {
+      refs.paginationNumberBtnsContainer.classList.add(
+        'number-buttons-container-search'
+      );
+    }
+    if (window.innerWidth >= 1280 && resp.length >= 9) {
+      refs.paginationContainer.classList.remove('is-hidden');
+    }
+    if (window.innerWidth >= 768 && resp.length >= 8) {
+      refs.paginationContainer.classList.remove('is-hidden');
+    }
     changeGalleryTitle();
   });
 }
