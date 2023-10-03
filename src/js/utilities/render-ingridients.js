@@ -1,4 +1,4 @@
-import { ingredients } from "../modal-igridients";
+import { ingredients } from "./local-storage";
 
 export const renderIngidients = (arr, container) => {
 	const markup = arr.map(item =>
@@ -9,10 +9,10 @@ export const renderIngidients = (arr, container) => {
 		 <li class="ingridient-discription-item"> Type: ${item.type}</li>
 		 <li class="ingridient-discription-item">Country of origin: ${item.country}</li>
 		 <li class="ingridient-discription-item">Alcohol by volume: ${item.abv}%</li>
-		 <li class="ingridient-discription-item">Flavour:  ${item.flavour}</li></ul><ul class="cocktail-modal__buttons">
+		 <li class="ingridient-discription-item">Flavour:  ${item.flavour}</li></ul><ul class="cocktail-modal-buttons">
 		 <li class="ingredient-button-item"> ${isFavIngr(item._id)}</li>
 		   <li class="ingredient-button-item">
-		   <button type="button" class="cocktail-modal__back-button ingridient-modal-back-btn" id="backButton" aria-label="back">
+		   <button type="button" class="cocktail-modal-back-button ingridient-modal-back-btn">
 			 BACK
 		   </button>
 		   </li>
@@ -23,10 +23,10 @@ export const renderIngidients = (arr, container) => {
 }
 function isFavIngr (id){
   if (ingredients && !ingredients.includes(id)) {
-    return `<button type="button" class="cocktail-modal__favorite-button ingridient-modal-favorite-btn"  data-action="addtofav" data-id-ingridient-btn=${id}>
+    return `<button type="button" class="cocktail-modal-favorite-button"  data-type ="ingr-btn" data-add="ingraddfav" data-id-ingridient-btn=${id}>
     Add to Favorites
     </button>` } else {
-         return `<button type="button" class="cocktail-modal__favorite-button ingridient-modal-favorite-btn" data-action="removefromfav" data-id-ingridient-btn=${id}>
+         return `<button type="button" class="cocktail-modal-favorite-button" data-type ="ingr-btn" data-add="igrremovefav" data-id-ingridient-btn=${id}>
          Remove from favorites
           </button>`
        }

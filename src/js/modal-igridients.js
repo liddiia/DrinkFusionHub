@@ -1,8 +1,8 @@
 import { fetchIngredient } from "./utilities/fetch-data";
 import { renderIngidients } from "./utilities/render-ingridients";
-import { addToLocalStorage, deleteFromLocalStorage } from "./utilities/local-storage";
+import { addToLocalStorage, deleteFromLocalStorage, COCTAILMODAL_ID, INGRIDIENT_ID, ingredients } from "./utilities/local-storage";
 import { modal, modalInfoEl } from './utilities/refs'
-import { COCTAILMODAL_ID } from "./modalCallDrink";
+
 import { renderDrink } from "./modal";
 export const showIngridient = async (id) => {
 	try {
@@ -13,26 +13,27 @@ export const showIngridient = async (id) => {
 		console.log(error);
 	}
 }
-
-const INGRIDIENT_ID = "ingridients";
-export let ingredients = JSON.parse(localStorage.getItem('ingridients')) || [];
-
 const addToFavIngr = (e) => {
-	if (e.target.classList.contains("ingridient-modal-favorite-btn")) {
-		const btn = e.target;
-		let actionType = btn.dataset.action;
-		let ingridientId = btn.dataset.idIngridientBtn;
-		let idx = ingredients.indexOf(ingridientId);
-		if (actionType === "addtofav" && idx === -1) {
-			btn.textContent = "Remove from favorites";
-			btn.dataset.action = "removefromfav"
-			addToLocalStorage(ingridientId, ingredients, INGRIDIENT_ID)
-		} else {
-			btn.textContent = "Add to favorites";
-			btn.dataset.action = "addtofav";
-			deleteFromLocalStorage(ingridientId, ingredients, INGRIDIENT_ID)
-
+	if (e.target.dataset.type==="ingr-btn") {
+		const btn = e.target
+		console.log("BTN",btn);
+		const ingrID = btn.dataset.idIngridientBtn
+		console.log("ingrID",ingrID);
+		const ingrAdd = btn.dataset.add
+		console.log("ingraction", ingrAdd);
+		
+		if(ingredients && !ingredients.includes(ingrID)){
+btn.dataset.add="igrremovefav";
+btn.textContent ="Remove from favorites"
+addToLocalStorage(ingrID, ingredients, INGRIDIENT_ID)
+		}else{
+			btn.dataset.add="ingraddfav";
+btn.textContent ="Add to Favorites"
+deleteFromLocalStorage(ingrID, ingredients, INGRIDIENT_ID)
 		}
+
+		
+		
 	}
 
 }

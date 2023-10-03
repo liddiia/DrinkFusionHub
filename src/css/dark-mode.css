@@ -75,6 +75,24 @@ input:checked+.slider-desc:before {
 
 /**  Dark Theme styles  **/
 
-body.dark-theme {
-
+body.dark-theme.modal-backdrop {
+  background-color: rgb(15, 15, 15, 0.5);
+}
+body.dark-theme.modal-container{
+  background-color: #232330;
+}
+body.dark-theme.modal-close-svg{
+  stroke: #FDFDFF;
+}
+body.dark-theme.cocktail-modal-title, body.dark-theme.cocktail-modal-subtitle, body.dark-theme.ingridient-title, body.dark-theme.ingr-title, body.dark-theme.cocktail-modal-back-button{
+  color: #FDFDFF;
+} 
+body.dark-theme.cocktail-modal-back-button{
+  background-color: #FDFDFF10;
+}
+body.dark-theme.ingridient-type, body.dark-theme.ingridient-discription, body.dark-theme.cocktail-modal-per-cocktail, body.dark-theme.cocktail-modal-recipe{
+  color: #FDFDFF50
+}
+body.dark-theme.ingidient-dicr-list, body.dark-theme.cocktail-modal-ingredients{
+  color: #FDFDFF80
 }

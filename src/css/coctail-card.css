@@ -1,5 +1,5 @@
 
-.cocktail-modal__image {
+.cocktail-modal-image {
 	max-width: 295px;
 	border-radius: 16px;
 	margin-bottom: 40px;
@@ -11,27 +11,27 @@
 	overflow: hidden;
   }
   
-  .cocktail-modal__title {
+  .cocktail-modal-title {
 	text-transform: uppercase;
 	font-size: 16px;
 	margin-bottom: 8px;
 	color: var(--color-light-theme-black);
   }
   
-  .cocktail-modal__subtitle {
+  .cocktail-modal-subtitle {
 	font-size: 18px;
 	text-transform: uppercase;
 	margin-bottom: 8px;
 	color: var(--color-light-theme-black);
   }
   
-  .cocktail-modal__per-cocktail {
+  .cocktail-modal-per-cocktail {
 	font-size: 14px;
 	margin-bottom: 20px;
 	color: rgba(36, 36, 36, 0.5);
   }
   
-  .cocktail-modal__ingredients {
+  .cocktail-modal-ingredients {
 	list-style: disc;
 	list-style-position: inside;
 	padding-left: 8px;
@@ -39,12 +39,12 @@
 	color: rgba(36, 36, 36, 0.8);
   }
   
-  .cocktail-modal__ingredient-item {
+  .cocktail-modal-ingredient-item {
 	font-size: 14px;
 	line-height: 1.8;
   }
   
-  .cocktail-modal__ingredients-item:not(:last-child) {
+  .cocktail-modal-ingredients-item:not(:last-child) {
 	margin-bottom: 8px;
   }
   
@@ -53,7 +53,7 @@
 	color: var(--color-violet);
   }
   
-  .cocktail-modal__recipe {
+  .cocktail-modal-recipe {
 	font-size: 14px;
 	margin-top: 8px;
 	margin-bottom: 40px;
@@ -64,7 +64,7 @@
 	overflow-y: auto;
   }
   
-  .cocktail-modal__favorite-button {
+  .cocktail-modal-favorite-button {
 	border: none;
 	border-radius: 12px;
   
@@ -83,12 +83,12 @@
 	color: var(--color-white);
   }
   
-  .cocktail-modal__favorite-button:hover,
-  .cocktail-modal__favorite-button:focus {
+  .cocktail-modal-favorite-button:hover,
+  .cocktail-modal-favorite-button:focus {
 	background-color: var(--color-violet-darck);
   }
   
-  .cocktail-modal__back-button {
+  .cocktail-modal-back-button {
 	padding: 14px 0;
 	margin-left: auto;
 	margin-right: auto;
@@ -105,8 +105,8 @@
 	color: var(--color-light-theme-black);
   }
   
-  .cocktail-modal__back-button:hover,
-  .cocktail-modal__back-button:focus {
+  .cocktail-modal-back-button:hover,
+  .cocktail-modal-back-button:focus {
 	background-color: rgba(36, 36, 36, 0.2);
   }
   @media screen and (min-width: 768px){
@@ -118,24 +118,24 @@
 		margin-left: 20px;
 	  }
 	
-	  .cocktail-modal__image {
+	  .cocktail-modal-image {
 		margin: 0 0 20px 0;
 	
 		width: 288px;
 		height: 277px;
 	  }
 	
-	  .cocktail-modal__subtitle {
+	  .cocktail-modal-subtitle {
 		font-size: 14px;
 	  }
 	
-	  .cocktail-modal__per-cocktail {
+	  .cocktail-modal-per-cocktail {
 		font-size: 14px;
 		margin-bottom: 20px;
 		color: rgba(36, 36, 36, 0.5);
 	  }
 	
-	  .cocktail-modal__ingredients {
+	  .cocktail-modal-ingredients {
 		list-style: disc;
 	
 		list-style-position: inside;
@@ -144,17 +144,17 @@
 		color: rgba(36, 36, 36, 0.8);
 	  }
 	
-	  .cocktail-modal__recipe {
+	  .cocktail-modal-recipe {
 		margin-top: 18px;
 		max-width: 520px;
 	  }
 	
-	  .cocktail-modal__buttons {
+	  .cocktail-modal-buttons {
 		display: flex;
 		gap: 18px;
 	  }
 	
-	  .cocktail-modal__favorite-button {
+	  .cocktail-modal-favorite-button {
 		margin-left: 0;
 	
 		margin: 0;
@@ -162,7 +162,7 @@
 		padding: 16px 0;
 	  }
 	
-	  .cocktail-modal__back-button {
+	  .cocktail-modal-back-button {
 		margin: 0;
 		width: 172px;
 		padding: 16px 0;

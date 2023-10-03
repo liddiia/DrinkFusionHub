@@ -12,8 +12,9 @@ export const refs = {
     leftPagBtn: document.querySelectorAll("[data-action='leftPag']"),
     rightPagBtn: document.querySelectorAll("[data-action='rightPag']"),
     paginationNumberBtnsContainer: document.querySelector(
-    '.number-buttons-container'
-  ),
+    '.number-buttons-container'),
+    mainEl:document.querySelector("main")
+  ,
 };
 
  const modalEl={
