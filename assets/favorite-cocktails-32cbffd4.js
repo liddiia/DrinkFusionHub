@@ -1,4 +1,4 @@
-import{d as r,C as s,f as a,h as l}from"./no-cocktails-07104a2d.js";import{g as n}from"./modalCallDrink-b48d8eb2.js";function d(t,e){const c=t.map(o=>`<li class="cocktail-card" data-id="${o._id}">
+import{d as s,C as l,f as e,h as n}from"./local-storage-3b474322.js";import{g as d,m,r as u}from"./modal-coctail-4fa2d4d2.js";function v(t,a){const c=t.map(o=>`<li class="cocktail-card" data-id="${o._id}">
       <div class="cocktail-img-wrap">
         <img
           class="cocktail-img"
@@ -26,4 +26,4 @@ import{d as r,C as s,f as a,h as l}from"./no-cocktails-07104a2d.js";import{g as 
           </button>
         </div>
       </div>
-    </li>`).join("");e.insertAdjacentHTML("beforeend",c)}document.querySelector(".interactive-section");const i=document.querySelector(".gallery-list"),m=async t=>{try{const e=await n(t);d(e,i)}catch(e){console.log(e)}};function u(t){if(t.target.classList.contains(".cocktail-rem-fav-btn")){let o=t.target.closest("li").dataset.id;r(o,a,s)}}i.addEventListener("click",u);const v=document.querySelector(".container-non-photos"),g=document.querySelector(".gallery-header");document.querySelector(".gallery-list");console.log("fav: ",a);a.length===0||!a?l(v,g):a.forEach(t=>{m(t),console.log(t)});
+    </li>`).join("");a.insertAdjacentHTML("beforeend",c)}document.querySelector(".interactive-section");const r=document.querySelector(".gallery-list"),g=async t=>{try{const a=await d(t);v(a,r)}catch(a){console.log(a)}};function k(t){if(t.target.classList.contains(".cocktail-rem-fav-btn")){let o=t.target.closest("li").dataset.id;s(o,e,l)}}r.addEventListener("click",k);const f=document.querySelector(".container-non-photos"),i=document.querySelector(".gallery-header");document.querySelector(".gallery-list");console.log("fav: ",e);e.length===0||!e?n(f,i):e.forEach(t=>{g(t),console.log(t)});m(i,u);

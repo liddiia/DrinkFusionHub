@@ -12,10 +12,10 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css"
     />
     
-    <script type="module" crossorigin src="/DrinkFusionHub/assets/index-37496bf9.js"></script>
-    <link rel="modulepreload" crossorigin href="/DrinkFusionHub/assets/no-cocktails-07104a2d.js">
-    <link rel="modulepreload" crossorigin href="/DrinkFusionHub/assets/modalCallDrink-b48d8eb2.js">
-    <link rel="stylesheet" href="/DrinkFusionHub/assets/no-cocktails-ef3dabf2.css">
+    <script type="module" crossorigin src="/DrinkFusionHub/assets/index-139f1dcf.js"></script>
+    <link rel="modulepreload" crossorigin href="/DrinkFusionHub/assets/local-storage-3b474322.js">
+    <link rel="modulepreload" crossorigin href="/DrinkFusionHub/assets/modal-coctail-4fa2d4d2.js">
+    <link rel="stylesheet" href="/DrinkFusionHub/assets/local-storage-ef3dabf2.css">
     <link rel="stylesheet" href="/DrinkFusionHub/assets/index-b37df716.css">
   </head>
   <body>
@@ -32,10 +32,14 @@
         </button>
         <ul class="desktop-menu-sub-list">
           <li class="desktop-menu-sub-item">
-            <a class="desktop-menu-sub-link" href="/favorite-cocktails.html">Favorite coctails</a>
+            <a class="desktop-menu-sub-link" href="favorite-cocktails.html" 
+              >Favorite coctails</a
+            >
           </li>
           <li class="desktop-menu-sub-item">
-            <a class="desktop-menu-sub-link" href="/favorite-ingredients.html">Favorite ingredients</a>
+            <a class="desktop-menu-sub-link" href="favorite-ingredients.html" 
+              >Favorite ingredients</a
+            >
           </li>
         </ul>
       </li>
@@ -282,6 +286,7 @@
           <a
             class="mobile-menu-sub-link"
             href="favorite-cocktails.html"
+         
             >Favorite cocktails</a
           >
         </li>
@@ -289,6 +294,7 @@
           <a
             class="mobile-menu-sub-link link"
             href="favorite-ingredients.html"
+          
             >Favorite ingredients</a
           >
         </li>
@@ -303,9 +309,9 @@
 </div>
 
 
-<div class="modal-backdrop" data-modal>
+<div class="modal-backdrop" data-modal="modal">
 	<div class="modal-container">
-		<button type="button" class="close-modal" data-modal-close><svg class="modal-close-svg" width="22" height="22">
+		<button type="button" class="close-modal" data-close="close"><svg class="modal-close-svg" width="22" height="22">
 			<use href="/DrinkFusionHub/assets/icons-3046862e.svg#icon-close"></use>
 		</svg>
 		</button>
