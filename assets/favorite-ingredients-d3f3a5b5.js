@@ -1,4 +1,4 @@
-import{i as n,a}from"./fetch-data-9cc49e55.js";import"./render-ingridients-fdfafca3.js";const s=(t,o)=>{const r=t.map(e=>`<h2 class="ingridient-title" data-id-igridient =${e._id}>${e.title}</h2>
+import{i as n,a}from"./fetch-data-0038364b.js";import"./render-ingridients-84795b14.js";const s=(t,o)=>{const r=t.map(e=>`<h2 class="ingridient-title" data-id-igridient =${e._id}>${e.title}</h2>
   <p class="ingridient-type" >${e.type}</p>
   <p class="ingridient-discription"><span class="ingr-title">${e.title}: </span>${c(e.description)}</p>
   <div class="cic-btn-wrapper">
