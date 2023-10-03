@@ -1,5 +1,6 @@
 import SlimSelect from 'slim-select';
-import { didntFindCoctails } from './utilities/no-cocktails';
+import { Notify } from 'notiflix/build/notiflix-notify-aio';
+import { didntFindCoctails } from './no-cocktails';
 import { arrayLettersAndNumbers } from './utilities/data-letters-numbers';
 import { changeGalleryTitle } from './utilities/chane-title';
 import { createKeyboardBtn } from './utilities/render-keyboard-btn';
@@ -104,6 +105,7 @@ function onSearchFormSubmit(evt) {
   const query = evt.currentTarget.elements['user-search-query'].value.trim();
   if (query === '') {
     galleryEl.innerHTML = '';
+    Notify.failure('Oops, cocktail not found, try another one!');
     didntFindCoctails(contNoPhotoEl, titleGalleryEl);
     return;
   }
