@@ -290,7 +290,7 @@
 
 /* Dark Theme */
 
-body.dark-theme .cocktail-card {
+/* body.dark-theme .cocktail-card {
   background: #232330;
 }
 
@@ -317,7 +317,7 @@ body.dark-theme .cocktail-card:hover {
     box-shadow: 0 0 2px #fff, 0 0 7px #fff, 0 0 6px #9461fd, 0 0 10px #9461fd,
       0 0 45px #4003e6, 0 0 55px #4003e6;
   }
-}
+} */
 
 .cocktail-card:hover {
   box-shadow: 0 0 2px #fff, 0 0 5px #fff, 0 0 21px #fff, 0 0 32px #0fa,

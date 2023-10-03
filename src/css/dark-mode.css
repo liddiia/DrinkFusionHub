@@ -75,24 +75,53 @@ input:checked+.slider-desc:before {
 
 /**  Dark Theme styles  **/
 
-body.dark-theme.modal-backdrop {
+body.dark-theme .modal-backdrop {
   background-color: rgb(15, 15, 15, 0.5);
 }
-body.dark-theme.modal-container{
+body.dark-theme .modal-container{
   background-color: #232330;
 }
-body.dark-theme.modal-close-svg{
+body.dark-theme .modal-close-svg{
   stroke: #FDFDFF;
 }
-body.dark-theme.cocktail-modal-title, body.dark-theme.cocktail-modal-subtitle, body.dark-theme.ingridient-title, body.dark-theme.ingr-title, body.dark-theme.cocktail-modal-back-button{
+body.dark-theme .cocktail-modal-title, body.dark-theme .cocktail-modal-subtitle, body.dark-theme .ingridient-title, body.dark-theme .ingr-title, body.dark-theme .cocktail-modal-back-button{
   color: #FDFDFF;
 } 
-body.dark-theme.cocktail-modal-back-button{
+body.dark-theme .cocktail-modal-back-button{
   background-color: #FDFDFF10;
 }
-body.dark-theme.ingridient-type, body.dark-theme.ingridient-discription, body.dark-theme.cocktail-modal-per-cocktail, body.dark-theme.cocktail-modal-recipe{
+body.dark-theme .ingridient-type, body.dark-theme .ingridient-discription, body.dark-theme .cocktail-modal-per-cocktail, body.dark-theme .cocktail-modal-recipe{
   color: #FDFDFF50
 }
-body.dark-theme.ingidient-dicr-list, body.dark-theme.cocktail-modal-ingredients{
+body.dark-theme .ingidient-dicr-list, body.dark-theme .cocktail-modal-ingredients{
   color: #FDFDFF80
+}
+
+body.dark-theme .cocktail-card {
+  background: #232330;
+}
+
+body.dark-theme .gallery-header,
+body.dark-theme .cocktail-name,
+body.dark-theme .cocktail-description,
+body.dark-theme .cocktail-learn-more-btn {
+  color: var(--color-white);
+}
+
+body.dark-theme .cocktail-card:hover {
+  box-shadow: 0 0 2px #fff, 0 0 5px #fff, 0 0 21px #9461fd, 0 0 42px #9461fd,
+    0 0 82px #4003e6, 0 0 92px #4003e6;
+  animation: pulsate-dark 2s infinite alternate;
+}
+
+@keyframes pulsate-dark {
+  100% {
+    box-shadow: 0 0 4px #fff, 0 0 9px #fff, 0 0 19px #9461fd, 0 0 40px #9461fd,
+      0 0 80px #4003e6, 0 0 90px #4003e6;
+  }
+
+  0% {
+    box-shadow: 0 0 2px #fff, 0 0 7px #fff, 0 0 6px #9461fd, 0 0 10px #9461fd,
+      0 0 45px #4003e6, 0 0 55px #4003e6;
+  }
 }
