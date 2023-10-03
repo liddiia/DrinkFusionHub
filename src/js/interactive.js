@@ -113,6 +113,7 @@ function onSearchFormSubmit(evt) {
   fetchCocktailByName(query).then(resp => {
     console.log(resp);
     createCocktailCards(resp, galleryEl);
+    renderPagination(resp);
     if (
       !refs.paginationNumberBtnsContainer.classList.contains(
         'number-buttons-container-search'
