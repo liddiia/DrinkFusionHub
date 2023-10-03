@@ -127,7 +127,7 @@ export function renderPagination(cocktailArr) {
             currentPageIndex === totalPagesNum - 1
           ) {
             refs.paginationNumberBtnsContainer.append(
-              ...start,
+              ...start2,
               moreBtn,
               ...finish
             );

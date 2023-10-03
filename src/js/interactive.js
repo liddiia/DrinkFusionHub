@@ -49,14 +49,7 @@ function onChangeSelect(evt) {
         'number-buttons-container-search'
       );
     }
-
-    refs.paginationNumberBtnsContainer.classList.contains(
-      'number-buttons-container-search'
-    );
-    if (window.innerWidth >= 1280 && resp.length >= 9) {
-      refs.paginationContainer.classList.remove('is-hidden');
-    }
-    if (window.innerWidth >= 768 && resp.length >= 8) {
+    if (window.innerWidth >= 320 && resp.length >= 8) {
       refs.paginationContainer.classList.remove('is-hidden');
     }
   });
@@ -126,6 +119,9 @@ function onSearchFormSubmit(evt) {
       refs.paginationContainer.classList.remove('is-hidden');
     }
     if (window.innerWidth >= 768 && resp.length >= 8) {
+      refs.paginationContainer.classList.remove('is-hidden');
+    }
+    if (window.innerWidth >= 320 && resp.length >= 8) {
       refs.paginationContainer.classList.remove('is-hidden');
     }
     changeGalleryTitle();
