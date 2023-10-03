@@ -1,6 +1,6 @@
 const noPhoto = `<img
-            srcset="/img/no-cocktails/no-cocktails@1x.png 1x, /img/no-cocktails/no-cocktails@2x.png 2x"
-            src="/img/no-cocktails/no-cocktails@1x.png"
+            srcset="/src/img/no-cocktails/no-cocktails@1x.png 1x, /src/img/no-cocktails/no-cocktails@2x.png 2x"
+            src="/src/img/no-cocktails/no-cocktails@1x.png"
             alt="no-coctails"
             class="no-coctails-img"
             width="234"
