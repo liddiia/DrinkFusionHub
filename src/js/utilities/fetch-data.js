@@ -1,6 +1,6 @@
 import axios from 'axios';
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
-import { didntFindCoctails } from '../no-cocktails';
+import { didntFindCoctails } from '../no-cocktails'
 
 const BASE_URL = 'https://drinkify.b.goit.study/api/v1/';
 const RANDOM_ENDPOINT = `cocktails/?r=`;
