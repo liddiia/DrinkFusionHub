@@ -2,6 +2,7 @@ import './mob-menu';
 import { favorites } from './utilities/local-storage';
 import { haventAddedFavoriteCoctails } from './utilities/no-cocktails';
 import { renderADrink } from './favorite';
+import { modalCall } from './modalCallDrink';
 
 const contNoCoctails = document.querySelector('.container-non-photos');
 const titleGalleryEl = document.querySelector('.gallery-header');

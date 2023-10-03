@@ -10,4 +10,3 @@ import './js/add-favorite-cocktails-ls'
 import './js/modal-igridients';
 
 import './js/modal-coctail'
-import './js/modalCallDrink'
