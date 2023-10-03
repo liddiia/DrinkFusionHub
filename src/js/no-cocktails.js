@@ -28,3 +28,5 @@ export function haventAddedFavoriteIngradients(contNoCoctails, titleGalleryEl) {
   contNoCoctails.innerHTML = `${noPhoto}
  <p class="description-no-coctails">You haven't added any <span class="span-no-coctails">favorite ingredients</span> yet</p>`;
 }
+
+console.log('errr');
