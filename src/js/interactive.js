@@ -36,6 +36,9 @@ createKeyboardBtn(arrayLettersAndNumbers, btnHeroKeyboardEl);
 function onChangeSelect(evt) {
   const selecteByLetAndChar = evt.target.value;
   changeGalleryTitle();
+  if (contNoPhotoEl.classList.contains('active')) {
+    contNoPhotoEl.classList.remove('active');
+  }
 
   fetchCocktailByFirstLetter(selecteByLetAndChar).then(resp => {
     createCocktailCards(resp, galleryEl);
@@ -58,6 +61,9 @@ function onChangeSelect(evt) {
 function onKeyboardClick(evt) {
   if (evt.currentTarget === evt.target) {
     return;
+  }
+  if (contNoPhotoEl.classList.contains('active')) {
+    contNoPhotoEl.classList.remove('active');
   }
   const btn = evt.target.getAttribute('data-name');
   changeGalleryTitle();
@@ -100,6 +106,9 @@ function onSearchFormSubmit(evt) {
     galleryEl.innerHTML = '';
     didntFindCoctails(contNoPhotoEl, titleGalleryEl);
     return;
+  }
+  if (contNoPhotoEl.classList.contains('active')) {
+    contNoPhotoEl.classList.remove('active');
   }
   fetchCocktailByName(query).then(resp => {
     console.log(resp);
