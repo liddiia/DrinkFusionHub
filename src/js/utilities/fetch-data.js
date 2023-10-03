@@ -1,8 +1,6 @@
 import axios from 'axios';
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
 import { didntFindCoctails } from './no-cocktails';
-import { contNoPhotoEl } from '../interactive';
-import { titleGalleryEl } from '../interactive';
 
 const BASE_URL = 'https://drinkify.b.goit.study/api/v1/';
 const RANDOM_ENDPOINT = `cocktails/?r=`;
@@ -10,6 +8,9 @@ const COCKT_SEARCH = `cocktails/search/?`;
 const COCKT_LOOKUP_ID = `cocktails/lookup/?id=`;
 const INGRED_ENDPOINT = `ingredients/`;
 const INGRED_SEARCH_NAME = `ingredients/search/?`;
+
+const contNoPhotoEl = document.querySelector('.container-non-photos');
+const titleGalleryEl = document.querySelector('.gallery-header');
 
 export async function fetchRandomCocktails(num) {
   const response = await fetch(`${BASE_URL}${RANDOM_ENDPOINT}${num}`);
