@@ -17,3 +17,4 @@ if (favorites.length === 0 || !favorites) {
     console.log(item);
   });
 }
+

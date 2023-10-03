@@ -19,12 +19,12 @@ export function haventAddedFavoriteCoctails(contNoCoctails, titleGalleryEl) {
   titleGalleryEl.textContent = 'Favorite cocktails';
   contNoCoctails.classList.add('active');
   contNoCoctails.innerHTML = `${noPhoto}
-          <p class="description-no-coctails">You haven't added any <span class="span-no-coctails">favorite cocktails</span> yet</p>`;
+ <p class="description-no-coctails">You haven't added any <span class="span-no-coctails">favorite cocktails</span> yet</p>`;
 }
 
 export function haventAddedFavoriteIngradients(contNoCoctails, titleGalleryEl) {
   titleGalleryEl.textContent = 'Favorite ingredients';
   contNoCoctails.classList.add('active');
   contNoCoctails.innerHTML = `${noPhoto}
-          <p class="description-no-coctails">You haven't added any <span class="span-no-coctails">favorite ingredients</span> yet</p>`;
+ <p class="description-no-coctails">You haven't added any <span class="span-no-coctails">favorite ingredients</span> yet</p>`;
 }

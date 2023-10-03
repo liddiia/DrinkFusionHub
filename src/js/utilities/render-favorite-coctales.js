@@ -47,7 +47,7 @@ export function favouritesMarkup(arr, container) {
                 href="/img/icons.svg#icon-remove"
               ></use>
             </svg>
-          </-button>
+          </button>
         </div>
       </div>
     </li>`

@@ -24,4 +24,3 @@ export const renderFavIngidients = (arr, container) => {
   function isDicriprionIng (disc){
   return disc? disc:"Unfortunately we don't have it yet"
   }
-  
