@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <link rel="icon" type="image/svg+xml" href="/DrinkFusionHub/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Drinkify</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css"
+    />
+    
+    <script type="module" crossorigin src="/DrinkFusionHub/assets/index-96dda26d.js"></script>
+    <link rel="modulepreload" crossorigin href="/DrinkFusionHub/assets/fetch-data-3afd6672.js">
+    <link rel="modulepreload" crossorigin href="/DrinkFusionHub/assets/render-ingridients-b18445b1.js">
+    <link rel="stylesheet" href="/DrinkFusionHub/assets/fetch-data-d231a14a.css">
+    <link rel="stylesheet" href="/DrinkFusionHub/assets/index-b37df716.css">
+  </head>
+  <body>
+
+<header class="main-heder">
+  <div class="container page-header-container">
+    <ul class="page-nav-list">
+      <li class="page-nav-item"><a href="index.html" class="page-nav-link">Home</a></li>
+      <li class="page-nav-item">
+        <button type="button" class="btn-hed-sub-menu">
+          Favorite<svg class="heder-sub-icon">
+            <use href="/DrinkFusionHub/assets/icons-3046862e.svg#icon-chevron-down"></use>
+          </svg>
+        </button>
+        <ul class="desktop-menu-sub-list">
+          <li class="desktop-menu-sub-item">
+            <a class="desktop-menu-sub-link" href="favorite-cocktails.html" target="_blank" rel="noreferrer noopener"
+              >Favorite coctails</a
+            >
+          </li>
+          <li class="desktop-menu-sub-item">
+            <a class="desktop-menu-sub-link" href="favorite-ingredients.html" target="_blank" rel="noreferrer noopener"
+              >Favorite ingredients</a
+            >
+          </li>
+        </ul>
+      </li>
+    </ul>
+    <nav class="page-nav">
+      <a class="logotype" href="/index.html"
+        >drinkify
+        <svg class="logo-icon-heder" width="21" height="18">
+          <use href="/DrinkFusionHub/assets/icons-3046862e.svg#icon-cocktail"></use>
+        </svg>
+      </a>
+    </nav>
+    <label class="switch-desc">
+      <input
+        type="checkbox"
+        class="input-dark-theme is-hidden"
+        aria-label="Change theme"
+      />
+      <span class="slider-desc round"></span>
+    </label>
+    <button type="button" class="mobile-menu-open-btn js-open-menu">
+      <svg class="mob-menu-icon" width="32" height="32">
+        <use href="/DrinkFusionHub/assets/icons-3046862e.svg#icon-mob-menu"></use>
+      </svg>
+    </button>
+  </div>
+</header>
+
+<main>
+   <!--1 секция Герой-->
+ <section class="hero-section section">
+    <div class="container hero-container">
+      <div class="hero-first">
+      <h1 class="main-title">
+        A party without <span class="hero-cocktails">cocktails</span><br> is not like a party
+      </h1>
+      <p class="hero-p">From classic sips to exotic mixes, we're your key to becoming a cocktail wizard!</p>
+      <button onclick="window.location.href = '#gallery';" class="button-on-hero" type="button">View cocktails</button>
+     </div>
+      <div class="picture-hero">
+         <picture class="hero-img-girl-light-theme">
+          <source
+            srcset="/DrinkFusionHub/assets/hero-desktop-black-star@1x-0fe8b31e.png 1x, /DrinkFusionHub/assets/hero-desktop-black-star@2x-75b6c2ae.png 2x"
+            media="(min-width: 1280px)"
+          /> 
+           <source
+            srcset="/DrinkFusionHub/assets/hero-tablet-black-star@1x-dc49ac24.png 1x, /DrinkFusionHub/assets/hero-tablet-black-star@2x-b3eb037a.png 2x"
+            media="(min-width: 768px)"
+          />
+          <source
+            srcset="/DrinkFusionHub/assets/hero-mobile-black-star@1x-31c09171.png 1x, /DrinkFusionHub/assets/hero-mobile-black-star@2x-c64e88e9.png 2x"
+            media="(max-width: 767px)"
+          />
+          <img
+            class="portfolio-image"
+            src="/DrinkFusionHub/assets/hero-mobile-black-star@1x-31c09171.png"
+            alt="girl" 
+          /> 
+        </picture>
+
+        <picture class="hero-img-girl-dark-theme">
+          <source
+            srcset="/DrinkFusionHub/assets/hero-desktop-white-star@1x-f50e14a4.png 1x, /DrinkFusionHub/assets/hero-desktop-white-star@2x-a8190ae5.png 2x"
+            media="(min-width: 1280px)"
+          /> 
+           <source
+            srcset="/DrinkFusionHub/assets/hero-tablet-white-star@1x-b85d8b20.png 1x, /DrinkFusionHub/assets/hero-tablet-white-star@2x-5d405490.png 2x"
+            media="(min-width: 768px)"
+          />
+          <source
+            srcset="/DrinkFusionHub/assets/hero-mobile-white-star@1x-e71c230a.png 1x, /DrinkFusionHub/assets/hero-mobile-white-star@2x-daf0b48f.png 2x"
+            media="(max-width: 767px)"
+          />
+          <img
+            class="portfolio-image"
+            src="/DrinkFusionHub/assets/hero-mobile-white-star@1x-e71c230a.png"
+            alt="girl" 
+          /> 
+        </picture>
+      <p class="hero-p-under-picture">Search your favorite cocktail by ABC </p> 
+      
+       </div> 
+       
+  </div> 
+  </section> 
+  <section class="interactive-section">
+  <div class="container">
+    <div class="container-slimselect">
+      <select id="mySelect"></select>
+    </div>
+
+    <div class="container-letters-numbers">
+      <ul class="list-letters-numders js-list-let-num"></ul>
+    </div>
+
+    <form class="search-form js-form" id="#search-form">
+      <button type="submit" class="btn-hero-serch">
+        <svg class="search-icon" width="16" height="16">
+          <use href="/DrinkFusionHub/assets/icons-3046862e.svg#icon-search"></use>
+        </svg>
+      </button>
+      <input
+        class="input-hero-search"
+        type="text"
+        name="user-search-query"
+        autocomplete="off"
+        placeholder="Search"
+      />
+    </form>
+  </div>
+</section>
+
+
+  <section class="gallery container" id="search">
+  <h2 id="gallery" class="gallery-header">Cocktails</h2>
+  <ul  class="gallery-list"></ul>
+  <div class="container-non-photos"></div>
+  <div class="pagination-buttons-container container">
+    <button
+      class="left-pag-btn pagination-button-item"
+      type="button"
+      id="left-pag-btn"
+      data-action="leftPag"
+    >
+      <svg
+        class="page-left-icon-container"
+        id="left-pag-btn-svg"
+        data-action="leftPag"
+      >
+        <use
+          class="page-left-icon"
+          href="/DrinkFusionHub/assets/icons-3046862e.svg#icon-arrow_left"
+          data-action="leftPag"
+        ></use>
+      </svg>
+    </button>
+    <div class="number-buttons-container"></div>
+    <button
+      class="right-pag-btn pagination-button-item"
+      type="button"
+      id="right-pag-btn"
+      data-action="rightPag"
+    >
+      <svg
+        class="page-right-icon-container"
+        id="right-pag-btn-svg"
+        data-action="rightPag"
+      >
+        <use
+          class="page-right-icon"
+          href="/DrinkFusionHub/assets/icons-3046862e.svg#icon-arrow_right"
+          data-action="rightPag"
+        ></use>
+      </svg>
+    </button>
+  </div>
+</section>
+
+ 
+</main>
+<footer class="footer">
+  <div class="page-footer">
+    <div class="container footer-container">
+      <div class="logo-container">
+          <a class="footer-logotype" href="/index.html"
+          >drinkify</a>
+          <svg class="logo-icon" width="21" height="18">
+              <use href="/DrinkFusionHub/assets/icons-3046862e.svg#icon-cocktail"></use>
+          </svg>
+      </div>
+      <div class="social-container">
+        <p class="social-text">We in social</p>
+        <ul class="social-icon-list list">
+          <li class="social-list-item">
+            <a class="social-list-link" href="https://www.facebook.com/goiTclub/" target="_blank" rel="noreferrer noopener">
+              <svg class="social-item-icon">
+                <use href="/DrinkFusionHub/assets/icons-3046862e.svg#icon-facebook-f"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social-list-item">
+            <a class="social-list-link" href="https://www.instagram.com/goitclub/" target="_blank" rel="noreferrer noopener">
+              <svg class="social-item-icon" width="32" height="32">
+                <use href="/DrinkFusionHub/assets/icons-3046862e.svg#icon-instagram"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social-list-item">
+            <a class="social-list-link" href="https://www.youtube.com/c/GoiT" target="_blank" rel="noreferrer noopener">
+              <svg class="social-item-icon" width="32" height="32">
+                <use href="/DrinkFusionHub/assets/icons-3046862e.svg#icon-youtube"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>  
+</footer>
+
+
+<div class="mobile-menu js-menu-container is-hidden">
+  <div class="container">
+    <div class="mobile-menu-container">
+      <a class="logotype-menu link" href="index.html"
+        >drinkify
+        <svg class="logo-icon" width="21" height="18">
+          <use href="/DrinkFusionHub/assets/icons-3046862e.svg#icon-cocktail"></use>
+        </svg>
+      </a>
+      <div class="switch-btn-container">
+        <label class="switch-desc-mobile">
+          <input
+            type="checkbox"
+            class="input-dark-theme-mobile is-hidden"
+            aria-label="Change theme"
+          />
+          <span class="slider-desc round"></span>
+        </label>
+        <button type="button" class="mobile-menu-close-btn js-close-menu">
+          <svg class="close-mob-menu-icon">
+            <use href="/DrinkFusionHub/assets/icons-3046862e.svg#icon-close"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div class="favorite-mob-menu">
+      <ul class="mobile-menu-list list">
+        <li class="mobile-menu-item">
+          <a class="mobile-menu-link" href="index.html"
+            ><p class="mob-menu-text">Home</p></a
+          >
+        </li>
+        <li class="mobile-menu-item sub sub-js">
+          <button type="button" class="btn-opn-sub-menu js-btn-sub-menu">
+            Favorite<svg class="opn-sub-icon" width="24" height="24">
+              <use href="/DrinkFusionHub/assets/icons-3046862e.svg#icon-chevron-down"></use>
+            </svg>
+          </button>
+        </li>
+      </ul>
+      <ul class="mobile-menu-sub-list sub-menu">
+        <li class="mobile-menu-sub-item">
+          <a
+            class="mobile-menu-sub-link"
+            href="favorite-cocktails.html"
+            target="_blank"
+            rel="noreferrer noopener"
+            >Favorite cocktails</a
+          >
+        </li>
+        <li class="mobile-menu-sub-item">
+          <a
+            class="mobile-menu-sub-link link"
+            href="favorite-ingredients.html"
+            target="_blank"
+            rel="noreferrer noopener"
+            >Favorite ingredients</a
+          >
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="star-icon-container">
+    <svg class="star-icon-planshet" width="391" height="391">
+      <use href="/DrinkFusionHub/assets/icons-3046862e.svg#icon-star"></use>
+    </svg>
+  </div>
+</div>
+
+
+<div class="modal-backdrop" data-modal>
+	<div class="modal-container">
+		<button type="button" class="close-modal" data-modal-close><svg class="modal-close-svg" width="22" height="22">
+			<use href="/DrinkFusionHub/assets/icons-3046862e.svg#icon-close"></use>
+		</svg>
+		</button>
+		<div class="modal-info" id="modalinfo"></div>
+	</div>
+</div>
+
+
+
+
+
+</body>
+</html>
