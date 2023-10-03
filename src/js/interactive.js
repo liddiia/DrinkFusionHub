@@ -15,8 +15,8 @@ const selectElement = document.getElementById('mySelect');
 const btnHeroKeyboardEl = document.querySelector('.js-list-let-num');
 const galleryEl = document.querySelector('.gallery-list');
 const formEl = document.querySelector('.js-form');
-export const contNoPhotoEl = document.querySelector('.container-non-photos');
-export const titleGalleryEl = document.querySelector('.gallery-header');
+const contNoPhotoEl = document.querySelector('.container-non-photos');
+const titleGalleryEl = document.querySelector('.gallery-header');
 
 const slim = new SlimSelect({
   select: selectElement,
