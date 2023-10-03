@@ -74,6 +74,23 @@ input:checked+.slider-desc:before {
 }
 
 /**  Dark Theme styles  **/
+/*hero*/
+body.dark-theme .hero-img-girl-dark-theme {
+  display: block;
+}
+body.dark-theme .hero-img-girl-light-theme {
+  display: none;
+}
+body.dark-theme .main-title {
+  color: var(--color-white);
+}
+body.dark-theme .hero-p {
+  color: var(--color-white);
+}
+body.dark-theme .hero-p-under-picture {
+  color: var(--color-white);
+}
+/***/
 
 body.dark-theme .modal-backdrop {
   background-color: rgb(15, 15, 15, 0.5);
