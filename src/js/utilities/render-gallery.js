@@ -20,10 +20,7 @@ export function createCocktailCards(arr, container) {
         <div class="cic-btn-wrapper">
           <button class="cocktail-learn-more-btn" data-id-drink="${
             item._id
-          }">learn more</button>
-          <button class="cocktail-add-fav-btn" data-type="user-action" data-action="addtofav">
-            ${isFav(item._id)}
-          </button>
+          }">learn more</button>${isFav(item._id)}
         </div>
       </div>
     </li>`
@@ -33,9 +30,10 @@ export function createCocktailCards(arr, container) {
   container.innerHTML = markup;
 }
 
-function isFav(id) {
+export function isFav(id) {
   if (favorites && !favorites.includes(id)) {
-    return `<svg
+    return `<button class="cocktail-add-fav-btn" id="${id}" data-type="user-action" data-action="addtofav">
+            <svg
               class="favorites-btn-icon"
               aria-label="add to favorites button"
             >
@@ -43,16 +41,17 @@ function isFav(id) {
                 class="favorites-icon"
                 href="${svgUrl}#icon-heart"
               ></use>
-            </svg>`;
+            </svg></button>`;
   } else {
-    return `<svg
-              class="favorites-btn-icon is-favorite"
+    return `<button class="cocktail-add-fav-btn is-favorite" id="${id}" data-type="user-action" data-action="addtofav">
+            <svg
+              class="favorites-btn-icon"
               aria-label="add to favorites button"
             >
               <use
                 class="favorites-icon"
                 href="${svgUrl}#icon-heart"
               ></use>
-            </svg>`;
+            </svg></button>`;
   }
 }
