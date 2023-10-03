@@ -1,6 +1,6 @@
 import SlimSelect from 'slim-select';
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
-import { didntFindCoctails } from './no-cocktails';
+import { didntFindCoctails } from './utilities/no-cocktails';
 import { arrayLettersAndNumbers } from './utilities/data-letters-numbers';
 import { changeGalleryTitle } from './utilities/chane-title';
 import { createKeyboardBtn } from './utilities/render-keyboard-btn';
