@@ -1,8 +1,8 @@
 export const COCKTAIL_ID = 'favorites';
 export let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
-export const INGRIDIENT_ID = 'ingridients';
+export const INGRIDIENT_ID = "ingridients";
 export let ingredients = JSON.parse(localStorage.getItem('ingridients')) || [];
-export const COCTAILMODAL_ID = 'modalcoctail';
+export const COCTAILMODAL_ID = "modalcoctail";
 
 export function addToLocalStorage(id, arr, keyLS) {
   arr.push(id);

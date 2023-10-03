@@ -15,7 +15,9 @@
   visibility: visible;
   pointer-events: all;
 }
-
+.modal-backdrop.is-open main{
+  pointer-events: none;
+}
 .modal-container {
   position: absolute;
   top: 50%;

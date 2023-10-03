@@ -1,23 +1,21 @@
 
 import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock';
 
-import { modal, modalCloseBtn, modalInfoEl} from './utilities/refs'
+import { modal, modalCloseBtn} from './utilities/refs'
 import { showIngridient } from './modal-igridients';
-
-export const COCTAILMODAL_ID = "modalcoctail";
+import { COCTAILMODAL_ID } from './utilities/local-storage';
+import { refs } from './utilities/refs';
 export const closeModalHelper = (event) => {
 	modal.classList.toggle("is-open");
 	enableBodyScroll(event);
 }
-
-
-
 
 export function modalCall ( el, renderFunc){
   const openModal = (e) => {
     const { target } = e;
   console.log(target);
     const idDrink = target.dataset.idDrink;
+    console.log(idDrink);
     if (target.classList.contains("cocktail-learn-more-btn")) {
       setTimeout(modal.classList.toggle("is-open"), 500)
       renderFunc(idDrink);
