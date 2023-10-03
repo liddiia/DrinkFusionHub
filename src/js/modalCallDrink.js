@@ -4,7 +4,7 @@ import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock';
 import { modal, modalCloseBtn} from './utilities/refs'
 import { showIngridient } from './modal-igridients';
 import { COCTAILMODAL_ID } from './utilities/local-storage';
-import { refs } from './utilities/refs';
+
 export const closeModalHelper = (event) => {
 	modal.classList.toggle("is-open");
 	enableBodyScroll(event);
@@ -13,7 +13,7 @@ export const closeModalHelper = (event) => {
 export function modalCall ( el, renderFunc){
   const openModal = (e) => {
     const { target } = e;
-  console.log(target);
+  
     const idDrink = target.dataset.idDrink;
     console.log(idDrink);
     if (target.classList.contains("cocktail-learn-more-btn")) {
@@ -33,16 +33,21 @@ export function modalCall ( el, renderFunc){
   }
   const closeModal = (e) => {
     const { target } = e;
+    
     if (target === modalCloseBtn || target === modal|| target.tagName === "A") {
-      if (target.tagName === "A"&&target.classList.contains("ingredient-link")) {
+      if (target.tagName === "A"&& target.classList.contains("ingredient-link")) {
         e.preventDefault();
-        console.log(target);
+       
         const ingrId = target.dataset.idIngridient;
         showIngridient(ingrId)
-        return
+       return
+      }else{
+        console.log(target.parentNode);
+        setTimeout(closeModalHelper(target), 500)
+       
       }
       
-      setTimeout(closeModalHelper(target), 500)
+      
     }
   }
   

@@ -14,27 +14,33 @@ export const showIngridient = async (id) => {
 	}
 }
 const addToFavIngr = (e) => {
-	if (e.target.dataset.type==="ingr-btn") {
-		const btn = e.target
+	if (
+		e.currentTarget === e.target ||
+		e.target.dataset.typeingr !== 'ingr-btn'
+	  ) {
+		return;
+	  }
+	
+		const btn = e.target;
 		console.log("BTN",btn);
-		const ingrID = btn.dataset.idIngridientBtn
-		console.log("ingrID",ingrID);
-		const ingrAdd = btn.dataset.add
-		console.log("ingraction", ingrAdd);
-		
-		if(ingredients && !ingredients.includes(ingrID)){
-btn.dataset.add="igrremovefav";
-btn.textContent ="Remove from favorites"
-addToLocalStorage(ingrID, ingredients, INGRIDIENT_ID)
+		let ingrId = btn.dataset.idIngridientBtn;
+		console.log("ingrID",ingrId);
+		let actionType = btn.dataset.localingr
+		console.log("ingraction", actionType);
+		let idx = ingredients.indexOf(ingrId);
+		if(actionType === 'ingraddfav' && idx === -1){
+		actionType="igrremovefav";
+		btn.textContent ="Remove from favorites"
+		addToLocalStorage(ingrId, ingredients, INGRIDIENT_ID)
 		}else{
-			btn.dataset.add="ingraddfav";
+			actionType="ingraddfav";
 btn.textContent ="Add to Favorites"
-deleteFromLocalStorage(ingrID, ingredients, INGRIDIENT_ID)
+deleteFromLocalStorage(ingrId, ingredients, INGRIDIENT_ID)
 		}
 
 		
 		
-	}
+	
 
 }
 

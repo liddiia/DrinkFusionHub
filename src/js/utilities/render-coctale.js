@@ -48,12 +48,12 @@ export function createMarkupDescriptionCocktail(arr, container) {
 
 function isFavCoct(id) {
    if (favorites && !favorites.includes(id)) {
-     return `<button type="button" class="cocktail-modal-favorite-button" data-action="favorite" data-type="coct-btn" data-id-coctail=${id}>
+     return `<button type="button" class="cocktail-modal-favorite-button" data-localcockt="favorite" data-typecockt="coct-btn" data-id-coctail=${id}>
     Add to Favorites
    </button>`
   }
  else {
-    return `<button type="button" class="cocktail-modal__favorite-button" data-type="coct-btn" data-action="remfromfavorite" data-id-coctail=${id}>
+    return `<button type="button" class="cocktail-modal-favorite-button" data-typecockt="coct-btn" data-localcockt="remfromfavorite" data-id-coctail=${id}>
     Remove from Favorite
   </button>`
   }
