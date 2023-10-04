@@ -4,7 +4,7 @@ import svgUrl from '/img/icons.svg';
 export function createCocktailCards(arr, container) {
   const markup = arr
     .map(
-      item => `<li class="cocktail-card" data-id="${item._id}">
+      item => `<li class="cocktail-card glow-on-hover" data-id="${item._id}">
       <div class="cocktail-img-wrap">
         <img
           class="cocktail-img"
@@ -41,7 +41,8 @@ export function isFav(id) {
                 class="favorites-icon"
                 href="${svgUrl}#icon-heart"
               ></use>
-            </svg></button>`;
+            </svg>
+            </button>`;
   } else {
     return `<button class="cocktail-add-fav-btn is-favorite" id="${id}" data-type="user-action" data-action="addtofav">
             <svg
@@ -52,6 +53,7 @@ export function isFav(id) {
                 class="favorites-icon"
                 href="${svgUrl}#icon-heart"
               ></use>
-            </svg></button>`;
+            </svg>
+         </button>`;
   }
 }
