@@ -7,13 +7,12 @@ import {
 // import { refs } from './refs';
 import { getCocktail } from './utilities/fetch-data';
 
-const favoriteCocktailsList = document.querySelector('.interactive-section');
-const gelleryListEl = document.querySelector('.gallery-list');
+export const favoriteCoctailsList = document.querySelector('.favorite-cocktails-list');
 
 export const renderADrink = async id => {
   try {
     const drink = await getCocktail(id);
-    favouritesMarkup(drink, gelleryListEl);
+    favouritesMarkup(drink, favoriteCoctailsList);
   } catch (error) {
     console.log(error);
   }
@@ -31,10 +30,12 @@ export const renderADrink = async id => {
 function removeIdFromLocalStorage(event) {
   if (event.target.classList.contains('.cocktail-rem-fav-btn')) {
     const btn = event.target;
+    log
     const listItem = btn.closest('li');
     let cocktailId = listItem.dataset.id;
     deleteFromLocalStorage(cocktailId, favorites, COCKTAIL_ID);
+
   }
 }
 
-gelleryListEl.addEventListener('click', removeIdFromLocalStorage);
+favoriteCoctailsList.addEventListener('click', removeIdFromLocalStorage);

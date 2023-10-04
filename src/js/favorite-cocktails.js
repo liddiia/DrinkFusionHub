@@ -6,15 +6,14 @@ import { haventAddedFavoriteCoctails } from './no-cocktails';
 import { renderADrink } from './favorite';
 import { modalCall } from './modalCallDrink';
 import { renderDrink } from './modal';
-import { modal, modalCloseBtn } from './utilities/refs';
-
+import { favoriteCoctailsList } from './favorite';
 const contNoCoctails = document.querySelector('.container-non-photos');
 const titleGalleryEl = document.querySelector('.gallery-header');
+const gelleryListEl = document.querySelector('.gallery-list');
 const desc = document.querySelector('.description-no-coctails');
 const span = document.querySelector('span-no-coctails');
-const gelleryListEl = document.querySelector('.gallery-list');
-
 console.log('fav: ', favorites);
+
 
 if (favorites.length === 0 || !favorites) {
   haventAddedFavoriteCoctails(contNoCoctails, titleGalleryEl, desc, span);
@@ -24,5 +23,7 @@ if (favorites.length === 0 || !favorites) {
     console.log(item);
   });
 }
+if(favoriteCoctailsList){
+  modalCall(favoriteCoctailsList, renderDrink)
+}
 
-modalCall(gelleryListEl, renderDrink);
