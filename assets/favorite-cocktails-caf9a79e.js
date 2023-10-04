@@ -1,4 +1,4 @@
-import{s as e,d as n,C as l,f as i,h as d}from"./icons-ea514461.js";import{g as m,m as v,r as f}from"./modal-coctail-42a1aac6.js";function k(t,a){const r=t.map(o=>`<li class="cocktail-card" data-id="${o._id}">
+import{s as e,g as n,d as l,C as d,f as i,h as m}from"./icons-78da617c.js";import{m as v,r as f}from"./modal-coctail-b72b8586.js";function k(t,a){const r=t.map(o=>`<li class="cocktail-card" data-id="${o._id}">
       <div class="cocktail-img-wrap">
         <img
           class="cocktail-img"
@@ -26,4 +26,4 @@ import{s as e,d as n,C as l,f as i,h as d}from"./icons-ea514461.js";import{g as 
           </button>
         </div>
       </div>
-    </li>`).join("");a.insertAdjacentHTML("beforeend",r)}const c=document.querySelector(".favorite-cocktails-list"),g=async t=>{try{const a=await m(t);k(a,c)}catch(a){console.log(a)}};function u(t){if(t.target.classList.contains(".cocktail-rem-fav-btn")){const a=t.target;log;let o=a.closest("li").dataset.id;n(o,i,l)}}c.addEventListener("click",u);const s=document.querySelector(".favorite-container-nococktails");console.log("fav: ",i);i.length===0||!i?d(s):i.forEach(t=>{s.classList.contains("active")&&s.classList.remove("active"),g(t),console.log(t)});c&&v(c,f);
+    </li>`).join("");a.insertAdjacentHTML("beforeend",r)}const c=document.querySelector(".favorite-cocktails-list"),g=async t=>{try{const a=await n(t);k(a,c)}catch(a){console.log(a)}};function u(t){if(t.target.classList.contains(".cocktail-rem-fav-btn")){const a=t.target;log;let o=a.closest("li").dataset.id;l(o,i,d)}}c.addEventListener("click",u);const s=document.querySelector(".favorite-container-nococktails");console.log("fav: ",i);i.length===0||!i?m(s):i.forEach(t=>{s.classList.contains("active")&&s.classList.remove("active"),g(t),console.log(t)});c&&v(c,f);
