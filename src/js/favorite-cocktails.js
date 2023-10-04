@@ -2,7 +2,7 @@ import './mob-menu';
 import './modal-coctail'
 import './modal-igridients'
 import { favorites } from './utilities/local-storage';
-import { haventAddedFavoriteCoctails } from './utilities/no-cocktails';
+import { haventAddedFavoriteCoctails } from './no-cocktails';
 import { renderADrink } from './favorite';
 import { modalCall } from './modalCallDrink';
 import { renderDrink } from './modal';

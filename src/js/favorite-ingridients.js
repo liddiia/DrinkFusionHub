@@ -6,7 +6,7 @@ import './mob-menu';
 import { ingredients } from './utilities/local-storage';
 
 import { renderFavIngidients } from './utilities/render-favorite-ingredients';
-import { haventAddedFavoriteIngradients } from './utilities/no-cocktails';
+import { haventAddedFavoriteIngradients } from './no-cocktails';
 
 const contNoCoctails = document.querySelector('.container-non-photos');
 const titleGalleryEl = document.querySelector('.gallery-header');
