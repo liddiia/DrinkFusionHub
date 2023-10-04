@@ -18,6 +18,7 @@ const galleryEl = document.querySelector('.gallery-list');
 const formEl = document.querySelector('.js-form');
 const contNoPhotoEl = document.querySelector('.container-non-photos');
 const titleGalleryEl = document.querySelector('.gallery-header');
+const paginContainer = document.querySelector('.pagination-buttons-container');
 
 const slim = new SlimSelect({
   select: selectElement,
@@ -39,6 +40,7 @@ function onChangeSelect(evt) {
   changeGalleryTitle();
   if (contNoPhotoEl.classList.contains('active')) {
     contNoPhotoEl.classList.remove('active');
+    paginContainer.classList.remove('isHidden');
   }
 
   fetchCocktailByFirstLetter(selecteByLetAndChar).then(resp => {
@@ -65,6 +67,7 @@ function onKeyboardClick(evt) {
   }
   if (contNoPhotoEl.classList.contains('active')) {
     contNoPhotoEl.classList.remove('active');
+    paginContainer.classList.remove('isHidden');
   }
   const btn = evt.target.getAttribute('data-name');
   changeGalleryTitle();
@@ -105,12 +108,14 @@ function onSearchFormSubmit(evt) {
   const query = evt.currentTarget.elements['user-search-query'].value.trim();
   if (query === '') {
     galleryEl.innerHTML = '';
+    paginContainer.classList.add('isHidden');
     Notify.failure('Oops, cocktail not found, try another one!');
     didntFindCoctails(contNoPhotoEl, titleGalleryEl);
     return;
   }
   if (contNoPhotoEl.classList.contains('active')) {
     contNoPhotoEl.classList.remove('active');
+    paginContainer.classList.remove('isHidden');
   }
   fetchCocktailByName(query).then(resp => {
     console.log(resp);
@@ -137,3 +142,5 @@ function onSearchFormSubmit(evt) {
     changeGalleryTitle();
   });
 }
+
+console.log('error');

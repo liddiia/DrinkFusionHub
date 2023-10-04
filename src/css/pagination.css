@@ -83,7 +83,6 @@
 }
 
 @media only screen and (min-width: 375px) {
-
   .number-buttons-container {
     margin-right: 59px;
     margin-left: 59px;
@@ -177,4 +176,8 @@
   border: none;
   background-color: var(--color-blue);
   color: var(--color-white);
+}
+
+.pagination-buttons-container.isHidden {
+  display: none;
 }

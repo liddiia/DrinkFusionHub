@@ -24,7 +24,7 @@
   position: absolute;
 }
 
-input:checked+.slider-desc {
+input:checked + .slider-desc {
   background-image: url(../img/dark-slider.png);
   background-size: contain;
   border: 2px solid #7e8fdd;
@@ -51,7 +51,7 @@ input:checked+.slider-desc {
   }
 }
 
-input:checked+.slider-desc:before {
+input:checked + .slider-desc:before {
   background-color: #fdfdff;
   background-image: url(../img/dark-circle.png);
   background-size: cover;
@@ -59,7 +59,7 @@ input:checked+.slider-desc:before {
 }
 
 .slider-desc:before {
-  content: "";
+  content: '';
   height: 24px;
   width: 24px;
   background: url(../img/light-circle.png);
@@ -92,26 +92,73 @@ body.dark-theme .hero-p-under-picture {
 }
 /***/
 
+/* ********** Interactive ********* */
+body.dark-theme .btn-hero-serch .search-icon {
+  fill: #fdfdff;
+}
+
+body.dark-theme .input-hero-search {
+  background-color: transparent;
+  background-color: black;
+  color: #fdfdff33;
+}
+
+body.dark-theme .hero-keyboard-btn {
+  background-color: #7e8fdd66;
+  color: #fdfdff;
+}
+body.dark-theme .hero-keyboard-btn.hero-keyboard-btn-active {
+  background-color: #9cdfdf;
+}
+
+body.dark-theme .input-hero-search::placeholder {
+  color: #fdfdff33;
+}
+
+/* ********** /Interactive ********* */
+
+/* ********** No-Cocktails ********* */
+body.dark-theme .container-non-photos {
+  background-color: black;
+}
+
+body.dark-theme .description-no-coctails {
+  color: #fdfdff;
+}
+body.dark-theme .span-no-coctails {
+  color: #9cdfdf;
+}
+
+/* ********** / No-Cocktails ********* */
+
 body.dark-theme .modal-backdrop {
   background-color: rgb(15, 15, 15, 0.5);
 }
-body.dark-theme .modal-container{
+body.dark-theme .modal-container {
   background-color: #232330;
 }
-body.dark-theme .modal-close-svg{
-  stroke: #FDFDFF;
+body.dark-theme .modal-close-svg {
+  stroke: #fdfdff;
 }
-body.dark-theme .cocktail-modal-title, body.dark-theme .cocktail-modal-subtitle, body.dark-theme .ingridient-title, body.dark-theme .ingr-title, body.dark-theme .cocktail-modal-back-button{
-  color: #FDFDFF;
+body.dark-theme .cocktail-modal-title,
+body.dark-theme .cocktail-modal-subtitle,
+body.dark-theme .ingridient-title,
+body.dark-theme .ingr-title,
+body.dark-theme .cocktail-modal-back-button {
+  color: #fdfdff;
 }
-body.dark-theme .cocktail-modal-back-button{
-  background-color: #FDFDFF10;
+body.dark-theme .cocktail-modal-back-button {
+  background-color: #fdfdff10;
 }
-body.dark-theme .ingridient-type, body.dark-theme .ingridient-discription, body.dark-theme .cocktail-modal-per-cocktail, body.dark-theme .cocktail-modal-recipe{
-  color: #FDFDFF50
+body.dark-theme .ingridient-type,
+body.dark-theme .ingridient-discription,
+body.dark-theme .cocktail-modal-per-cocktail,
+body.dark-theme .cocktail-modal-recipe {
+  color: #fdfdff50;
 }
-body.dark-theme .ingidient-dicr-list, body.dark-theme .cocktail-modal-ingredients{
-  color: #FDFDFF80
+body.dark-theme .ingidient-dicr-list,
+body.dark-theme .cocktail-modal-ingredients {
+  color: #fdfdff80;
 }
 
 body.dark-theme .cocktail-card {
