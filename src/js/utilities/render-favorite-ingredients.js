@@ -13,7 +13,7 @@ export const renderFavIngidients = (arr, container) => {
     item.title
   }: </span>${isDicriprionIng(item.description)}</p>
   <div class="cic-btn-wrapper">
-  <button class="cocktail-learn-more-btn" data-id-drink="${
+  <button class="cocktail-learn-more-btn" data-id-igridient="${
     item._id
   }">learn more</button>
   <button class="cocktail-rem-fav-btn" data-type="user-action" data-action="remfromfav">
@@ -35,5 +35,5 @@ export const renderFavIngidients = (arr, container) => {
   container.insertAdjacentHTML("beforeend", markup);
 };
 function isDicriprionIng(disc) {
-  return disc ? disc : "Unfortunately we don't have it yet";
+  return disc ? disc : "Sorry we dont have it yet";
 }

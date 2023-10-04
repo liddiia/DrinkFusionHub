@@ -1,27 +1,27 @@
 
 import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock';
 
-import { modal, modalCloseBtn} from './utilities/refs'
-import { showIngridient } from './modal-igridients';
-import { COCTAILMODAL_ID } from './utilities/local-storage';
+import { modal, modalCloseBtn } from './refs'
+import { showIngridient } from '../modal-igridients';
+import { COCTAILMODAL_ID } from './local-storage';
 
 export const closeModalHelper = (event) => {
-	modal.classList.toggle("is-open");
-	enableBodyScroll(event);
+  modal.classList.toggle("is-open");
+  enableBodyScroll(event);
 }
 
-export function modalCall ( el, renderFunc){
+export function modalCall(el, renderFunc) {
   const openModal = (e) => {
-        
+
     const { target } = e;
-  
+    console.log(target);
     const idDrink = target.dataset.idDrink;
     console.log(idDrink);
     if (target.classList.contains("cocktail-learn-more-btn")) {
       setTimeout(modal.classList.toggle("is-open"), 500)
       renderFunc(idDrink);
       disableBodyScroll(e);
-  
+      console.log(modal);
       localStorage.setItem(COCTAILMODAL_ID, idDrink)
     }
     const closeEscape = (e => {
@@ -34,25 +34,25 @@ export function modalCall ( el, renderFunc){
   }
   const closeModal = (e) => {
     const { target } = e;
-   
-    if (target === modalCloseBtn || target === modal|| target.tagName === "A") {
-      if (target.tagName === "A"&& target.classList.contains("ingredient-link")) {
+
+    if (target === modalCloseBtn || target === modal || target.tagName === "A") {
+      if (target.tagName === "A" && target.classList.contains("ingredient-link")) {
         e.preventDefault();
-       
+
         const ingrId = target.dataset.idIngridient;
         showIngridient(ingrId)
-       return
-      }else{
+        return
+      } else {
         console.log(target.parentNode);
-      closeModalHelper(target)
-       
+        closeModalHelper(target)
+
       }
-      
-      
+
+
     }
   }
-  
+
   el.addEventListener("click", openModal);
-  
+
   modal.addEventListener("click", closeModal);
 }
