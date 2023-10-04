@@ -12,16 +12,8 @@ export function didntFindCoctails(contNoCoctails, titleGalleryEl) {
   contNoCoctails.classList.add('active');
 }
 
-export function haventAddedFavoriteCoctails(
-  contNoCoctails,
-  titleGalleryEl,
-  desc,
-  span
-) {
-  titleGalleryEl.textContent = 'Favorite cocktails';
+export function haventAddedFavoriteCoctails(contNoCoctails) {
   contNoCoctails.classList.add('active');
-  desc.textContent = "You haven't added any yet";
-  span.textContent = 'favorite cocktails';
 }
 
 export function haventAddedFavoriteIngradients(
