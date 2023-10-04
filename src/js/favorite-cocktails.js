@@ -6,6 +6,7 @@ import { refs } from './utilities/refs';
 import { getCocktail } from './utilities/fetch-data';
 import { renderFavPagination } from './utilities/favorites-pagination';
 import svgUrl from '/img/icons.svg';
+
 const contFavoriteNoCoctails = document.querySelector(
   '.favorite-container-nococktails'
 );
@@ -52,8 +53,9 @@ export const renderFav = ids => {
   </li>`
 ;
   });
-};
-
-console.log("favorites", favorites);
+  console.log("favorites", favorites);
 renderFavPagination(favorites);
 console.log("Hello World");
+
+}
+

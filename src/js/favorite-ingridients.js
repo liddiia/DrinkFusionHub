@@ -1,25 +1,24 @@
 import './mob-menu';
-// import './modal';
-// import './modal-coctail';
-// import './modal-igridients';
-
+import './modal-igridients';
+import { modalCallIngr } from './utilities/modalCallIngr'; 
 import { ingredients } from './utilities/local-storage';
 
 import { renderFavIngidients } from './utilities/render-favorite-ingredients';
 import { haventAddedFavoriteIngradients } from './no-cocktails';
 import { fetchIngredient } from './utilities/fetch-data';
+import { showIngridient } from './modal-igridients';
 
 const contNoCoctails = document.querySelector('.container-non-photos');
-const gelleryListEl = document.querySelector('.ingredients-cocktails-list');
+const favIngListEl = document.querySelector('.ingredients-cocktails-list');
 
 const showFavIngridient = async (id) => {
-	try {
-		const ingridient = await fetchIngredient(id);
-		renderFavIngidients(ingridient,gelleryListEl );
+  try {
+    const ingridient = await fetchIngredient(id);
+    renderFavIngidients(ingridient, favIngListEl);
 
-	} catch (error) {
-		console.log(error);
-	}
+  } catch (error) {
+    console.log(error);
+  }
 }
 
 
@@ -29,8 +28,11 @@ if (ingredients.length === 0 || !ingredients) {
 } else {
   console.log(ingredients);
   ingredients.forEach(item => {
-  showFavIngridient(item);
+    showFavIngridient(item);
     console.log(item);
   });
 
+}
+if (favIngListEl) {
+  modalCallIngr(favIngListEl, showIngridient)
 }
