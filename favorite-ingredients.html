@@ -66,69 +66,29 @@
 </header>
 
     <main>
-          
-        <section class="gallery container" id="search">
-  <h2 id="gallery" class="gallery-header">Cocktails</h2>
-  <ul class="gallery-list"></ul>
-
-  <div class="container-non-photos js-container-non-photos">
-    <img
-      srcset="/DrinkFusionHub/assets/no-cocktails@1x-a6f40fdf.png 1x, /DrinkFusionHub/assets/no-cocktails@2x-8a89483f.png 2x"
-      src="/DrinkFusionHub/assets/no-cocktails@1x-a6f40fdf.png"
-      alt="no-cocktails"
-      class="no-coctails-img"
-      width="234"
-      height="201"
-      loading="lazy"
-    />
-    <p class="description-no-coctails">
-      Sorry, we <span class="span-no-coctails">didn’t find</span> any cocktail
-      for you
-    </p>
-  </div>
-
-  <div class="pagination-buttons-container container">
-    <button
-      class="left-pag-btn pagination-button-item"
-      type="button"
-      id="left-pag-btn"
-      data-action="leftPag"
-    >
-      <svg
-        class="page-left-icon-container"
-        id="left-pag-btn-svg"
-        data-action="leftPag"
-      >
-        <use
-          class="page-left-icon"
-          href="/DrinkFusionHub/assets/icons-4101da0b.svg#icon-arrow_left"
-          data-action="leftPag"
-        ></use>
-      </svg>
-    </button>
-    <div class="number-buttons-container"></div>
-    <button
-      class="right-pag-btn pagination-button-item"
-      type="button"
-      id="right-pag-btn"
-      data-action="rightPag"
-    >
-      <svg
-        class="page-right-icon-container"
-        id="right-pag-btn-svg"
-        data-action="rightPag"
-      >
-        <use
-          class="page-right-icon"
-          href="/DrinkFusionHub/assets/icons-4101da0b.svg#icon-arrow_right"
-          data-action="rightPag"
-        ></use>
-      </svg>
-    </button>
-  </div>
-</section>
-
-      
+      <section class="favorites-cocktails-section">
+        <div class="container">
+          <h1 class="favorites-cocktail-title gallery-header">
+            Favorite ingredients
+          </h1>
+          <ul class="ingredients-cocktails-list"></ul>
+          <div class="favorite-container-nococktails js-ingredients-container">
+            <img
+              srcset="/DrinkFusionHub/assets/no-cocktails@1x-a6f40fdf.png 1x, /DrinkFusionHub/assets/no-cocktails@2x-8a89483f.png 2x"
+              src="/DrinkFusionHub/assets/no-cocktails@1x-a6f40fdf.png"
+              alt="no-cocktails"
+              class="no-coctails-img"
+              width="234"
+              height="201"
+              loading="lazy"
+            />
+            <p class="description-no-coctails">
+              You haven't added any
+              <span class="span-no-coctails">favorite ingredients</span> yet
+            </p>
+          </div>
+        </div>
+      </section>
     </main>
     <footer class="footer">
   <div class="page-footer">
@@ -248,7 +208,6 @@
 		<div class="modal-info" id="modalinfo"></div>
 	</div>
 </div>
-
 
     
     <!-- <script type="module" src="main.js"></script>
