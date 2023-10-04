@@ -1,4 +1,4 @@
-import{d as s,C as l,f as e,h as n}from"./local-storage-8345f622.js";import{g as d,m,r as u}from"./modal-coctail-de29ab3b.js";function v(t,a){const c=t.map(o=>`<li class="cocktail-card" data-id="${o._id}">
+import{d as i,C as s,f as c,h as n}from"./local-storage-a05408d6.js";import{g as l,m as d,r as m}from"./modal-coctail-973ef70e.js";function u(t,e){const a=t.map(o=>`<li class="cocktail-card" data-id="${o._id}">
       <div class="cocktail-img-wrap">
         <img
           class="cocktail-img"
@@ -26,4 +26,4 @@ import{d as s,C as l,f as e,h as n}from"./local-storage-8345f622.js";import{g as
           </button>
         </div>
       </div>
-    </li>`).join("");a.insertAdjacentHTML("beforeend",c)}document.querySelector(".interactive-section");const r=document.querySelector(".gallery-list"),g=async t=>{try{const a=await d(t);v(a,r)}catch(a){console.log(a)}};function k(t){if(t.target.classList.contains(".cocktail-rem-fav-btn")){let o=t.target.closest("li").dataset.id;s(o,e,l)}}r.addEventListener("click",k);const f=document.querySelector(".container-non-photos"),i=document.querySelector(".gallery-header");document.querySelector(".gallery-list");console.log("fav: ",e);e.length===0||!e?n(f,i):e.forEach(t=>{g(t),console.log(t)});m(i,u);
+    </li>`).join("");e.insertAdjacentHTML("beforeend",a)}document.querySelector(".interactive-section");const r=document.querySelector(".gallery-list"),g=async t=>{try{const e=await l(t);u(e,r)}catch(e){console.log(e)}};function v(t){if(t.target.classList.contains(".cocktail-rem-fav-btn")){let o=t.target.closest("li").dataset.id;i(o,c,s)}}r.addEventListener("click",v);const k=document.querySelector(".container-non-photos"),f=document.querySelector(".gallery-header"),p=document.querySelector(".description-no-coctails"),y=document.querySelector("span-no-coctails"),b=document.querySelector(".gallery-list");console.log("fav: ",c);c.length===0||!c?n(k,f,p,y):c.forEach(t=>{g(t),console.log(t)});d(b,m);

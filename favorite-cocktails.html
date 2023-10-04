@@ -12,10 +12,10 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css"
     />
     
-    <script type="module" crossorigin src="/DrinkFusionHub/assets/favorite-cocktails-7bd2f016.js"></script>
-    <link rel="modulepreload" crossorigin href="/DrinkFusionHub/assets/local-storage-8345f622.js">
-    <link rel="modulepreload" crossorigin href="/DrinkFusionHub/assets/modal-coctail-de29ab3b.js">
-    <link rel="stylesheet" href="/DrinkFusionHub/assets/local-storage-b472276b.css">
+    <script type="module" crossorigin src="/DrinkFusionHub/assets/favorite-cocktails-d7657a1f.js"></script>
+    <link rel="modulepreload" crossorigin href="/DrinkFusionHub/assets/local-storage-a05408d6.js">
+    <link rel="modulepreload" crossorigin href="/DrinkFusionHub/assets/modal-coctail-973ef70e.js">
+    <link rel="stylesheet" href="/DrinkFusionHub/assets/local-storage-d1a814cf.css">
   </head>
   <body>
     <header class="main-heder">
@@ -25,7 +25,7 @@
       <li class="page-nav-item">
         <button type="button" class="btn-hed-sub-menu">
           Favorite<svg class="heder-sub-icon">
-            <use href="/DrinkFusionHub/assets/icons-3046862e.svg#icon-chevron-down"></use>
+            <use href="/DrinkFusionHub/assets/icons-4101da0b.svg#icon-chevron-down"></use>
           </svg>
         </button>
         <ul class="desktop-menu-sub-list">
@@ -46,7 +46,7 @@
       <a class="logotype" href="/index.html"
         >drinkify
         <svg class="logo-icon-heder" width="21" height="18">
-          <use href="/DrinkFusionHub/assets/icons-3046862e.svg#icon-cocktail"></use>
+          <use href="/DrinkFusionHub/assets/icons-4101da0b.svg#icon-cocktail"></use>
         </svg>
       </a>
     </nav>
@@ -60,7 +60,7 @@
     </label>
     <button type="button" class="mobile-menu-open-btn js-open-menu">
       <svg class="mob-menu-icon" width="32" height="32">
-        <use href="/DrinkFusionHub/assets/icons-3046862e.svg#icon-mob-menu"></use>
+        <use href="/DrinkFusionHub/assets/icons-4101da0b.svg#icon-mob-menu"></use>
       </svg>
     </button>
   </div>
@@ -69,8 +69,27 @@
     <main>
       <section class="gallery container" id="search">
   <h2 id="gallery" class="gallery-header">Cocktails</h2>
-  <ul  class="gallery-list"></ul>
-  <div class="container-non-photos"></div>
+  <ul class="gallery-list"></ul>
+
+  <div class="container-non-photos js-container-non-photos">
+    <img
+      srcset="
+        ../img/no-cocktails/no-cocktails@1x.png 1x,
+        ../img/no-cocktails/no-cocktails@2x.png 2x
+      "
+      src="../img/no-cocktails/no-cocktails@1x.png"
+      alt="no-cocktails"
+      class="no-coctails-img"
+      width="234"
+      height="201"
+      loading="lazy"
+    />
+    <p class="description-no-coctails">
+      Sorry, we <span class="span-no-coctails">didn’t find</span> any cocktail
+      for you
+    </p>
+  </div>
+
   <div class="pagination-buttons-container container">
     <button
       class="left-pag-btn pagination-button-item"
@@ -85,7 +104,7 @@
       >
         <use
           class="page-left-icon"
-          href="/DrinkFusionHub/assets/icons-3046862e.svg#icon-arrow_left"
+          href="/DrinkFusionHub/assets/icons-4101da0b.svg#icon-arrow_left"
           data-action="leftPag"
         ></use>
       </svg>
@@ -104,7 +123,7 @@
       >
         <use
           class="page-right-icon"
-          href="/DrinkFusionHub/assets/icons-3046862e.svg#icon-arrow_right"
+          href="/DrinkFusionHub/assets/icons-4101da0b.svg#icon-arrow_right"
           data-action="rightPag"
         ></use>
       </svg>
@@ -120,7 +139,7 @@
           <a class="footer-logotype" href="/index.html"
           >drinkify</a>
           <svg class="logo-icon" width="21" height="18">
-              <use href="/DrinkFusionHub/assets/icons-3046862e.svg#icon-cocktail"></use>
+              <use href="/DrinkFusionHub/assets/icons-4101da0b.svg#icon-cocktail"></use>
           </svg>
       </div>
       <div class="social-container">
@@ -129,21 +148,21 @@
           <li class="social-list-item">
             <a class="social-list-link" href="https://www.facebook.com/goiTclub/" target="_blank" rel="noreferrer noopener">
               <svg class="social-item-icon">
-                <use href="/DrinkFusionHub/assets/icons-3046862e.svg#icon-facebook-f"></use>
+                <use href="/DrinkFusionHub/assets/icons-4101da0b.svg#icon-facebook-f"></use>
               </svg>
             </a>
           </li>
           <li class="social-list-item">
             <a class="social-list-link" href="https://www.instagram.com/goitclub/" target="_blank" rel="noreferrer noopener">
               <svg class="social-item-icon" width="32" height="32">
-                <use href="/DrinkFusionHub/assets/icons-3046862e.svg#icon-instagram"></use>
+                <use href="/DrinkFusionHub/assets/icons-4101da0b.svg#icon-instagram"></use>
               </svg>
             </a>
           </li>
           <li class="social-list-item">
             <a class="social-list-link" href="https://www.youtube.com/c/GoiT" target="_blank" rel="noreferrer noopener">
               <svg class="social-item-icon" width="32" height="32">
-                <use href="/DrinkFusionHub/assets/icons-3046862e.svg#icon-youtube"></use>
+                <use href="/DrinkFusionHub/assets/icons-4101da0b.svg#icon-youtube"></use>
               </svg>
             </a>
           </li>
@@ -159,7 +178,7 @@
       <a class="logotype-menu link" href="index.html"
         >drinkify
         <svg class="logo-icon" width="21" height="18">
-          <use href="/DrinkFusionHub/assets/icons-3046862e.svg#icon-cocktail"></use>
+          <use href="/DrinkFusionHub/assets/icons-4101da0b.svg#icon-cocktail"></use>
         </svg>
       </a>
       <div class="switch-btn-container">
@@ -173,7 +192,7 @@
         </label>
         <button type="button" class="mobile-menu-close-btn js-close-menu">
           <svg class="close-mob-menu-icon">
-            <use href="/DrinkFusionHub/assets/icons-3046862e.svg#icon-close"></use>
+            <use href="/DrinkFusionHub/assets/icons-4101da0b.svg#icon-close"></use>
           </svg>
         </button>
       </div>
@@ -188,7 +207,7 @@
         <li class="mobile-menu-item sub sub-js">
           <button type="button" class="btn-opn-sub-menu js-btn-sub-menu">
             Favorite<svg class="opn-sub-icon" width="24" height="24">
-              <use href="/DrinkFusionHub/assets/icons-3046862e.svg#icon-chevron-down"></use>
+              <use href="/DrinkFusionHub/assets/icons-4101da0b.svg#icon-chevron-down"></use>
             </svg>
           </button>
         </li>
@@ -215,7 +234,7 @@
   </div>
   <div class="star-icon-container">
     <svg class="star-icon-planshet" width="391" height="391">
-      <use href="/DrinkFusionHub/assets/icons-3046862e.svg#icon-star"></use>
+      <use href="/DrinkFusionHub/assets/icons-4101da0b.svg#icon-star"></use>
     </svg>
   </div>
 </div>
@@ -224,7 +243,7 @@
       <div class="modal-backdrop" data-modal="modal">
 	<div class="modal-container">
 		<button type="button" class="close-modal" data-close="close"><svg class="modal-close-svg" width="22" height="22">
-			<use href="/DrinkFusionHub/assets/icons-3046862e.svg#icon-close"></use>
+			<use href="/DrinkFusionHub/assets/icons-4101da0b.svg#icon-close"></use>
 		</svg>
 		</button>
 		<div class="modal-info" id="modalinfo"></div>
