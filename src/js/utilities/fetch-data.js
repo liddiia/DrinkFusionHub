@@ -12,6 +12,7 @@ const INGRED_SEARCH_NAME = `ingredients/search/?`;
 const contNoPhotoEl = document.querySelector('.container-non-photos');
 const titleGalleryEl = document.querySelector('.gallery-header');
 const galleryEl = document.querySelector('.gallery-list');
+const paginContainer = document.querySelector('.pagination-buttons-container');
 
 export async function fetchRandomCocktails(num) {
   const response = await fetch(`${BASE_URL}${RANDOM_ENDPOINT}${num}`);
@@ -44,6 +45,7 @@ export async function fetchCocktailByName(query) {
   } catch (error) {
     console.log(error);
     galleryEl.innerHTML = '';
+    paginContainer.classList.add('isHidden');
     didntFindCoctails(contNoPhotoEl, titleGalleryEl);
     Notify.failure('Oops, cocktail not found, try another one!');
   }
@@ -60,6 +62,7 @@ export async function fetchCocktailByFirstLetter(query) {
   } catch (error) {
     console.log(error);
     galleryEl.innerHTML = '';
+    paginContainer.classList.add('isHidden');
     didntFindCoctails(contNoPhotoEl, titleGalleryEl);
     Notify.failure('Oops, cocktail not found, try another one!');
   }
