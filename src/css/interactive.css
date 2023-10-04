@@ -4,7 +4,7 @@
 
 .container-slimselect {
   box-sizing: border-box;
-  width: 105px;
+  width: 90px;
   height: 34px;
   margin: auto;
   margin-bottom: 40px;
@@ -24,9 +24,9 @@
     padding-top: 100px;
   }
 
-  .container-slimselect {
+  /* .container-slimselect {
     display: none;
-  }
+  } */
 }
 
 @media screen and (max-width: 767px) {
@@ -132,8 +132,7 @@ input::placeholder {
   border-radius: 8px;
 }
 
-.ss-values {
-  background-color: #9cdfdf;
+.container-slimselect .ss-main .ss-values .ss-placeholder {
   color: #fdfdff;
   font-size: 14px;
   font-family: Poppins;
