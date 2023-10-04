@@ -1,5 +1,5 @@
 @media only screen and (min-width: 320px) {
-  .pagination-buttons-container {
+  .pagination-buttons-container, .favorite-pagination-buttons-container {
     height: fit-content;
     display: flex;
     flex-wrap: nowrap;
@@ -9,6 +9,7 @@
     padding: 0;
     margin: 0 auto;
     max-width: 334px;
+    margin-top: 40px
   }
 
   .number-buttons-container {
@@ -95,8 +96,9 @@
 }
 
 @media screen and (min-width: 768px) {
-  .pagination-buttons-container {
+  .pagination-buttons-container, .favorite-pagination-buttons-container {
     max-width: 700px;
+    margin-top: 64px;
   }
 
   .number-buttons-container {
@@ -147,8 +149,9 @@
 }
 
 @media only screen and (min-width: 1280px) {
-  .pagination-buttons-container {
+  .pagination-buttons-container, .favorite-pagination-buttons-container {
     max-width: 880px;
+    margin-top: 44px;
   }
 
   .number-buttons-container {
