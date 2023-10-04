@@ -15,7 +15,7 @@ button {
 }
 
 .page-nav-item {
-    color: #242424;
+    color: var(--color-light-theme-black);
     font-family: Poppins;
     font-size: 16px;
     font-style: normal;
