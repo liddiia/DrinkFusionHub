@@ -59,5 +59,5 @@ function isFavCoct(id) {
   }
 }
 function isDicriprion(discr){
-    return discr.hasOwnProperty("measure") ?  discr.measure : "🧐" ;
+    return discr.hasOwnProperty("measure") ?  discr.measure : "Sorry we dont have it yet" ;
 }

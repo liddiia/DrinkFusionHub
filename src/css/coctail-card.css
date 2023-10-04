@@ -47,7 +47,9 @@
   .cocktail-modal-ingredients-item:not(:last-child) {
 	margin-bottom: 8px;
   }
-  
+  .ingredient-link{
+	transition: color var(--transition);
+  }
   .ingredient-link:hover,
   .ingredient-link:focus {
 	color: var(--color-violet);
@@ -81,6 +83,7 @@
   
 	background-color: var(--color-violet);
 	color: var(--color-white);
+	transition: background-color var(--transition);
   }
   
   .cocktail-modal-favorite-button:hover,
@@ -103,6 +106,7 @@
   
 	background-color: rgba(36, 36, 36, 0.1);
 	color: var(--color-light-theme-black);
+	transition: background-color var(--transition);
   }
   
   .cocktail-modal-back-button:hover,

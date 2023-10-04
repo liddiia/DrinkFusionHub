@@ -4,7 +4,7 @@ import './modal-igridients';
 import { favorites } from './utilities/local-storage';
 import { haventAddedFavoriteCoctails } from './no-cocktails';
 import { renderADrink } from './favorite';
-import { modalCall } from './modalCallDrink';
+import { modalCall } from './utilities/modalCallDrink';
 import { renderDrink } from './modal';
 import { favoriteCoctailsList } from './favorite';
 const contFavoriteNoCoctails = document.querySelector(
@@ -23,6 +23,7 @@ if (favorites.length === 0 || !favorites) {
     console.log(item);
   });
 }
+console.log(favoriteCoctailsList);
 if (favoriteCoctailsList) {
   modalCall(favoriteCoctailsList, renderDrink);
 }
