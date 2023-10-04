@@ -18,17 +18,35 @@
     <main>
       <section class="favorites-cocktails-section">
         <div class="container">
-          <h1 class="favorites-cocktail-title gallery-header">Favorite cocktails</h1>
+          <h1 class="favorites-cocktail-title gallery-header">
+            Favorite cocktails
+          </h1>
           <ul class="favorite-cocktails-list"></ul>
+          <div class="favorite-container-nococktails">
+            <img
+              srcset="
+                /img/no-cocktails/no-cocktails@1x.png 1x,
+                /img/no-cocktails/no-cocktails@2x.png 2x
+              "
+              src="/img/no-cocktails/no-cocktails@1x.png"
+              alt="no-cocktails"
+              class="no-coctails-img"
+              width="234"
+              height="201"
+              loading="lazy"
+            />
+            <p class="description-no-coctails">
+              You haven't added any
+              <span class="span-no-coctails">favorite cocktails</span> yet
+            </p>
+          </div>
         </div>
       </section>
-     
     </main>
     <load src="partials/footer.html" />
     <load src="partials/mobile-menu.html" />
 
-      <load src="partials/modal.html" />
-    
+    <load src="partials/modal.html" />
 
     <script type="module" src="js/favorite-cocktails.js"></script>
     <!--<script type="module" src="js/favorite-ingridients.js"></script>
