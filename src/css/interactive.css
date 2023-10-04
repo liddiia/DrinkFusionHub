@@ -3,7 +3,8 @@
 }
 
 .container-slimselect {
-  width: 90px;
+  box-sizing: border-box;
+  width: 105px;
   height: 34px;
   margin: auto;
   margin-bottom: 40px;
@@ -118,4 +119,20 @@ input::placeholder {
 
 .container-letters-numbers {
   margin-bottom: 50px;
+}
+
+/* ****************** Slim-Select ***************************** */
+
+.container-slimselect .ss-main {
+  background-color: #9cdfdf;
+  border-radius: 8px;
+}
+
+.ss-values {
+  background-color: #9cdfdf;
+  color: #fdfdff;
+  font-size: 14px;
+  font-family: Poppins;
+  font-weight: 600;
+  line-height: 18px;
 }
