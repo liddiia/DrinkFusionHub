@@ -1,4 +1,4 @@
-import{s,i,e as r,c as a}from"./icons-78da617c.js";const c=(n,e)=>{const o=n.map(t=>` <li class= "fav-ingr-item>
+import{s,i,e as r,c as a}from"./icons-34fc0dad.js";const c=(n,e)=>{const o=n.map(t=>` <li class= "fav-ingr-item>
          <h2 class="ingridient-title" data-id-igridient =${t._id}>${t.title}</h2>
   <p class="ingridient-type" >${t.type}</p>
   <p class="ingridient-discription"><span class="ingr-title">${t.title}: </span>${l(t.description)}</p>

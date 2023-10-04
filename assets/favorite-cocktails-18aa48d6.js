@@ -1,4 +1,4 @@
-import{s as e,g as n,d as l,C as d,f as i,h as m}from"./icons-78da617c.js";import{m as v,r as f}from"./modal-coctail-b72b8586.js";function k(t,a){const r=t.map(o=>`<li class="cocktail-card" data-id="${o._id}">
+import{s as e,g as n,d as l,C as d,f as i,h as m}from"./icons-34fc0dad.js";import{m as v,r as f}from"./modal-coctail-cd88f095.js";function k(t,a){const r=t.map(o=>`<li class="cocktail-card" data-id="${o._id}">
       <div class="cocktail-img-wrap">
         <img
           class="cocktail-img"
