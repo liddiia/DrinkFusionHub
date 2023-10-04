@@ -53,9 +53,10 @@ export const renderFav = ids => {
   </li>`
 ;
   });
-  console.log("favorites", favorites);
+}
+
+console.log("favorites", favorites);
 renderFavPagination(favorites);
 console.log("Hello World");
 
-}
 
