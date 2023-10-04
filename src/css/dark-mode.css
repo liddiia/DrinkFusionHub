@@ -162,6 +162,8 @@ body.dark-theme .cocktail-modal-ingredients {
   color: #fdfdff80;
 }
 
+/* ********** Gallery-random ********* */
+
 body.dark-theme .cocktail-card {
   background: #232330;
 }
@@ -177,12 +179,8 @@ body.dark-theme .btn-hed-sub-menu {
   color: var(--color-white);
 }
 
-body.dark-theme .mob-menu-icon {
-  stroke: var(--color-white);
-  fill: var(--color-white);
-}
-
-body.dark-theme .cocktail-card:hover {
+body.dark-theme .cocktail-card:hover,
+body.dark-theme .cocktail-card:focus {
   box-shadow: 0 0 2px #fff, 0 0 5px #fff, 0 0 21px #9461fd, 0 0 42px #9461fd,
     0 0 82px #4003e6, 0 0 92px #4003e6;
   animation: pulsate-dark 2s infinite alternate;
@@ -199,10 +197,29 @@ body.dark-theme .cocktail-card:hover {
       0 0 45px #4003e6, 0 0 55px #4003e6;
   }
 }
-/***********background***************
-body.dark-theme{
-  /* background-image: url(/img/backgraund/background-mob-darkc.jpg);
-  /* background-size: cover; 
+
+body.dark-theme .glow-on-hover:after {
+  z-index: -1;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #232330;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+/* ********** / Gallery-random ********* */
+
+body.dark-theme .mob-menu-icon {
+  stroke: var(--color-white);
+  fill: var(--color-white);
+}
+
+/***********background****************/
+/*body.dark-theme{
+   background-image: url(/img/backgraund/background-mob-darkc.jpg);
+  background-size: cover; 
   }
   @media screen and (min-device-pixel-ratio: 2) and (max-width: 767px),
   screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 767px),
@@ -234,4 +251,5 @@ body.dark-theme{
   body{
   background-image:url(/img/backgraund/desctop-backgr-dark@2x.jpg);
   }
-  } */
+  }
+*/
