@@ -22,9 +22,11 @@ const paginContainer = document.querySelector('.pagination-buttons-container');
 
 const slim = new SlimSelect({
   select: selectElement,
-  data: arrayLettersAndNumbers.map(item => ({ text: item, value: item })),
+  data: [
+    { placeholder: true, text: 'A' },
+    ...arrayLettersAndNumbers.map(item => ({ text: item, value: item })),
+  ],
   showSearch: true,
-  searchPlaceholder: 'search',
   placeholder: 'element',
   allowDeselect: true,
 });
@@ -142,5 +144,3 @@ function onSearchFormSubmit(evt) {
     changeGalleryTitle();
   });
 }
-
-console.log('error');
