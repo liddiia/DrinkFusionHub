@@ -10,22 +10,28 @@ const noPhoto = `<img
 export function didntFindCoctails(contNoCoctails, titleGalleryEl) {
   titleGalleryEl.textContent = '';
   contNoCoctails.classList.add('active');
-  contNoCoctails.innerHTML = `${noPhoto}
-          <p class="description-no-coctails">Sorry, we <span class="span-no-coctails">didn’t find</span> any cocktail for you</p>`;
 }
 
-export function haventAddedFavoriteCoctails(contNoCoctails, titleGalleryEl) {
+export function haventAddedFavoriteCoctails(
+  contNoCoctails,
+  titleGalleryEl,
+  desc,
+  span
+) {
   titleGalleryEl.textContent = 'Favorite cocktails';
   contNoCoctails.classList.add('active');
-  contNoCoctails.innerHTML = `${noPhoto}
- <p class="description-no-coctails">You haven't added any <span class="span-no-coctails">favorite cocktails</span> yet</p>`;
+  desc.textContent = "You haven't added any yet";
+  span.textContent = 'favorite cocktails';
 }
 
-export function haventAddedFavoriteIngradients(contNoCoctails, titleGalleryEl) {
+export function haventAddedFavoriteIngradients(
+  contNoCoctails,
+  titleGalleryEl,
+  desc,
+  span
+) {
   titleGalleryEl.textContent = 'Favorite ingredients';
   contNoCoctails.classList.add('active');
-  contNoCoctails.innerHTML = `${noPhoto}
- <p class="description-no-coctails">You haven't added any <span class="span-no-coctails">favorite ingredients</span> yet</p>`;
+  desc.textContent = "You haven't added any yet";
+  span.textContent = 'favorite cocktails';
 }
-
-console.log('errr');
