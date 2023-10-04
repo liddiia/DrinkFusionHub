@@ -100,6 +100,7 @@ body.dark-theme .btn-hero-serch .search-icon {
 body.dark-theme .input-hero-search {
   background-color: transparent;
   background-color: black;
+  border: 2px solid #7e8fdd;
   color: #fdfdff33;
 }
 
