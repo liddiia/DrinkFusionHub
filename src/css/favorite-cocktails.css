@@ -43,3 +43,28 @@
   color: var(--color-blue);
   font-style: var(--hero-titel-span-font-style);
 }
+
+.favorite-cocktails-list {
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (min-width: 768px) {
+  .favorite-cocktails-list {
+    flex-direction: row;
+    gap: 32px 16px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .favorite-cocktails-list {
+    gap: 44px 24px;
+  }
+}

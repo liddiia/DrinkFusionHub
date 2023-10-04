@@ -1,5 +1,5 @@
 .interactive-section {
-  padding-top: 50px;
+  padding-top: 33px;
 }
 
 .container-slimselect {
@@ -20,9 +20,13 @@
 }
 
 @media screen and (min-width: 768px) {
-  /* .container-slimselect {
+  .interactive-section {
+    padding-top: 100px;
+  }
+
+  .container-slimselect {
     display: none;
-  } */
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -81,7 +85,7 @@ input::placeholder {
   border-radius: 8px;
   padding: 5px 0;
   border: none;
-  background-color: var(--color-violet);
+  background-color: #7e8fdd66;
   color: var(--color-white);
   font-size: var(--hero-text-font-size);
   font-family: var(--font-family);
