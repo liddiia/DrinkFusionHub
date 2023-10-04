@@ -1,4 +1,4 @@
-import{s,i as n,e as a}from"./icons-e4221401.js";const c=(e,i)=>{const r=e.map(t=>`<h2 class="ingridient-title" data-id-igridient =${t._id}>${t.title}</h2>
+import{s,i as n,e as a}from"./icons-ae96585a.js";const c=(e,i)=>{const r=e.map(t=>`<h2 class="ingridient-title" data-id-igridient =${t._id}>${t.title}</h2>
   <p class="ingridient-type" >${t.type}</p>
   <p class="ingridient-discription"><span class="ingr-title">${t.title}: </span>${l(t.description)}</p>
   <div class="cic-btn-wrapper">

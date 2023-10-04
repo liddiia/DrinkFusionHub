@@ -12,10 +12,10 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css"
     />
     
-    <script type="module" crossorigin src="/DrinkFusionHub/assets/favorite-cocktails-a96abfc9.js"></script>
-    <link rel="modulepreload" crossorigin href="/DrinkFusionHub/assets/icons-e4221401.js">
-    <link rel="modulepreload" crossorigin href="/DrinkFusionHub/assets/modal-coctail-b246d070.js">
-    <link rel="stylesheet" href="/DrinkFusionHub/assets/icons-d1a814cf.css">
+    <script type="module" crossorigin src="/DrinkFusionHub/assets/favorite-cocktails-dbbedcfb.js"></script>
+    <link rel="modulepreload" crossorigin href="/DrinkFusionHub/assets/icons-ae96585a.js">
+    <link rel="modulepreload" crossorigin href="/DrinkFusionHub/assets/modal-coctail-2d7c57b5.js">
+    <link rel="stylesheet" href="/DrinkFusionHub/assets/icons-03ce22e5.css">
   </head>
   <body>
     <header class="main-heder">
@@ -69,11 +69,27 @@
     <main>
       <section class="favorites-cocktails-section">
         <div class="container">
-          <h1 class="favorites-cocktail-title gallery-header">Favorite cocktails</h1>
+          <h1 class="favorites-cocktail-title gallery-header">
+            Favorite cocktails
+          </h1>
           <ul class="favorite-cocktails-list"></ul>
+          <div class="favorite-container-nococktails">
+            <img
+              srcset="/DrinkFusionHub/assets/no-cocktails@1x-a6f40fdf.png 1x, /DrinkFusionHub/assets/no-cocktails@2x-8a89483f.png 2x"
+              src="/DrinkFusionHub/assets/no-cocktails@1x-a6f40fdf.png"
+              alt="no-cocktails"
+              class="no-coctails-img"
+              width="234"
+              height="201"
+              loading="lazy"
+            />
+            <p class="description-no-coctails">
+              You haven't added any
+              <span class="span-no-coctails">favorite cocktails</span> yet
+            </p>
+          </div>
         </div>
       </section>
-     
     </main>
     <footer class="footer">
   <div class="page-footer">
@@ -183,7 +199,7 @@
 </div>
 
 
-      <div class="modal-backdrop" data-modal="modal">
+    <div class="modal-backdrop" data-modal="modal">
 	<div class="modal-container">
 		<button type="button" class="close-modal" data-close="close"><svg class="modal-close-svg" width="22" height="22">
 			<use href="/DrinkFusionHub/assets/icons-4101da0b.svg#icon-close"></use>
@@ -192,7 +208,6 @@
 		<div class="modal-info" id="modalinfo"></div>
 	</div>
 </div>
-    
 
     
     <!--<script type="module" src="js/favorite-ingridients.js"></script>
