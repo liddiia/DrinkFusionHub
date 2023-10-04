@@ -7,22 +7,30 @@ import { ingredients } from './utilities/local-storage';
 
 import { renderFavIngidients } from './utilities/render-favorite-ingredients';
 import { haventAddedFavoriteIngradients } from './no-cocktails';
+import { fetchIngredient } from './utilities/fetch-data';
 
 const contNoCoctails = document.querySelector('.container-non-photos');
-const titleGalleryEl = document.querySelector('.gallery-header');
-const desc = document.querySelector('.description-no-coctails');
-const span = document.querySelector('span-no-coctails');
-const gelleryListEl = document.querySelector('.gallery-list');
+const gelleryListEl = document.querySelector('.ingredients-cocktails-list');
+
+const showFavIngridient = async (id) => {
+	try {
+		const ingridient = await fetchIngredient(id);
+		renderFavIngidients(ingridient,gelleryListEl );
+
+	} catch (error) {
+		console.log(error);
+	}
+}
+
 
 if (ingredients.length === 0 || !ingredients) {
   console.log(ingredients);
-  haventAddedFavoriteIngradients(contNoCoctails, titleGalleryEl, desc, span);
+  haventAddedFavoriteIngradients(contNoCoctails);
 } else {
   console.log(ingredients);
-
-  titleGalleryEl.textContent = 'Favorite ingredients';
   ingredients.forEach(item => {
-    renderFavIngidients(item);
+  showFavIngridient(item);
     console.log(item);
   });
+
 }

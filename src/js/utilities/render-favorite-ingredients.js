@@ -4,7 +4,8 @@ export const renderFavIngidients = (arr, container) => {
   const markup = arr
     .map(
       item =>
-        `<h2 class="ingridient-title" data-id-igridient =${item._id}>${
+        ` <li class= "fav-ingr-item>
+         <h2 class="ingridient-title" data-id-igridient =${item._id}>${
           item.title
         }</h2>
   <p class="ingridient-type" >${item.type}</p>
@@ -26,11 +27,12 @@ export const renderFavIngidients = (arr, container) => {
   ></use>
   </svg>
   </button>
-  </div>`
+  </div>
+  </li>`
     )
     .join('');
 
-  container.innerHTML = markup;
+  container.insertAdjacentHTML("beforeend", markup);
 };
 function isDicriprionIng(disc) {
   return disc ? disc : "Unfortunately we don't have it yet";
