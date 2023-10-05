@@ -6,6 +6,8 @@ import { favorites } from './utilities/local-storage';
 import { refs } from './utilities/refs';
 import { getCocktail } from './utilities/fetch-data';
 import { renderFavPagination } from './utilities/favorites-pagination';
+import { modalCall } from './utilities/modalCallDrink';
+import { renderDrink } from './modal';
 import svgUrl from '/img/icons.svg';
 
 const contFavoriteNoCoctails = document.querySelector(
@@ -58,6 +60,9 @@ export const renderFav = ids => {
 
 console.log("favorites", favorites);
 renderFavPagination(favorites);
-console.log("Hello World");
 
+
+if (refs.favoritesList) {
+  modalCall(refs.favoritesList, renderDrink)
+}
 
