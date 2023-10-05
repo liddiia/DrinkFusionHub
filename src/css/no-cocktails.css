@@ -6,7 +6,7 @@
   display: block;
   box-sizing: border-box;
   align-items: center;
-  width: 244px;
+  max-width: 244px;
   height: 190px;
   margin-right: auto;
   margin-left: auto;
@@ -19,8 +19,11 @@
 
 @media screen and (min-width: 768px) {
   .container-non-photos {
-    width: 370px;
+    max-width: 370px;
     height: 297px;
+  }
+  .description-no-coctails {
+    max-width: 370px;
   }
 }
 
@@ -31,12 +34,14 @@
 }
 
 .description-no-coctails {
+  box-sizing: border-box;
   text-align: center;
   color: var(--color-light-theme-black);
   font-size: 18px;
   font-family: var(--font-family);
   font-weight: 400;
   line-height: 24px;
+  max-width: 244px;
 }
 
 .span-no-coctails {
