@@ -1,5 +1,5 @@
 @media only screen and (min-width: 320px) {
-  .pagination-buttons-container, .favorite-pagination-buttons-container {
+  .pagination-buttons-container, .favorite-pagination-buttons-container, .favorite-ingredients-pagination-buttons-container {
     height: fit-content;
     display: flex;
     flex-wrap: nowrap;
@@ -96,7 +96,7 @@
 }
 
 @media screen and (min-width: 768px) {
-  .pagination-buttons-container, .favorite-pagination-buttons-container {
+  .pagination-buttons-container, .favorite-pagination-buttons-container, .favorite-ingredients-pagination-buttons-container {
     max-width: 700px;
     margin-top: 64px;
   }
@@ -149,7 +149,7 @@
 }
 
 @media only screen and (min-width: 1280px) {
-  .pagination-buttons-container, .favorite-pagination-buttons-container {
+  .pagination-buttons-container, .favorite-pagination-buttons-container, .favorite-ingredients-pagination-buttons-container {
     max-width: 880px;
     margin-top: 44px;
   }

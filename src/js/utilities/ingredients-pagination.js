@@ -1,10 +1,10 @@
 
 import { refs } from "./refs";
-import { renderFav } from "../favorite-cocktails";
+import { renderIngFav } from "../favorite-ingridients";
 import svgUrl from '/img/icons.svg';
 
-export function renderFavPagination(cocktailArr) {
-  refs.favoritePaginationContainer.innerHTML = `<button
+export function renderFavIngPagination(cocktailArr) {
+  refs.favoriteIngPaginationContainer.innerHTML = `<button
   class="left-pag-btn pagination-button-item"
   type="button"
   id="left-pag-btn"
@@ -76,8 +76,8 @@ let cardsPerPage = 6;
   let totalCocktailCount = cocktailArr.length;
 
   if (totalCocktailCount <= cardsPerPage) {
-    refs.favoritePaginationContainer.classList.add('is-hidden');
-  } else refs.favoritePaginationContainer.classList.remove('is-hidden');
+    refs.favoriteIngPaginationContainer.classList.add('is-hidden');
+  } else refs.favoriteIngPaginationContainer.classList.remove('is-hidden');
 
 
   let totalPagesNum = Math.ceil(totalCocktailCount / cardsPerPage);
@@ -99,7 +99,7 @@ let cardsPerPage = 6;
     }, []);
   }
 
-  renderFav(sortedCardsArr[0]);
+  renderIngFav(sortedCardsArr[0]);
 
   leftPagBtn.addEventListener('click', onPaginationBtnClick);
   rightPagBtn.addEventListener('click', onPaginationBtnClick);
@@ -248,7 +248,7 @@ let cardsPerPage = 6;
 
     defaultActiveBtn.classList.remove('pagination-button-item-active');
     let btnValue = evt.target.dataset.action;
-    refs.favoritesList.innerHTML = '';
+    refs.favIngredientsList.innerHTML = '';
 
 
     switch (btnValue) {
@@ -280,7 +280,7 @@ let cardsPerPage = 6;
     }
 
 
-    renderFav(sortedCardsArr[currentPageIndex]);
+    renderIngFav(sortedCardsArr[currentPageIndex]);
     console.log("sortedCardsArr[currentPageIndex]", sortedCardsArr[currentPageIndex]);
     updateButtonLayout();
     updatePaginationButtons();
