@@ -18,13 +18,13 @@ const addToFavCoct = (e) => {
 		btn.textContent = "Remove from favorites";
 		actionType = "remfromfavorite";
 		addToLocalStorage(cocktailId, favorites, COCKTAIL_ID);
-		document.getElementById(cocktailId).classList.add('is-favorite');
+		document.getElementById(cocktailId).classList.toggle('is-favorite');
 		console.log(favorites);
 	} else {
 		btn.textContent = "Add to favorites";
 		actionType = "favorite";
 		deleteFromLocalStorage(cocktailId, favorites, COCKTAIL_ID);
-		document.getElementById(cocktailId).classList.remove('is-favorite');
+		document.getElementById(cocktailId).classList.toggle('is-favorite');
 	}
 
 }
