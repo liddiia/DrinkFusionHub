@@ -1,4 +1,4 @@
-import{r as u,s as w,m as h,d as F,C as q,a as O,b as j,c as z,f as L,e as K,g as U,h as V,i as W,j as G}from"./icons-79db9f8b.js";import"./modal-coctail-dab237a0.js";function B(i){u.favoritePaginationContainer.innerHTML=`<button
+import{r as u,s as w,m as h,d as F,C as q,a as O,b as j,c as z,f as L,e as K,g as U,h as V,i as W,j as G}from"./icons-4c5212e4.js";import"./modal-coctail-fe1ce9fc.js";function B(i){u.favoritePaginationContainer.innerHTML=`<button
   class="left-pag-btn pagination-button-item"
   type="button"
   id="left-pag-btn"
