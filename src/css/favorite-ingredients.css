@@ -42,7 +42,7 @@
     line-height: calc(18/14);
     letter-spacing: 0em;
     margin-bottom: 14px;
-    color:var(----color-text-black-fair);
+    color:var(--color-text-black-fair);
     }
     .fav-ingridient-discription{
     font-size: 14px;

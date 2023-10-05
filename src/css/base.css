@@ -62,7 +62,7 @@
   --gallery-card-text-line-height: 1.29;
 
   --color-text-black: rgba(36, 36, 36, 1);
-  ----color-text-black-fair: rgba(36, 36, 36, 0.5);
+  --color-text-black-fair: rgba(36, 36, 36, 0.5);
   --color-text-blue: rgba(156, 223, 223, 1);
   --color-text-violet: rgba(126, 143, 221, 1);
   --color-text-white: rgba(253, 253, 255, 1);
@@ -96,7 +96,8 @@ html,
 body {
   font-family: var(--font-family);
   height: 100%;
-  background-size: cover;}
+  background-size: cover;
+/* background-repeat: no-repeat; */}
 .wrap-cont-drink,
 .wrap-cont-drink-ingr
    {

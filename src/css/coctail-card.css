@@ -28,7 +28,7 @@
   .cocktail-modal-per-cocktail {
 	font-size: 14px;
 	margin-bottom: 20px;
-	color: rgba(36, 36, 36, 0.5);
+	color: var(--color-text-black-fair);
   }
   
   .cocktail-modal-ingredients {
@@ -59,7 +59,7 @@
 	font-size: 14px;
 	margin-top: 8px;
 	margin-bottom: 40px;
-	color: rgba(36, 36, 36, 0.5);
+	color:var(--color-text-black-fair);
 	line-height: 1.29;
 	max-width: 295px;
 	max-height: 200px;
@@ -136,7 +136,7 @@
 	  .cocktail-modal-per-cocktail {
 		font-size: 14px;
 		margin-bottom: 20px;
-		color: rgba(36, 36, 36, 0.5);
+		color:var(--color-text-black-fair);
 	  }
 	
 	  .cocktail-modal-ingredients {
