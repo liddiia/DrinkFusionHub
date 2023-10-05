@@ -75,7 +75,7 @@
   }
   .hero-p-under-picture {
     position: absolute;
-    left: 80px;
+    left: 23%;
     color: var(--color-light-theme-black);
     font-family: var(--font-family);
     font-size: var(--mobile-hero-caption-font-size);
@@ -92,7 +92,6 @@
   
   @media screen and (min-width: 375px) {
     .hero-p-under-picture {
-    position: absolute;
     bottom: 7px;
     right:  93px;
     width: 173px;
