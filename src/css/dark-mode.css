@@ -1,5 +1,5 @@
 .switch-desc {
-  cursor: pointer;;
+  cursor: pointer;
   display: none;
   width: 64px;
   height: 32px;
@@ -96,33 +96,32 @@ body.dark-theme .hero-p-under-picture {
 /* ********** Interactive ********* */
 
 body.dark-theme .container-slimselect .ss-main {
-  background-color: #7e8fdd;
+  background-color: var(--color-violet);
   border-radius: 8px;
 }
 
 body.dark-theme .container-slimselect .ss-main:hover,
 body.dark-theme .container-slimselect .ss-main:focus {
-  background-color: #9cdfdf;
+  background-color: var(--color-blue);
   border-radius: 8px;
 }
 
 body.dark-theme .btn-hero-serch .search-icon {
-  fill: #fdfdff;
+  fill: var(--color-white);
 }
 
 body.dark-theme .input-hero-search {
   background-color: transparent;
-  background-color: black;
-  border: 2px solid #7e8fdd;
-  color: #fdfdff33;
+  border: 2px solid var(--color-violet);
+  color: var(--color-text-white);
 }
 
 body.dark-theme .hero-keyboard-btn {
-  background-color: #7e8fdd;
-  color: #fdfdff;
+  background-color: var(--color-violet);
+  color: var(--color-white);
 }
 body.dark-theme .hero-keyboard-btn.hero-keyboard-btn-active {
-  background-color: #9cdfdf;
+  background-color: var(--color-blue);
 }
 
 body.dark-theme .input-hero-search::placeholder {
@@ -133,7 +132,7 @@ body.dark-theme .input-hero-search::placeholder {
 
 /* ********** No-Cocktails ********* */
 body.dark-theme .container-non-photos {
-  background-color: black;
+  background-color: transparent;
 }
 
 body.dark-theme .description-no-coctails {
@@ -193,7 +192,9 @@ body.dark-theme .btn-hed-sub-menu {
 }
 
 body.dark-theme .cocktail-card:hover,
-body.dark-theme .cocktail-card:focus, body.dark-theme .modal-container:hover, body.dark-theme .modal-container:focus {
+body.dark-theme .cocktail-card:focus,
+body.dark-theme .modal-container:hover,
+body.dark-theme .modal-container:focus {
   box-shadow: 0 0 2px #fff, 0 0 5px #fff, 0 0 21px #9461fd, 0 0 42px #9461fd,
     0 0 82px #4003e6, 0 0 92px #4003e6;
   animation: pulsate-dark 2s infinite alternate;
@@ -230,43 +231,42 @@ body.dark-theme .mob-menu-icon {
 }
 
 /***********background****************/
-body.dark-theme{
-   background-image: url(/img/backgraund/background-mob-darck.jpg);
+body.dark-theme {
+  background-image: url(/img/backgraund/background-mob-darck.jpg);
   background-size: cover;
-  }
-  @media screen and (min-device-pixel-ratio: 2) and (max-width: 767px),
+}
+@media screen and (min-device-pixel-ratio: 2) and (max-width: 767px),
   screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 767px),
   screen and (min-resolution: 192dpi) and (max-width: 767px),
   screen and (min-resolution: 2dppx) and (max-width: 767px) {
-  body.dark-theme{
-  background-image: url(/img/backgraund/background-mob-darck@2x.jpg);
+  body.dark-theme {
+    background-image: url(/img/backgraund/background-mob-darck@2x.jpg);
   }
-  }
-  @media screen and (min-device-pixel-ratio: 2) and (max-width: 1279px),
+}
+@media screen and (min-device-pixel-ratio: 2) and (max-width: 1279px),
   screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 1279px),
   screen and (min-resolution: 192dpi) and (max-width: 1279px),
   screen and (min-resolution: 2dppx) and (max-width: 1279px) {
-  body.dark-theme{
-  background-image: url(/img/backgraund/background-tablet-darck@2x.jpg);
+  body.dark-theme {
+    background-image: url(/img/backgraund/background-tablet-darck@2x.jpg);
   }
+}
+@media screen and (max-width: 1279px) {
+  body.dark-theme {
+    background-image: url(/img/backgraund/background-tablet-darck.jpg);
   }
-  @media screen and (max-width: 1279px){
-    body.dark-theme{
-    background-image: url(/img/backgraund/background-tablet-darck.jpg)
-  }
-  }
+}
 
-  @media screen and (min-width: 1280px) {
-  body.dark-theme{
-  background-image: url(/img/backgraund/background-descktop-darck.jpg);
+@media screen and (min-width: 1280px) {
+  body.dark-theme {
+    background-image: url(/img/backgraund/background-descktop-darck.jpg);
   }
-  }
+}
 
-  @media screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 1280px),
+@media screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 1280px),
   screen and (min-resolution: 192dpi) and (min-width: 1280px),
   screen and (min-resolution: 2dppx) and (min-width: 1280px) {
-    body.dark-theme{
-  background-image:url(/img/backgraund/background-descktop-darck@2x.jpg);
+  body.dark-theme {
+    background-image: url(/img/backgraund/background-descktop-darck@2x.jpg);
   }
-  }
-
+}
