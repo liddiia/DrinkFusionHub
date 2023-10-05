@@ -229,8 +229,8 @@ body.dark-theme .mob-menu-icon {
 }
 
 /***********background****************/
-/*body.dark-theme{
-   background-image: url(/img/backgraund/background-mob-darkc.jpg);
+body.dark-theme{
+   background-image: url(/img/backgraund/background-mob-darck.jpg);
   background-size: cover; 
   }
   @media screen and (min-device-pixel-ratio: 2) and (max-width: 767px),
@@ -238,7 +238,7 @@ body.dark-theme .mob-menu-icon {
   screen and (min-resolution: 192dpi) and (max-width: 767px),
   screen and (min-resolution: 2dppx) and (max-width: 767px) {
   body.dark-theme{
-  background-image: url(/img/backgraund/background-mob-darkc@2x.jpg);
+  background-image: url(/img/backgraund/background-mob-darck@2x.jpg);
   }
   }
   @media screen and (min-device-pixel-ratio: 2) and (max-width: 1279px),
@@ -249,19 +249,23 @@ body.dark-theme .mob-menu-icon {
   background-image: url(/img/backgraund/background-tablet-darck@2x.jpg);
   }
   }
-  
-  @media screen and (min-width: 1280px)
-  {
+  @media screen and (max-width: 1279px){
+    body.dark-theme{
+    background-image: url(/img/backgraund/background-tablet-darck.jpg)
+  }
+  }
+
+  @media screen and (min-width: 1280px) {
   body.dark-theme{
-  background-image: url(/img/backgraund/background-tablet-darck.jpg);
+  background-image: url(/img/backgraund/background-descktop-darck.jpg);
   }
   }
   
   @media screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 1280px),
   screen and (min-resolution: 192dpi) and (min-width: 1280px),
   screen and (min-resolution: 2dppx) and (min-width: 1280px) {
-  body{
-  background-image:url(/img/backgraund/desctop-backgr-dark@2x.jpg);
+    body.dark-theme{
+  background-image:url(/img/backgraund/background-descktop-darck@2x.jpg);
   }
   }
-*/
+

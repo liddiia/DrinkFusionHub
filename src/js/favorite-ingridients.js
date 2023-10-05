@@ -9,7 +9,7 @@ import { fetchIngredient } from './utilities/fetch-data';
 import { showIngridient } from './modal-igridients';
 
 const contNoCoctails = document.querySelector('.container-non-photos');
-const favIngListEl = document.querySelector('.ingredients-cocktails-list');
+const favIngListEl = document.querySelector('.fav-ingredients-cocktails-list');
 
 const showFavIngridient = async (id) => {
   try {
