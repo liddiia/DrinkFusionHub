@@ -91,6 +91,12 @@ body.dark-theme .hero-p {
 body.dark-theme .hero-p-under-picture {
   color: var(--color-white);
 }
+body.dark-theme .star1 {
+  fill: var(--color-white);
+};
+body.dark-theme .star2 {
+  fill: var(--color-white);
+};
 /***/
 
 /* ********** Interactive ********* */

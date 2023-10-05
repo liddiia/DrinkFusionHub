@@ -1,74 +1,66 @@
- <!--1 секция Герой-->
- <section class="hero-section section">
-    <div class="container hero-container">
-      <div class="hero-first">
+<!--1 секция Герой-->
+<section class="hero-section section">
+  <div class="container hero-container">
+    <div class="hero-first">
       <h1 class="main-title">
-        A party without <span class="hero-cocktails">cocktails</span><br> is not like a party
+        A party without <span class="hero-cocktails">cocktails</span><br />
+        is not like a party
       </h1>
-      <p class="hero-p">From classic sips to exotic mixes, we're your key to becoming a cocktail wizard!</p>
-      <button onclick="window.location.href = '#gallery';" class="button-on-hero" type="button">View cocktails</button>
-     </div>
-      <div class="picture-hero">
-         <picture class="hero-img-girl-light-theme">
-          <source
-            srcset="
-              /img/hero/hero-desktop-black-star@1x.png  1x,
-              /img/hero/hero-desktop-black-star@2x.png 2x
-            "
-            media="(min-width: 1280px)"
-          /> 
-           <source
-            srcset="
-            /img/hero/hero-tablet-black-star@1x.png  1x,
-              /img/hero/hero-tablet-black-star@2x.png  2x
-            "
-            media="(min-width: 768px)"
-          />
-          <source
-            srcset="
-            /img/hero/hero-mobile-black-star@1x.png  1x,
-            /img/hero/hero-mobile-black-star@2x.png 2x
-            "
-            media="(max-width: 767px)"
-          />
-          <img
-            class="portfolio-image"
-            src="/img/hero/hero-mobile-black-star@1x.png"
-            alt="girl" 
-          /> 
-        </picture>
+      <p class="hero-p">
+        From classic sips to exotic mixes, we're your key to becoming a cocktail
+        wizard!
+      </p>
+      <button
+        onclick="window.location.href = '#gallery';"
+        class="button-on-hero"
+        type="button"
+      >
+        View cocktails
+      </button>
+    </div>
+    <div class="picture-hero">
+      <div class="hero-picture-wrapper">
 
-        <picture class="hero-img-girl-dark-theme">
-          <source
-            srcset="
-              /img/hero/hero-desktop-white-star@1x.png  1x,
-              /img/hero/hero-desktop-white-star@2x.png 2x
-            "
-            media="(min-width: 1280px)"
-          /> 
-           <source
-            srcset="
-            /img/hero/hero-tablet-white-star@1x.png  1x,
-              /img/hero/hero-tablet-white-star@2x.png  2x
-            "
-            media="(min-width: 768px)"
-          />
-          <source
-            srcset="
-            /img/hero/hero-mobile-white-star@1x.png  1x,
-            /img/hero/hero-mobile-white-star@2x.png 2x
-            "
-            media="(max-width: 767px)"
-          />
-          <img
-            class="portfolio-image"
-            src="/img/hero/hero-mobile-white-star@1x.png"
-            alt="girl" 
-          /> 
-        </picture>
-      <p class="hero-p-under-picture">Search your favorite cocktail by ABC </p> 
-      
-       </div> 
-       
-  </div> 
-  </section> 
+      <div class="hero-girl-background"><picture class="hero-img-girl">
+        <source
+          srcset="
+            /img/hero/hero-tablet-gir.png    1x,
+            /img/hero/hero-tablet-gir@2x.png 2x
+          "
+          media="(min-width: 768px)"
+        />
+        <source
+          srcset="
+            /img/hero/hero-mobile-girl.png    1x,
+            /img/hero/hero-mobile-girl@2x.png 2x
+          "
+          media="(max-width: 767px)"
+        />
+        <img
+          class="portfolio-image"
+          src="/img/hero/hero-mobile-girl.png"
+          alt="girl"
+        />
+      </picture></div>
+      <svg class="elips1" width="12" height="12">
+        <use href="/img/icons.svg#icon-ellipse"></use>
+      </svg>
+      <svg class="elips2" width="24" height="24">
+        <use href="/img/icons.svg#icon-ellipse"></use>
+      </svg>
+      <svg class="elips3" width="18" height="18">
+        <use href="/img/icons.svg#icon-ellipse"></use>
+      </svg>
+      <svg class="star1 rotate-star" width="120" height="120">
+        <use href="/img/icons.svg#icon-star1"></use>
+      </svg>
+      <svg class="star2 rotate-star" width="30" height="30">
+        <use href="/img/icons.svg#icon-star1"></use>
+      </svg>
+
+      </div>
+
+      <p class="hero-p-under-picture">Search your favorite cocktail by ABC</p>
+    </div>
+  </div>
+</section>

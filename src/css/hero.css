@@ -3,16 +3,17 @@
   background-color: #6E7FCF;;
 }
 .hero-container {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
+  padding-left: 0;
+  padding-right: 0;
 }
 .container.hero-container{
   max-width: 375px;
-  padding-right: 6px;
-  padding-left: 15px;
   padding-top: 68px;
 } 
+.hero-first{
+padding-left: 20px;
+padding-right: 20px;
+}
 .main-title {
   color: var(--color-light-theme-black);
   font-family: var(--font-family);
@@ -39,6 +40,7 @@
     line-height: var(--hero-titel-line-height);
     padding-bottom: 36px;
     max-width: 335px;
+    
   }
   .button-on-hero {
     color: var(--color-white);
@@ -54,28 +56,9 @@
     display: flex; 
     padding: 14px 28px;
     border: transparent;
-  }
-  .hero-img-girl-light-theme {
-    width: 100%;
-    left: 0;
-    top: 0;
-  }
-  .hero-img-girl-dark-theme {
-    display: none;
-    width: 100%;
-    left: 0;
-    top: 0;
-  }
-  .picture-hero {
-    position: relative;
-     width: 100%;
-     height: 100%;
-    display: flex;
-    align-items: flex-end;
+    margin-bottom: 27px;
   }
   .hero-p-under-picture {
-    position: absolute;
-    left: 23%;
     color: var(--color-light-theme-black);
     font-family: var(--font-family);
     font-size: var(--mobile-hero-caption-font-size);
@@ -88,13 +71,76 @@
     margin-left: auto;
     margin-right: auto;
     width: 173px;
+    margin-top: auto;
   }
-  
+  .picture-hero {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 481px; 
+  }
+  .hero-girl-background{
+    position: absolute;
+    box-shadow: 0px 28px 75px 0px rgba(88, 109, 204, 0.50);
+    background-color: var(--color-violet);
+    border-radius: 80px 0 80px 0;
+    z-index: 1;
+    
+  }
+  .elips1{
+    position: absolute;
+    
+    fill: var(--color-blue);
+  }
+  .elips2{
+    position: absolute;
+    
+    fill: var(--color-violet);
+    
+  }
+  .elips3{
+    position: absolute;
+    bottom: 0;
+    
+    fill: var(--color-blue);
+  }
+
+  .hero-img-girl{
+    position: absolute;
+  bottom: 0;
+     z-index: 2;
+  }
+  .star1{
+    position: absolute;
+    
+    fill: var(--color-light-theme-black);
+    z-index: 0;
+    
+  }
+  .star2{
+    position: absolute;
+    
+    fill: var(--color-light-theme-black);
+    z-index: 0;
+  }
+  .rotate-star {
+    animation:rotate-star 5s linear infinite ;
+  }
+  @keyframes rotate-star {
+    from {
+      transform: rotate(0deg);
+       
+    }
+    to {
+      transform: rotate(360deg);
+      
+    }
+  }
   @media screen and (min-width: 375px) {
     .hero-p-under-picture {
-    bottom: 7px;
-    right:  93px;
-    width: 173px;
+       width: 173px;
     }   
   }
 @media screen and (min-width: 768px) {
@@ -114,6 +160,7 @@
     width: 384px;
   }
   .button-on-hero {
+    margin-bottom: 0;
   font-size: 18px;
   line-height: 24px; 
   border-radius: 12px;
@@ -136,33 +183,51 @@ width: 338px;
 padding-bottom: 48px;
   }
   .hero-p-under-picture {
-bottom: -12px;
 font-size: var(--tablet-hero-text-font-size);
 line-height: var(--tablet-hero-text-line-height); 
 letter-spacing: var(--hero-caption-letter-spacing);
 width: 229px;
-left: 80px;
+
   }
-   .picture-hero {
-    position: relative;
+     .picture-hero {
    width: 352px;
    height: 593px;
   }
+  .hero-girl-background{
+    width: 293px;
+    height: 417px;
+    right: 32px;
+    bottom: 98px;
+  }
+  .hero-img-girl {
+    width: 333px;
+    height: 451px;
+    right: 1px;
+    bottom: 9px;
+  } 
+
+  .elips1{
+    top: 43px;
+    right: 132px;
+  }
+  .elips3{
+    bottom: 0;
+    right: 32px;
+  }
+  .elips2{
+    bottom: 23px;
+    right: 301px;
+  }
+  .star1{
+    top: 17px;
+    right: -10px;
+  }
+  .star2{
+    left: -40px;
+    bottom: 162px;
+
+  }
   
-  .hero-img-girl-light-theme {
-    position: absolute;
-    width: 410px;
-    height: 565px;
-    left: -62px;
-    bottom: 50px;
-  } 
-  .hero-img-girl-dark-theme {
-    position: absolute;
-    width: 410px;
-    height: 565px;
-    left: -62px;
-    bottom: 50px;
-  } 
 }
 @media screen and (min-width: 1280px) {
 .hero-first {
@@ -192,33 +257,92 @@ max-width: 480px;
 padding-bottom: 56px;
   }
   .hero-p-under-picture {
-   right: 72px;
-   bottom: -20px;
-font-size: var(--hero-caption-font-size);
+   font-size: var(--hero-caption-font-size);
 line-height: var(--hero-caption-line-height); 
 letter-spacing: var( --hero-caption-letter-spacing);
 width: 229px;
-margin-right: 80px;
+
   }
   .picture-hero {
     width: 552px;
     height: 672px;
-    padding-right: 83px;
-    padding-top: 98px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
   }
-  .hero-img-girl-light-theme {
-    width: 100%;
-    height: 100%;
-    left: 0;
-    bottom: 0;
+     .hero-girl-background{
+     width: 380px;
+     height: 476px;
+     right: 100px;
+     
+   }
+   .hero-img-girl {
+     width: 410px;
+     height: 565px;
+     right: 0;
+     bottom: 0;
+   } 
+ 
+   .elips1{
+     top: 52px;
+     right: 200px;
+   }
+   .elips3{
+     bottom: 0;
+     right: 132px;
+   }
+   .elips2{
+     bottom: 23px;
+     right: 424px;
+   }
+   .star1{
+    width: 160px;
+    height: 160px;
+     top: 17px;
+     right: 30px;
+     z-index: 3;
+   }
+   .star2{
+    width: 60px;
+    height: 60px;
+     left: 0;
+     bottom: 220px;
+     z-index: 10;
+   }
+}
+ 
+@media screen and (max-width: 767px) {
+  .hero-girl-background{
+    width: 61%;
+    height: 70%;
+    top:12%;
+    left:22%;
   }
-  .hero-img-girl-dark-theme {
-    width: 100%;
-    height: 100%;
-    left: 0;
-    bottom: 0;
+  .elips1{
+    top:3%;
+    right: 36%;
   }
+  .elips2{
+    bottom: 5%;
+    left: 11%;
+        
+  }
+  .elips3{
+    right: 11%;
+   }
+
+  .hero-img-girl{
+    
+  right: -20%;
+    width: 154%;
+   
+  }
+  .star1{
+    top:1%;
+    right: 2%;
+       
+  }
+  .star2{
+    bottom: 26%;
+    left: 7%;
+    
+  }
+
 }
