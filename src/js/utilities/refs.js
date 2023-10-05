@@ -1,8 +1,8 @@
 /** add your listiener here */
 export const refs = {
     favoritesList: document.querySelector('.favorite-cocktails-list'),
-    favoritesTitle: document.querySelector('.fav-cocktails__title'),
-    favoriteSearchItem: document.querySelector('.fav-cocktails__item'),
+    favoritesTitle: document.querySelector('.fav-cocktails-title'),
+    favoriteSearchItem: document.querySelector('.fav-cocktails-item'),
     prewButton: document.querySelector('.prew-button'),
     nextButton: document.querySelector('.next-button'),
     pagContainer: document.querySelector('.pagination'),

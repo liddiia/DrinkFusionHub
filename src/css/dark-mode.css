@@ -192,7 +192,7 @@ body.dark-theme .btn-hed-sub-menu {
 }
 
 body.dark-theme .cocktail-card:hover,
-body.dark-theme .cocktail-card:focus {
+body.dark-theme .cocktail-card:focus, body.dark-theme .modal-container:hover, body.dark-theme .modal-container:focus {
   box-shadow: 0 0 2px #fff, 0 0 5px #fff, 0 0 21px #9461fd, 0 0 42px #9461fd,
     0 0 82px #4003e6, 0 0 92px #4003e6;
   animation: pulsate-dark 2s infinite alternate;

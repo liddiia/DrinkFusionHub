@@ -1,7 +1,7 @@
 
 import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock';
-
 import { modal, modalCloseBtn } from './refs'
+
 
 
 export const closeModalHelper = (event) => {
@@ -34,7 +34,7 @@ export function modalCallIngr(el, renderFunc) {
   const closeModal = (e) => {
     const { target } = e;
 
-    if (target === modalCloseBtn || target === modal) {
+    if (target === modalCloseBtn || target === modal|| target.classList.contains("ingridient-modal-back-btn") ) {
           closeModalHelper(target)
 
       }

@@ -4,7 +4,7 @@ import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock';
 import { modal, modalCloseBtn } from './refs'
 import { showIngridient } from '../modal-igridients';
 import { COCTAILMODAL_ID } from './local-storage';
-
+import { backIngridients } from '../modal-igridients';
 export const closeModalHelper = (event) => {
   modal.classList.toggle("is-open");
   enableBodyScroll(event);
@@ -41,6 +41,8 @@ export function modalCall(el, renderFunc) {
 
         const ingrId = target.dataset.idIngridient;
         showIngridient(ingrId)
+        modal.addEventListener("click", backIngridients);
+
         return
       } else {
         console.log(target.parentNode);

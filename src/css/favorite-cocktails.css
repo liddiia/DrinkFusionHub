@@ -1,7 +1,9 @@
 .favorites-cocktail-title{
   margin-top: 80px;
 }
-
+.favorites-coctails-container{
+  padding-bottom: 80px;
+}
 .favorite-container-nococktails {
   display: none;
 }
@@ -25,6 +27,9 @@
   .favorite-container-nococktails {
     width: 370px;
     height: 297px;
+  }
+  .favorites-coctails-container{
+    padding-bottom: 100px;
   }
 }
 
