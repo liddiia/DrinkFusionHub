@@ -93,10 +93,10 @@ body.dark-theme .hero-p-under-picture {
 }
 body.dark-theme .star1 {
   fill: var(--color-white);
-};
+}
 body.dark-theme .star2 {
   fill: var(--color-white);
-};
+}
 /***/
 
 /* ********** Interactive ********* */
@@ -202,8 +202,7 @@ body.dark-theme .cocktail-card:focus,
 body.dark-theme .modal-container:hover,
 body.dark-theme .modal-container:focus,
 body.dark-theme .fav-ingr-item:hover,
-body.dark-theme .fav-ingr-item:focus
-{
+body.dark-theme .fav-ingr-item:focus {
   box-shadow: 0 0 2px #fff, 0 0 5px #fff, 0 0 21px #9461fd, 0 0 42px #9461fd,
     0 0 82px #4003e6, 0 0 92px #4003e6;
   animation: pulsate-dark 2s infinite alternate;
@@ -234,9 +233,91 @@ body.dark-theme .glow-on-hover:after {
 }
 /* ********** / Gallery-random ********* */
 
+/* ********** Header ******** */
+
 body.dark-theme .mob-menu-icon {
   stroke: var(--color-white);
   fill: var(--color-white);
+}
+
+body.dark-theme .logotype {
+  background-image: linear-gradient(-225deg, #fff 0%, #fff 100%);
+  animation: letters 3s 1 alternate cubic-bezier(0.2, 0.4, 0.2, 1);
+  -webkit-aanimation: letters 3s 1 alternate cubic-bezier(0.2, 0.4, 0.2, 1);
+  -mox-animation: letters 3s 1 alternate cubic-bezier(0.2, 0.4, 0.2, 1);
+  -o-animation: letters 3s 1 alternate cubic-bezier(0.2, 0.4, 0.2, 1);
+  -ms-animation: letters 3s 1 alternate cubic-bezier(0.2, 0.4, 0.2, 1);
+}
+
+@keyframes letters {
+  0% {
+    letter-spacing: -5rem;
+    filter: blur(3rem);
+    -webkit-filter: blur(3rem);
+    -ms-filter: blur(3rem);
+    -webkit-backdrop-filter: blur(3rem);
+    backdrop-filter: blur(3rem);
+  }
+  50% {
+    filter: blur(0.3rem);
+    -webkit-filter: blur(0.3rem);
+    -ms-filter: blur(0.3em);
+    -webkit-backdrop-filter: blur(0.3rem);
+    backdrop-filter: blur(0.3rem);
+  }
+  to {
+    letter-spacing: 0;
+    filter: blur(0);
+    -webkit-filter: blur(0);
+    -ms-filter: blur(0);
+    -webkit-backdrop-filter: blur(0);
+    backdrop-filter: blur(0);
+  }
+}
+
+body.dark-theme .page-nav {
+  -webkit-animation: neon 2s ease-in-out infinite alternate;
+  -moz-animation: neon 2s ease-in-out infinite alternate;
+  animation: neon 2s ease-in-out inf infinite alternate;
+}
+
+@keyframes neon {
+  from {
+    text-shadow: 0 0 10px #f5f0f0, 0 0 20px #101010, 0 0 30px #101010,
+      0 0 40px #101010, 0 0 50px #6752ad, 0 0 60px #6752ad, 0 0 70px #6752ad;
+  }
+  to {
+    text-shadow: 0 0 20px #f5f0f0, 0 0 30px #4400ff, 0 0 40px #4400ff,
+      0 0 50px #4400ff, 0 0 60px #4400ff, 0 0 70px #4400ff, 0 0 80px #4400ff;
+  }
+}
+
+body.dark-theme .hero-cocktails {
+  animation: flicker 3s linear infinite;
+}
+
+@keyframes flicker {
+  0%,
+  19.999%,
+  22%,
+  62.999%,
+  64%,
+  64.999%,
+  70%,
+  100% {
+    opacity: 0.99;
+    text-shadow: 0 0 4px #fff, 0 0 9px #fff, 0 0 19px #9461fd, 0 0 40px #9461fd,
+      0 0 80px #4003e6, 0 0 90px #4003e6;
+  }
+  20%,
+  21.999%,
+  63%,
+  63.999%,
+  65%,
+  69.999% {
+    opacity: 0.4;
+    text-shadow: none;
+  }
 }
 
 /***********background****************/
@@ -280,25 +361,19 @@ body.dark-theme {
   }
 }
 
- /********darck theme FAVIRIE INGREDIENTS***********/
-    body.dark-theme .fav-ingr-item {
-        box-shadow: 0px 4px 46px 0px rgba(0, 0, 0, 0.05);
+/********darck theme FAVIRIE INGREDIENTS***********/
+body.dark-theme .fav-ingr-item {
+  box-shadow: 0px 4px 46px 0px rgba(0, 0, 0, 0.05);
 
-        background-color: rgba(35, 35, 48, 1);
-   
-            }
+  background-color: rgba(35, 35, 48, 1);
+}
 
-     body.dark-theme .fav-ingridient-title {
-       
-        color: var(--color-text-white);
-          }
-          body.dark-theme .fav-ingridient-type{
-        
-        color:var(--color-text-white-);
-        }
-        body.dark-theme .fav-ingridient-discription{
-        
-            color: var(--color-text-white);
-       }
-        
-   
+body.dark-theme .fav-ingridient-title {
+  color: var(--color-text-white);
+}
+body.dark-theme .fav-ingridient-type {
+  color: var(--color-text-white-);
+}
+body.dark-theme .fav-ingridient-discription {
+  color: var(--color-text-white);
+}
