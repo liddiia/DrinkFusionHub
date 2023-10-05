@@ -135,25 +135,25 @@ input::placeholder {
 
 .container-slimselect .ss-main:hover,
 .container-slimselect .ss-main:focus {
-  background-color: #9cdfdf;
+  background-color: var(--color-blue);
   border-radius: 8px;
 }
 
 /* placeholder */
 .container-slimselect .ss-main .ss-values .ss-placeholder {
-  color: #fdfdff;
+  color: var(--color-white);
   font-size: 14px;
   font-family: Poppins;
   font-weight: 600;
-  line-height: 18px;
+  line-height: 1.3;
 }
 /* placeholder selected */
 .container-slimselect .ss-main .ss-values .ss-single {
-  color: #fdfdff;
+  color: var(--color-white);
   font-size: 14px;
   font-family: Poppins;
   font-weight: 600;
-  line-height: 18px;
+  line-height: 1.3;
 }
 
 /* ****************** Slim-Select ****************** */
