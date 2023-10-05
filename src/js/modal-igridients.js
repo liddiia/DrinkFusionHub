@@ -44,7 +44,7 @@ const addToFavIngr = (e) => {
 
 }
 
-const backIngridients = (e) => {
+export const backIngridients = (e) => {
 	if (e.target.classList.contains("ingridient-modal-back-btn")) {
 		const id = localStorage.getItem(COCTAILMODAL_ID);
 		if (id) {
@@ -57,4 +57,3 @@ const backIngridients = (e) => {
 	}
 }
 modal.addEventListener("click", addToFavIngr);
-modal.addEventListener("click", backIngridients);

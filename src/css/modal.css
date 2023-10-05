@@ -31,6 +31,12 @@
   overflow-y: auto;
   transform: translate(-50%, -50%);
 }
+.modal-container:hover, .modal-container:focus{
+ 
+  box-shadow: 0 0 2px #fff, 0 0 5px #fff, 0 0 8px #fff, 0 0 15px #0fa,
+    0 0 30px rgba(0, 255, 110, 0.718), 0 0 45px rgba(0, 255, 110, 0.718);
+  animation: pulsate-light 2s infinite alternate;
+}
 
 .close-modal {
   position: absolute;
