@@ -1,5 +1,6 @@
 import './mob-menu';
 import './modal-igridients';
+import './utilities/dark-theme';
 import { modalCallIngr } from './utilities/modalCallIngr'; 
 import { ingredients } from './utilities/local-storage';
 

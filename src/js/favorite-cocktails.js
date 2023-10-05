@@ -1,6 +1,7 @@
 import './mob-menu';
 import './modal-coctail';
 import './modal-igridients';
+import './utilities/dark-theme';
 import { favorites } from './utilities/local-storage';
 import { refs } from './utilities/refs';
 import { getCocktail } from './utilities/fetch-data';
