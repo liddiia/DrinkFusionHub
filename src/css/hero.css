@@ -57,25 +57,25 @@
   }
   .hero-img-girl-light-theme {
     width: 100%;
-    position: absolute;
     left: 0;
     top: 0;
   }
   .hero-img-girl-dark-theme {
     display: none;
     width: 100%;
-    position: absolute;
     left: 0;
     top: 0;
   }
   .picture-hero {
     position: relative;
-    width: 100%;
-     height: 481px; 
+     width: 100%;
+     height: 100%;
     display: flex;
     align-items: flex-end;
   }
   .hero-p-under-picture {
+    position: absolute;
+    left: 80px;
     color: var(--color-light-theme-black);
     font-family: var(--font-family);
     font-size: var(--mobile-hero-caption-font-size);
