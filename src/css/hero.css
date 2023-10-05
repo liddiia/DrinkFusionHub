@@ -157,6 +157,7 @@ left: 80px;
     bottom: 50px;
   } 
   .hero-img-girl-dark-theme {
+    position: absolute;
     width: 410px;
     height: 565px;
     left: -62px;
