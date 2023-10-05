@@ -2,11 +2,13 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>favorite-coctails</title>
-
+    <title>Favorite cocktails</title>
+    <link
+      rel="schortcut icon"
+      type="image/png"
+      href="img/favicon/favicon-32x32.png"
+    />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css"
@@ -14,47 +16,43 @@
     <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body>
-    <div class="fav-wrap-cont">
-    <load src="partials/header.html" />
-    <main>
-      <section class="favorites-cocktails-section">
-        <div class="container favorites-coctails-container">
-          <h1 class="favorites-cocktail-title gallery-header">
-            Favorite cocktails
-          </h1>
-          <ul class="favorite-cocktails-list"></ul>
-          <div class="favorite-container-nococktails">
-            <img
-              srcset="
-                /img/no-cocktails/no-cocktails@1x.png 1x,
-                /img/no-cocktails/no-cocktails@2x.png 2x
-              "
-              src="/img/no-cocktails/no-cocktails@1x.png"
-              alt="no-cocktails"
-              class="no-coctails-img"
-              width="234"
-              height="201"
-              loading="lazy"
-            />
-            <p class="description-no-coctails">
-              You haven't added any
-              <span class="span-no-coctails">favorite cocktails</span> yet
-            </p>
-
+    <div class="wrap-cont-drink">
+      <load src="partials/header.html" />
+      <main class="main">
+        <section class="favorites-cocktails-section">
+          <div class="container favorites-coctails-container">
+            <h1 class="favorites-cocktail-title gallery-header">
+              Favorite cocktails
+            </h1>
+            <ul class="favorite-cocktails-list"></ul>
+            <div class="favorite-container-nococktails">
+              <img
+                srcset="
+                  /img/no-cocktails/no-cocktails@1x.png 1x,
+                  /img/no-cocktails/no-cocktails@2x.png 2x
+                "
+                src="/img/no-cocktails/no-cocktails@1x.png"
+                alt="no-cocktails"
+                class="no-coctails-img"
+                width="234"
+                height="201"
+                loading="lazy"
+              />
+              <p class="description-no-coctails">
+                You haven't added any
+                <span class="span-no-coctails">favorite cocktails</span> yet
+              </p>
+            </div>
+            <div class="favorite-pagination-buttons-container container"></div>
           </div>
-          <div class="favorite-pagination-buttons-container container">
-          </div>
+        </section>
+      </main>
+      <load src="partials/footer.html" />
 
-        </div>
-      </section>
-    </main>
-    <load src="partials/footer.html" />
-   </div>
-    <load src="partials/mobile-menu.html" />
+      <load src="partials/mobile-menu.html" />
 
-    <load src="partials/modal.html" />
-
+      <load src="partials/modal.html" />
+    </div>
     <script type="module" src="js/favorite-cocktails.js"></script>
- 
   </body>
 </html>

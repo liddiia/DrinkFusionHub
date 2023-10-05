@@ -2,11 +2,13 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>favorite-ingredients</title>
-
+    <title>Favorite ingredients</title>
+    <link
+      rel="schortcut icon"
+      type="image/png"
+      href="img/favicon/favicon-32x32.png"
+    />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css"
@@ -14,12 +16,12 @@
     <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body>
-    <div class="fav-wrap-cont">
+    <div class="wrap-cont-drink-ingr">
     <load src="partials/header.html" />
-    <main>
+    <main class="main">
       <section class="container">
-        <div class="favorites-ingridients-section">
-          <h1 class="favorites-cocktail-title gallery-header">
+        <div class="favorites-ingredients-section">
+          <h1 class="favorites-ingredients-title gallery-header">
             Favorite ingredients
           </h1>
           <ul class="fav-ingredients-cocktails-list"></ul>
@@ -44,11 +46,11 @@
         </div>
       </section>
     </main>
-  </div>
+  
     <load src="partials/footer.html" />
 
-    <load src="partials/mobile-menu.html" />
-
+      <load src="partials/mobile-menu.html" />
+    </div>
     <load src="partials/modal.html" />
 
     <script type="module" src="js/favorite-ingridients.js"></script>

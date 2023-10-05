@@ -38,10 +38,6 @@ const addToFavIngr = (e) => {
 		deleteFromLocalStorage(ingrId, ingredients, INGRIDIENT_ID)
 	}
 
-
-
-
-
 }
 
 export const backIngridients = (e) => {
