@@ -4,7 +4,7 @@ export const renderFavIngidients = (arr, container) => {
   const markup = arr
     .map(
       item =>
-        ` <li class= "fav-ingr-item">
+        ` <li class= "fav-ingr-item glow-on-hover">
       
          <h2 class="fav-ingridient-title" data-id-igridient =${item._id}>${
           item.title

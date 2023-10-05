@@ -14,8 +14,19 @@
     height: 222px;
     border-radius: 20px;
     background-color: var(--color-text-white);
-
+    transition: transform 0.4s ease-out;
         }
+        .fav-ingr-item:hover,
+        .fav-ingr-item:focus {
+            transform: translateY(-20px);
+            box-shadow: 0 0 2px #fff, 0 0 5px #fff, 0 0 8px #fff, 0 0 15px #0fa,
+              0 0 30px rgba(0, 255, 110, 0.718), 0 0 45px rgba(0, 255, 110, 0.718);
+            animation: pulsate-light 2s infinite alternate;
+          }
+
+
+
+
         .fav-ingridient-title {
     font-size: 18px;
     font-weight: 600;
