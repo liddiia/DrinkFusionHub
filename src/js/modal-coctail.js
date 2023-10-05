@@ -1,5 +1,4 @@
 import { modal } from "./utilities/refs";
-import { closeModalHelper } from "./utilities/modalCallDrink";
 import { favorites, addToLocalStorage, deleteFromLocalStorage, COCKTAIL_ID } from "./utilities/local-storage";
 const addToFavCoct = (e) => {
 	if (
@@ -25,14 +24,7 @@ const addToFavCoct = (e) => {
 		actionType = "favorite";
 		deleteFromLocalStorage(cocktailId, favorites, COCKTAIL_ID);
 		document.getElementById(cocktailId).classList.toggle('is-favorite');
-	}
+	}}
 
-}
-export const coctailBackModal = (e) => {
-	if (e.target.classList.contains("cocktail-modal-back")) {
-		setTimeout(closeModalHelper(e.target), 500)
-	}
-}
 
 modal.addEventListener('click', addToFavCoct);
-modal.addEventListener('click', coctailBackModal);

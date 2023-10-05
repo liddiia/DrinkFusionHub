@@ -1,7 +1,8 @@
 
 import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock';
 import { modal, modalCloseBtn } from './refs'
-
+import { ingredients } from './local-storage';
+import { renderFavIngPagination } from './ingredients-pagination';
 
 
 export const closeModalHelper = (event) => {
@@ -36,7 +37,7 @@ export function modalCallIngr(el, renderFunc) {
 
     if (target === modalCloseBtn || target === modal|| target.classList.contains("ingridient-modal-back-btn") ) {
           closeModalHelper(target)
-
+          renderFavIngPagination(ingredients)
       }
     
   }
