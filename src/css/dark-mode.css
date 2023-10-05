@@ -270,3 +270,26 @@ body.dark-theme {
     background-image: url(/img/backgraund/background-descktop-darck@2x.jpg);
   }
 }
+
+ /********darck theme FAVIRIE INGREDIENTS***********/
+    body.dark-theme .fav-ingr-item {
+        box-shadow: 0px 4px 46px 0px rgba(0, 0, 0, 0.05);
+
+        background-color: rgba(35, 35, 48, 1);
+   
+            }
+
+     body.dark-theme .fav-ingridient-title {
+       
+        color: var(--color-text-white);
+          }
+          body.dark-theme .fav-ingridient-type{
+        
+        color:var(--color-text-white-);
+        }
+        body.dark-theme .fav-ingridient-discription{
+        
+            color: var(--color-text-white);
+       }
+        
+   
