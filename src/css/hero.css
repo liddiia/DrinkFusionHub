@@ -323,6 +323,7 @@
 }
 
 @media screen and (max-width: 767px) {
+  
   .hero-girl-background {
     width: 61%;
     height: 70%;
@@ -353,4 +354,10 @@
     bottom: 26%;
     left: 7%;
   }
+}
+@media screen and (max-width: 374px) {
+  .picture-hero{
+    height: 128vw;
+  }
+
 }
