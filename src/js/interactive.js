@@ -38,6 +38,8 @@ btnHeroKeyboardEl.addEventListener('click', onKeyboardClick);
 createKeyboardBtn(arrayLettersAndNumbers, btnHeroKeyboardEl);
 
 function onChangeSelect(evt) {
+  const toSearch = document.getElementById('search');
+  toSearch.scrollIntoView({ behavior: 'smooth' }, true);
   const selecteByLetAndChar = evt.target.value;
   changeGalleryTitle();
   if (contNoPhotoEl.classList.contains('active')) {
@@ -64,6 +66,9 @@ function onChangeSelect(evt) {
 }
 
 function onKeyboardClick(evt) {
+  const toSearch = document.getElementById('search');
+  toSearch.scrollIntoView({ behavior: 'smooth' }, true);
+
   if (evt.currentTarget === evt.target) {
     return;
   }
@@ -106,6 +111,8 @@ function onKeyboardClick(evt) {
 }
 
 function onSearchFormSubmit(evt) {
+  const toSearch = document.getElementById('search');
+  toSearch.scrollIntoView({ behavior: 'smooth' }, true);
   evt.preventDefault();
   const query = evt.currentTarget.elements['user-search-query'].value.trim();
   if (query === '') {
