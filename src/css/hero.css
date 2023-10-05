@@ -39,7 +39,6 @@
     line-height: var(--hero-titel-line-height);
     padding-bottom: 36px;
     max-width: 335px;
-    
   }
   .button-on-hero {
     color: var(--color-white);
@@ -69,6 +68,13 @@
     left: 0;
     top: 0;
   }
+  .picture-hero {
+    position: relative;
+    width: 100%;
+     height: 481px; 
+    display: flex;
+    align-items: flex-end;
+  }
   .hero-p-under-picture {
     color: var(--color-light-theme-black);
     font-family: var(--font-family);
@@ -83,13 +89,7 @@
     margin-right: auto;
     width: 173px;
   }
-  .picture-hero {
-    position: relative;
-    width: 100%;
-     height: 481px; 
-    display: flex;
-    align-items: flex-end;
-  }
+  
   @media screen and (min-width: 375px) {
     .hero-p-under-picture {
     position: absolute;
