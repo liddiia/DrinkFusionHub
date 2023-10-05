@@ -14,7 +14,7 @@
 }
 
 .no-coctails-img {
-  padding: 20px;
+  margin-bottom: 20px;
 }
 
 @media screen and (min-width: 768px) {
@@ -30,6 +30,10 @@
 @media screen and (min-width: 1280px) {
   .container-non-photos {
     margin-bottom: 150px;
+  }
+
+  .no-coctails-img {
+    margin-bottom: 40px;
   }
 }
 
