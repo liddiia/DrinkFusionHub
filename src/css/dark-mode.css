@@ -1,4 +1,5 @@
 .switch-desc {
+  cursor: pointer;;
   display: none;
   width: 64px;
   height: 32px;
@@ -231,7 +232,7 @@ body.dark-theme .mob-menu-icon {
 /***********background****************/
 body.dark-theme{
    background-image: url(/img/backgraund/background-mob-darck.jpg);
-  background-size: cover; 
+  background-size: cover;
   }
   @media screen and (min-device-pixel-ratio: 2) and (max-width: 767px),
   screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 767px),
@@ -260,7 +261,7 @@ body.dark-theme{
   background-image: url(/img/backgraund/background-descktop-darck.jpg);
   }
   }
-  
+
   @media screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 1280px),
   screen and (min-resolution: 192dpi) and (min-width: 1280px),
   screen and (min-resolution: 2dppx) and (min-width: 1280px) {
