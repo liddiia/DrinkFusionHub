@@ -136,10 +136,10 @@ body.dark-theme .container-non-photos {
 }
 
 body.dark-theme .description-no-coctails {
-  color: #fdfdff;
+  color: var(--color-white);
 }
 body.dark-theme .span-no-coctails {
-  color: #9cdfdf;
+  color: var(--color-blue);
 }
 
 /* ********** / No-Cocktails ********* */
