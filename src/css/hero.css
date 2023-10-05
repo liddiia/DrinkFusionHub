@@ -1,9 +1,14 @@
-
 .button-on-hero:hover,
 .button-on-hero:focus {
   background-color: #6E7FCF;;
 }
+.hero-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
 .container.hero-container{
+  max-width: 375px;
   padding-right: 6px;
   padding-left: 15px;
   padding-top: 68px;
@@ -33,7 +38,7 @@
     font-weight: var(--hero-font-weight);
     line-height: var(--hero-titel-line-height);
     padding-bottom: 36px;
-    width: 100%;
+    max-width: 335px;
     
   }
   .button-on-hero {
@@ -50,16 +55,19 @@
     display: flex; 
     padding: 14px 28px;
     border: transparent;
-    margin-bottom: 27px;
   }
   .hero-img-girl-light-theme {
     width: 100%;
     position: absolute;
+    left: 0;
+    top: 0;
   }
   .hero-img-girl-dark-theme {
     display: none;
     width: 100%;
     position: absolute;
+    left: 0;
+    top: 0;
   }
   .hero-p-under-picture {
     color: var(--color-light-theme-black);
@@ -78,10 +86,9 @@
   .picture-hero {
     position: relative;
     width: 100%;
-    height: 481px;
+     height: 481px; 
     display: flex;
     align-items: flex-end;
-
   }
   @media screen and (min-width: 375px) {
     .hero-p-under-picture {
@@ -91,12 +98,15 @@
     width: 173px;
     }   
   }
-  .hero-p {
-    width: 335px;
-    
-  }
 @media screen and (min-width: 768px) {
+  .hero-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
   .container.hero-container{
+    max-width: 768px;
     padding-right: 0;
     padding-left: 32px;
     padding-top: 70px;
@@ -124,7 +134,7 @@ padding-bottom: 28px;
 font-size: var(--tablet-hero-text-font-size);
 line-height: var(--tablet-hero-text-line-height); 
 width: 338px;
-margin-bottom: 48px;
+padding-bottom: 48px;
   }
   .hero-p-under-picture {
 bottom: -12px;
@@ -135,32 +145,34 @@ width: 229px;
 left: 80px;
   }
    .picture-hero {
+    position: relative;
    width: 352px;
    height: 593px;
   }
-  .hero-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
+  
   .hero-img-girl-light-theme {
+    position: absolute;
     width: 410px;
     height: 565px;
-    right: 0;
-    bottom: 20px;
+    left: -62px;
+    bottom: 50px;
   } 
   .hero-img-girl-dark-theme {
     width: 410px;
     height: 565px;
-    right: 0;
-    bottom: 20px;
+    left: -62px;
+    bottom: 50px;
   } 
 }
 @media screen and (min-width: 1280px) {
 .hero-first {
-  width: ((100% - 56px)/2);
+  width: 555px;
+}
+.hero-container {
+  gap: 56px;
 }
 .container.hero-container{
+  max-width: 1280px;
   padding-right: 17px;
   padding-left: 100px;
 }
@@ -171,14 +183,13 @@ line-height: var(--hero-titel-line-height);
   .main-title {
 font-size: var(--hero-titel-font-size);
 line-height: var(--hero-titel-line-height);
-width: 555px;
-margin-bottom: 28px;
   }
   .hero-p {
 font-size: var(--hero-text-font-size);
 line-height: var(--hero-text-line-height);
 width: 480px;
-margin-bottom: 56px;
+max-width: 480px;
+padding-bottom: 56px;
   }
   .hero-p-under-picture {
    right: 72px;
@@ -194,7 +205,6 @@ margin-right: 80px;
     height: 672px;
     padding-right: 83px;
     padding-top: 98px;
-    width: ((100% - 56px)/2);
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -202,13 +212,13 @@ margin-right: 80px;
   .hero-img-girl-light-theme {
     width: 100%;
     height: 100%;
-    right: 0;
+    left: 0;
     bottom: 0;
   }
   .hero-img-girl-dark-theme {
     width: 100%;
     height: 100%;
-    right: 0;
+    left: 0;
     bottom: 0;
   }
 }
