@@ -1,4 +1,4 @@
-.favorites-ingridients-title{
+.favorites-ingredients-title{
     margin-top: 80px;
    
 }
@@ -53,8 +53,6 @@
     margin-bottom: 20px;
     }
 
-
-    /*
     @media screen and (min-width: 768px) {
     .fav-ingredients-cocktails-list {
     row-gap: 16px;
@@ -64,79 +62,18 @@
     padding: 24px; 
     width: 344px;
     height: 242px;
-    border-radius: 20px;
-    background: rgba(253, 253, 255, 1);
-    }
+     }
     .fav-ingridient-title {
-    font-size: 18px;
-    font-weight: 600;
-    line-height: calc(24/18);
-    letter-spacing: 0em;
-    margin-bottom: 4px;
-    }
-    .fav-ingridient-type{
-    font-size: 14px;
-    font-weight: 400;
-    line-height: calc(18/14);
-    letter-spacing: 0em;
-    }
-    .fav-ingridient-discription{
-    font-size: 14px;
-    font-weight: 400;
-    line-height: calc(18/14);
-    letter-spacing: 0em;
-    overflow: hidden;
-    -ms-text-overflow: ellipsis;
-    -o-text-overflow: ellipsis;
-    text-overflow: ellipsis;
-    -ms-line-clamp: 3;
-    -webkit-line-clamp: 3;
-    line-clamp: 3;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    margin-bottom: 20px;
-    }
-    }
+    font-size: 20px;
+    
+    line-height: 1.2;
+}
+
+   }
     @media screen and (min-width: 1280px) {
     .fav-ingredients-cocktails-list {
-    row-gap: 16px;
-    column-gap: 32px;
-    }
-    .fav-ingr-item {
-    padding: 24px; 
-    width: 344px;
-    height: 242px;
-    border-radius: 20px;
-    background: rgba(253, 253, 255, 1);
-    }
-    .fav-ingridient-title {
-    font-size: 18px;
-    font-weight: 600;
-    line-height: calc(24/18);
-    letter-spacing: 0em;
-    margin-bottom: 4px;
-    }
-    .fav-ingridient-type{
-    font-size: 14px;
-    font-weight: 400;
-    line-height: calc(18/14);
-    letter-spacing: 0em;
-    }
-    .fav-ingridient-discription{
-    font-size: 14px;
-    font-weight: 400;
-    line-height: calc(18/14);
-    letter-spacing: 0em;
-    overflow: hidden;
-    -ms-text-overflow: ellipsis;
-    -o-text-overflow: ellipsis;
-    text-overflow: ellipsis;
-    -ms-line-clamp: 3;
-    -webkit-line-clamp: 3;
-    line-clamp: 3;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    margin-bottom: 20px;
+    row-gap: 24px;
+    column-gap: 44px;
     }
     }
-    */
+   

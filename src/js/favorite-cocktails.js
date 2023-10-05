@@ -14,7 +14,6 @@ const contFavoriteNoCoctails = document.querySelector(
   '.favorite-container-nococktails'
 );
 
-
 export const renderFav = ids => {
   console.log("ids", ids);
   refs.favoritesList.innerHTML = '';
