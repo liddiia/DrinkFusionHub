@@ -2,11 +2,13 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>favorite-ingredients</title>
-
+    <title>Favorite ingredients</title>
+    <link
+      rel="schortcut icon"
+      type="image/png"
+      href="img/favicon/favicon-32x32.png"
+    />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css"
@@ -15,40 +17,42 @@
   </head>
   <body>
     <div class="wrap-cont-drink">
-    <load src="partials/header.html" />
-    <main class="main">
-      <section class="container">
-        <div class="favorites-ingredients-section">
-          <h1 class=".favorites-ingridients-title gallery-header">
-            Favorite ingredients
-          </h1>
-          <ul class="fav-ingredients-cocktails-list"></ul>
-          <div class="favorite-container-nococktails js-ingredients-container container-non-photos">
-            <img
-              srcset="
-                /img/no-cocktails/no-cocktails@1x.png 1x,
-                /img/no-cocktails/no-cocktails@2x.png 2x
-              "
-              src="/img/no-cocktails/no-cocktails@1x.png"
-              alt="no-cocktails"
-              class="no-coctails-img"
-              width="234"
-              height="201"
-              loading="lazy"
-            />
-            <p class="description-no-coctails">
-              You haven't added any
-              <span class="span-no-coctails">favorite ingredients</span> yet
-            </p>
+      <load src="partials/header.html" />
+      <main class="main">
+        <section class="container">
+          <div class="favorites-ingredients-section">
+            <h1 class=".favorites-ingridients-title gallery-header">
+              Favorite ingredients
+            </h1>
+            <ul class="fav-ingredients-cocktails-list"></ul>
+            <div
+              class="favorite-container-nococktails js-ingredients-container container-non-photos"
+            >
+              <img
+                srcset="
+                  /img/no-cocktails/no-cocktails@1x.png 1x,
+                  /img/no-cocktails/no-cocktails@2x.png 2x
+                "
+                src="/img/no-cocktails/no-cocktails@1x.png"
+                alt="no-cocktails"
+                class="no-coctails-img"
+                width="234"
+                height="201"
+                loading="lazy"
+              />
+              <p class="description-no-coctails">
+                You haven't added any
+                <span class="span-no-coctails">favorite ingredients</span> yet
+              </p>
+            </div>
           </div>
-        </div>
-      </section>
-    </main>
-  
-    <load src="partials/footer.html" />
+        </section>
+      </main>
 
-    <load src="partials/mobile-menu.html" />
-</div>
+      <load src="partials/footer.html" />
+
+      <load src="partials/mobile-menu.html" />
+    </div>
     <load src="partials/modal.html" />
 
     <script type="module" src="js/favorite-ingridients.js"></script>
