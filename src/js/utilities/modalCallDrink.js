@@ -35,7 +35,7 @@ export function modalCall(el, renderFunc) {
   const closeModal = (e) => {
     const { target } = e;
 
-    if (target === modalCloseBtn || target === modal || target.tagName === "A") {
+    if (target === modalCloseBtn || target === modal || target.classList.contains("cocktail-modal-back") ||target.tagName === "A") {
       if (target.tagName === "A" && target.classList.contains("ingredient-link")) {
         e.preventDefault();
 
