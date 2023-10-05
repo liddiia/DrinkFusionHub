@@ -1,6 +1,7 @@
 /** add your listiener here */
 export const refs = {
     favoritesList: document.querySelector('.favorite-cocktails-list'),
+    favIngredientsList: document.querySelector('.fav-ingredients-cocktails-list'),
     favoritesTitle: document.querySelector('.fav-cocktails-title'),
     favoriteSearchItem: document.querySelector('.fav-cocktails-item'),
     prewButton: document.querySelector('.prew-button'),
@@ -10,6 +11,7 @@ export const refs = {
     mainCocktailsGallery: document.querySelector('.gallery .gallery-list'),
     paginationContainer: document.querySelector('.pagination-buttons-container'),
     favoritePaginationContainer: document.querySelector('.favorite-pagination-buttons-container'),
+    favoriteIngPaginationContainer: document.querySelector('.favorite-ingredients-pagination-buttons-container'),
     leftPagBtn: document.querySelectorAll("[data-action='leftPag']"),
     rightPagBtn: document.querySelectorAll("[data-action='rightPag']"),
     paginationNumberBtnsContainer: document.querySelector(
