@@ -14,10 +14,10 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css"
     />
     
-    <script type="module" crossorigin src="/DrinkFusionHub/assets/favorite-cocktails-2b2838c4.js"></script>
-    <link rel="modulepreload" crossorigin href="/DrinkFusionHub/assets/icons-1af380a0.js">
-    <link rel="modulepreload" crossorigin href="/DrinkFusionHub/assets/modal-coctail-94871832.js">
-    <link rel="stylesheet" href="/DrinkFusionHub/assets/icons-027c9b68.css">
+    <script type="module" crossorigin src="/DrinkFusionHub/assets/favorite-cocktails-dcb82083.js"></script>
+    <link rel="modulepreload" crossorigin href="/DrinkFusionHub/assets/icons-3f0ccb58.js">
+    <link rel="modulepreload" crossorigin href="/DrinkFusionHub/assets/modal-coctail-171f0183.js">
+    <link rel="stylesheet" href="/DrinkFusionHub/assets/icons-8251e851.css">
   </head>
   <body>
     <div class="wrap-cont-drink">
@@ -79,15 +79,30 @@
             </h1>
             <ul class="favorite-cocktails-list"></ul>
             <div class="favorite-container-nococktails">
-              <img
-                srcset="/DrinkFusionHub/assets/no-cocktails@1x-f0fdc273.png 1x, /DrinkFusionHub/assets/no-cocktails@2x-a6f40fdf.png 2x"
-                src="/DrinkFusionHub/assets/no-cocktails@1x-f0fdc273.png"
-                alt="no-cocktails"
-                class="no-coctails-img"
-                width="234"
-                height="201"
-                loading="lazy"
-              />
+              <picture>
+                <source
+                  media="(max-width: 768px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 768px) and (min-resolution: 144dpi)"
+                  srcset="/DrinkFusionHub/assets/nococktails-mobile-1x-f2ea2a64.png "
+                />
+                <source
+                  media="(max-width: 768px) and (-webkit-min-device-pixel-ratio: 2), (max-width: 768px) and (min-resolution: 192dpi)"
+                  srcset="/DrinkFusionHub/assets/nococktails-mobile-2x-d6cafc25.png "
+                />
+                <source
+                  media="(min-width: 769px) and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 769px) and (min-resolution: 144dpi)"
+                  srcset="/DrinkFusionHub/assets/nococktails-tablet-desktop-1x-4169d7d9.png "
+                />
+                <source
+                  media="(min-width: 769px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 769px) and (min-resolution: 192dpi)"
+                  srcset="/DrinkFusionHub/assets/nococktails-tablet-desktop-2x-c7a77608.png "
+                />
+                <img
+                  class="no-coctails-img"
+                  src="/DrinkFusionHub/assets/nococktails-default-44c6816d.png"
+                  alt="no-cocktails"
+                  loading="lazy"
+                />
+              </picture>
               <p class="description-no-coctails">
                 You haven't added any
                 <span class="span-no-coctails">favorite cocktails</span> yet
