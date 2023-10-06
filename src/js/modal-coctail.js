@@ -8,9 +8,7 @@ const addToFavCoct = (e) => {
 		return;
 	}
 	const btn = e.target;
-	console.log(btn);
 	let cocktailId = btn.dataset.idCoctail;
-	console.log(cocktailId);
 	let actionType = btn.dataset.localcockt
 	let idx = favorites.indexOf(cocktailId);
 	if (actionType === 'favorite' && idx === -1) {
@@ -18,7 +16,6 @@ const addToFavCoct = (e) => {
 		actionType = "remfromfavorite";
 		addToLocalStorage(cocktailId, favorites, COCKTAIL_ID);
 		document.getElementById(cocktailId).classList.toggle('is-favorite');
-		console.log(favorites);
 	} else {
 		btn.textContent = "Add to favorites";
 		actionType = "favorite";

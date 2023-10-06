@@ -43,7 +43,6 @@ export async function fetchCocktailByName(query) {
     const response = await axios.get(`${BASE_URL}${COCKT_SEARCH}${params}`);
     return response.data;
   } catch (error) {
-    console.log(error);
     galleryEl.innerHTML = '';
     paginContainer.classList.add('isHidden');
     didntFindCoctails(contNoPhotoEl, titleGalleryEl);
@@ -60,7 +59,6 @@ export async function fetchCocktailByFirstLetter(query) {
     const response = await axios.get(`${BASE_URL}${COCKT_SEARCH}${params}`);
     return response.data;
   } catch (error) {
-    console.log(error);
     galleryEl.innerHTML = '';
     paginContainer.classList.add('isHidden');
     didntFindCoctails(contNoPhotoEl, titleGalleryEl);

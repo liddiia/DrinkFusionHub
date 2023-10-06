@@ -11,7 +11,6 @@ export function addToLocalStorage(id, arr, keyLS) {
 
 export function deleteFromLocalStorage(id, arr, keyLS) {
   let index = arr.indexOf(id);
-  console.log(index);
   if (index === -1) {
     return;
   }

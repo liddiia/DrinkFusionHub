@@ -8,15 +8,12 @@
   margin-top: 80px;
 }
 
-/* .remove-favorites-btn-icon {
-  width: 24px;
-  height: 24px;
-} */
+
 
 .remove-favorites-btn-icon {
   width: 24px;
   height: 24px;
-  /* fill: none; */
+
   pointer-events: none;
 }
 
@@ -38,9 +35,7 @@
 .cocktail-rem-fav-btn:hover .remove-favorites-btn-icon,
 .cocktail-rem-fav-btn:hover .remove-favorites-btn-icon {
   transform: scale(1.5);
-  /* animation: animate__heartBeat;
-  animation-duration: 2s;*/
-  /* https://animate.style/*/
+  
 }
 
 @media screen and (min-width: 768px) {

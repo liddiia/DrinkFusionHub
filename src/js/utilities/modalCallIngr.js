@@ -14,9 +14,9 @@ export function modalCallIngr(el, renderFunc) {
   const openModal = (e) => {
 
     const { target } = e;
-    console.log(target);
+
     const idIngridient = target.dataset.idIgridient;
-    console.log(idIngridient);
+
     if (target.classList.contains("cocktail-learn-more-btn")) {
       setTimeout(modal.classList.toggle("is-open"), 500)
       renderFunc(idIngridient);

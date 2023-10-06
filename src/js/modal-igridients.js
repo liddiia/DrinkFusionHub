@@ -10,7 +10,7 @@ export const showIngridient = async (id) => {
 		renderIngidients(ingridient, modalInfoEl);
 
 	} catch (error) {
-		console.log(error);
+
 	}
 }
 const addToFavIngr = (e) => {
@@ -22,11 +22,8 @@ const addToFavIngr = (e) => {
 	}
 
 	const btn = e.target;
-	console.log("BTN", btn);
 	let ingrId = btn.dataset.idIngridientBtn;
-	console.log("ingrID", ingrId);
 	let actionType = btn.dataset.localingr
-	console.log("ingraction", actionType);
 	let idx = ingredients.indexOf(ingrId);
 	if (actionType === 'ingraddfav' && idx === -1) {
 		actionType = "igrremovefav";

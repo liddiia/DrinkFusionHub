@@ -9,7 +9,6 @@ export const renderDrink = async (id) => {
 		const drink = await getCocktail(id);
 		createMarkupDescriptionCocktail(drink, modalInfoEl)
 	} catch (error) {
-		console.log(error);
 	}
 }
 if (galleryEl) {

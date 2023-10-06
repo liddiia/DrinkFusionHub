@@ -127,7 +127,6 @@ function onSearchFormSubmit(evt) {
     paginContainer.classList.remove('isHidden');
   }
   fetchCocktailByName(query).then(resp => {
-    console.log(resp);
     createCocktailCards(resp, galleryEl);
     renderPagination(resp);
     if (

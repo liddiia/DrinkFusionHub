@@ -15,7 +15,6 @@ const contFavoriteNoCoctails = document.querySelector(
 );
 
 export const renderFav = ids => {
-  console.log("ids", ids);
   refs.favoritesList.innerHTML = '';
   if (!ids || ids.length === 0) {
     contFavoriteNoCoctails.classList.add('active');
@@ -58,7 +57,6 @@ export const renderFav = ids => {
   }
 }
 
-console.log("favorites", favorites);
 renderFavPagination(favorites);
 
 
@@ -70,7 +68,6 @@ if (refs.favoritesList) {
 refs.favoritesList.addEventListener('click', (e) =>{
   if (e.target.classList.contains('remove-from-fav-btn')) {
     const cocktailId = e.target.getAttribute('id');
-    console.log(cocktailId);
     deleteFromLocalStorage(cocktailId, favorites, COCKTAIL_ID);
     renderFavPagination(favorites)
   }

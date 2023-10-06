@@ -85,8 +85,6 @@ let cardsPerPage = 6;
   const sortedCardsArr = createPagesArr(cocktailArr, cardsPerPage);
 
 
-  console.log("sortedCardsArr[0]", sortedCardsArr[0]);
-
   arrowCheck(leftPagBtn, rightPagBtn);
 
   function createPagesArr(arr, cardsPerPageNum) {
@@ -281,7 +279,6 @@ let cardsPerPage = 6;
 
 
     renderFav(sortedCardsArr[currentPageIndex]);
-    console.log("sortedCardsArr[currentPageIndex]", sortedCardsArr[currentPageIndex]);
     updateButtonLayout();
     updatePaginationButtons();
     arrowCheck(leftPagBtn, rightPagBtn);

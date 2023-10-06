@@ -202,8 +202,7 @@ export function renderPagination(cocktailArr) {
 
   function onPaginationBtnClick(evt) {
     const toSearch = document.getElementById('search');
-    console.log("btns", refs.paginationNumberBtnsContainer);
-    console.log("pagebtns", pageBtns);
+
     toSearch.scrollIntoView({ behavior: 'smooth' }, true);
     defaultActiveBtn.classList.remove('pagination-button-item-active');
     let btnValue = evt.target.dataset.action;

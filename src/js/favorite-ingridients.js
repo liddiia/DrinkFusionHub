@@ -16,7 +16,6 @@ const contNoCoctails = document.querySelector('.container-non-photos');
 const favIngListEl = document.querySelector('.fav-ingredients-cocktails-list');
 
 export const renderIngFav = ids => {
-  console.log('ids', ids);
   refs.favIngredientsList.innerHTML = '';
   if (!ids || ids.length === 0) {
     contNoCoctails.classList.add('active');
@@ -65,8 +64,6 @@ function isDicriprionIng(disc) {
   return disc ? disc : "Sorry we dont have it yet";
 }
 
-
-console.log('ingredients', ingredients);
 renderFavIngPagination(ingredients);
 
 
@@ -77,7 +74,6 @@ if (favIngListEl) {
 refs.favIngredientsList.addEventListener('click', (e) =>{
   if (e.target.classList.contains('fav-ingred-remove-button')) {
     const ingredientId = e.target.getAttribute('id');
-    console.log(ingredientId);
     deleteFromLocalStorage(ingredientId, ingredients, INGRIDIENT_ID);
     renderFavIngPagination(ingredients)
   }

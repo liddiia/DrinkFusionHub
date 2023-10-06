@@ -14,14 +14,14 @@ export function modalCallFavDrink(el, renderFunc) {
   const openModal = (e) => {
 
     const { target } = e;
-    console.log(target);
+
     const idDrink = target.dataset.idDrink;
-    console.log(idDrink);
+
     if (target.classList.contains("cocktail-learn-more-btn")) {
       setTimeout(modal.classList.toggle("is-open"), 500)
       renderFunc(idDrink);
       disableBodyScroll(e);
-      console.log(modal);
+
       localStorage.setItem(COCTAILMODAL_ID, idDrink)
     }
     const closeEscape = (e => {
@@ -45,7 +45,7 @@ export function modalCallFavDrink(el, renderFunc) {
 
         return
       } else {
-        console.log(target.parentNode);
+
         closeModalHelper(target)
         renderFavPagination(favorites)
       }

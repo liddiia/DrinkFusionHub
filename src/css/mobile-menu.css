@@ -1,7 +1,3 @@
-/* .active {
-    display: block;
-} */
-
 .mobile-menu {
     position: fixed;
     top: 0;
@@ -81,11 +77,6 @@
     color: var(--color-white);
 }
 
-/* .favorite-menu{
-    display: inline-block;
-    position: relative;
-} */
-
 .btn-opn-sub-menu {
     display: flex;
     align-items: center;
@@ -109,10 +100,7 @@
     pointer-events: none;
     transition: opacity 250ms, visibility 250ms, transform 250ms ease-in-out;
     top: 75px;
-    /* opacity: 1;
-    visibility: visible;
-    pointer-events: auto;
-    transition: opacity 250ms, visibility 250ms; */
+
 }
 
 .mobile-menu-sub-item:last-child {

@@ -18,11 +18,9 @@ function addToFavorites(evt) {
   }
 
   const btn = evt.target;
-  console.log(btn);
   let actionType = btn.dataset.action;
   const listItem = btn.closest('li');
   let cocktailId = listItem.dataset.id;
-  console.log(cocktailId);
   let idx = favorites.indexOf(cocktailId);
 
   if (actionType === 'addtofav' && idx === -1) {
@@ -35,5 +33,4 @@ function addToFavorites(evt) {
     actionType = 'addtofav';
     deleteFromLocalStorage(cocktailId, favorites, COCKTAIL_ID);
   }
-  console.log(favorites);
 }
