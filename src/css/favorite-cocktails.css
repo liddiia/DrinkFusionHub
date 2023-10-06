@@ -1,7 +1,7 @@
-.favorites-cocktail-title{
+.favorites-cocktail-title {
   margin-top: 80px;
 }
-.favorites-coctails-container{
+.favorites-coctails-container {
   margin-bottom: 80px;
 }
 .favorite-container-nococktails {
@@ -11,7 +11,6 @@
 .favorite-container-nococktails.active {
   display: block;
   box-sizing: border-box;
-  align-items: center;
   width: 244px;
   height: 190px;
   margin-right: auto;
@@ -19,16 +18,12 @@
   margin-bottom: 138px;
 }
 
-.no-coctails-img {
-  margin-bottom: 20px;
-}
-
 @media screen and (min-width: 768px) {
   .favorite-container-nococktails {
     width: 370px;
     height: 297px;
   }
-  .favorites-coctails-container{
+  .favorites-coctails-container {
     margin-bottom: 100px;
   }
 }
@@ -56,7 +51,6 @@
 .favorite-cocktails-list {
   margin: 0;
   padding: 0;
-
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
