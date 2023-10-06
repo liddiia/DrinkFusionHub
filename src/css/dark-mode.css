@@ -374,7 +374,7 @@ body.dark-theme {
 
 @media screen and (max-width: 374px) {
     body.dark-theme {
-    background-image: url(/img/backgraund/mob-fav-bacground-light-empty.jpg);
+    background-image: url(/img/backgraund/background-mob-darck.jpg);
     
   }
 }
