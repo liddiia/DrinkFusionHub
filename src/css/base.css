@@ -97,8 +97,6 @@ body {
   font-family: var(--font-family);
   height: 100%;
   background-size: cover;
-background-repeat: no-repeat;
-
 
 }
 .wrap-cont-drink,
@@ -154,16 +152,16 @@ background-repeat: no-repeat;
   }
 }
 
-@media screen and (min-device-pixel-ratio: 2) and (min-width: 375px),
-  screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 375px),
-  screen and (min-resolution: 192dpi) and (min-width: 375px),
-  screen and (min-resolution: 2dppx) and (min-width: 375px) {
+@media screen and (min-device-pixel-ratio: 2) and (min-width: 320px),
+  screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 320px),
+  screen and (min-resolution: 192dpi) and (min-width: 320px),
+  screen and (min-resolution: 2dppx) and (min-width: 320px) {
   body {
     background-image: url(/img/backgraund/mob-fav-bacground-light-empty@2x.jpg);
     
   }
 }
-@media screen and (min-width: 375px) {
+@media screen and (min-width: 320px) {
   body {
     background-image: url(/img/backgraund/mob-fav-bacground-light-fav-bacground-light.jpg);
    
@@ -202,9 +200,3 @@ background-repeat: no-repeat;
   }
 }
 
-@media screen and (max-width: 374px) {
-  body.dark-theme {
-  background-image: url(/img/backgraund/mob-fav-bacground-light-fav-bacground-light.jpg);
-  
-}
-}
