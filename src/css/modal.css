@@ -8,6 +8,7 @@
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
+  z-index: 200;
 }
 
 .modal-backdrop.is-open {
