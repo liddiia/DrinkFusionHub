@@ -201,3 +201,10 @@ background-repeat: no-repeat;
     
   }
 }
+
+@media screen and (max-width: 374px) {
+  body.dark-theme {
+  background-image: url(/img/backgraund/mob-fav-bacground-light-fav-bacground-light.jpg);
+  
+}
+}
