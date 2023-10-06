@@ -16,7 +16,7 @@
   visibility: visible;
   pointer-events: all;
 }
-.modal-backdrop.is-open main{
+.modal-backdrop.is-open main {
   pointer-events: none;
 }
 .modal-container {
@@ -32,8 +32,8 @@
   overflow-y: auto;
   transform: translate(-50%, -50%);
 }
-.modal-container:hover, .modal-container:focus{
- 
+.modal-container:hover,
+.modal-container:focus {
   box-shadow: 0 0 2px #fff, 0 0 5px #fff, 0 0 8px #fff, 0 0 15px #0fa,
     0 0 30px rgba(0, 255, 110, 0.718), 0 0 45px rgba(0, 255, 110, 0.718);
   animation: pulsate-light 2s infinite alternate;
@@ -55,7 +55,6 @@
   pointer-events: none;
 }
 
-
 @media screen and (min-width: 768px) {
   .modal-container {
     width: 600px;
@@ -72,6 +71,23 @@
     width: 24px;
     height: 24px;
   }
+}
 
-  
+/* ************ Scroll - Modal ************ */
+.modal-container ::-webkit-scrollbar {
+  background-color: transparent;
+}
+
+.modal-container ::-webkit-scrollbar-thumb {
+  background-color: transparent;
+}
+
+/* ************ Scroll Page ************ */
+::-webkit-scrollbar {
+  background-color: #7e8fdd66;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #7e8fdd;
+  border-radius: 10px;
 }
