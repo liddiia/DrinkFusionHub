@@ -1,4 +1,4 @@
-import{r as p,s as C,m as L,d as F,a as G,l as I,e as R,g as U,n as V,I as W,b as j}from"./icons-bdd0ddd3.js";function w(a){p.favoriteIngPaginationContainer.innerHTML=`<button
+import{r as p,s as C,m as L,d as F,a as G,l as I,e as R,g as U,n as V,I as W,b as j}from"./icons-61920239.js";function w(a){p.favoriteIngPaginationContainer.innerHTML=`<button
   class="left-pag-btn pagination-button-item"
   type="button"
   id="left-pag-btn"
