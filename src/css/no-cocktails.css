@@ -14,6 +14,8 @@
 }
 
 .no-coctails-img {
+  margin-left: auto;
+  margin-right: auto;
   margin-bottom: 20px;
 }
 
@@ -24,6 +26,10 @@
   }
   .description-no-coctails {
     max-width: 370px;
+  }
+
+  .no-coctails-img {
+    margin-bottom: 40px;
   }
 }
 
