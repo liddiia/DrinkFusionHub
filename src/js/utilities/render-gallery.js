@@ -9,7 +9,7 @@ export function createCocktailCards(arr, container) {
         <img
           class="cocktail-img"
           src="${item.drinkThumb}"
-         onerror = "this.onerror=null;this.src='/img/no-cocktails/no-cocktails@1x.png';"
+         onerror = "this.onerror=null;this.src='/img/no-cocktails/nococktails-tablet-desktop-1x.png';"
           alt="${item.drink}"
           loading="lazy"
         />
