@@ -5,7 +5,7 @@ import{f as E,s as V,r as h,o as U,p as Y,q as Z,t as Q,u as F,k as j,g as ee,i 
         <img
           class="cocktail-img"
           src="${s.drinkThumb}"
-         onerror = "this.onerror=null;this.src='/img/no-cocktails/no-cocktails@1x.png';"
+         onerror = "this.onerror=null;this.src='/img/no-cocktails/nococktails-tablet-desktop-1x.png';"
           alt="${s.drink}"
           loading="lazy"
         />
